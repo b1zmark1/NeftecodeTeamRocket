@@ -1,0 +1,12 @@
+{
+  "Delta Kin. Viscosity KV100 - relative | - Daimler Oxidation Test (DOT), %": {
+    "mae": 43.47270250702796,
+    "rmse": 124.46458774935978,
+    "r2": 0.598475728504474
+  },
+  "Oxidation EOT | DIN 51453 Daimler Oxidation Test (DOT), A/cm": {
+    "mae": 13.890390700465625,
+    "rmse": 20.054955598418612,
+    "r2": 0.6897103629808323
+  }
+}
