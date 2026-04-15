@@ -1,0 +1,267 @@
+{
+  "flat_feature_count": 631,
+  "category_vocab": {
+    "antioxidant::Номер CAS / SMILES": [
+      "cas_like"
+    ],
+    "antioxidant::Тип АО": [
+      "diphenylamine",
+      "phenol"
+    ],
+    "base_oil::Группа по API": [
+      "2",
+      "1",
+      "3",
+      "5",
+      "4"
+    ],
+    "base_oil::Происхождение": [
+      "hydrocracking",
+      "mineral",
+      "synthetic"
+    ],
+    "base_oil::Номер CAS": [
+      "cas_like"
+    ],
+    "detergent::Номер CAS": [
+      "290_636_7",
+      "нет",
+      "cas_like"
+    ],
+    "detergent::Класс субстрата": [
+      "calcium_sulfonate",
+      "calcium_salicylate",
+      "calcium_phenate",
+      "magnesium_sulfonate"
+    ],
+    "detergent::Структура УВ-радикала": [
+      "alkyl_formula"
+    ],
+    "detergent::SMILES для наиболее вероятной (средней) молекулы сульфокислоты": [
+      "smiles_like"
+    ],
+    "dispersant::Класс полиамина": [
+      "tepa"
+    ],
+    "dispersant::Номер CAS": [
+      "cas_like"
+    ],
+    "dispersant::Модификация": [
+      "boronated"
+    ],
+    "dispersant::Тип сукцинимида": [
+      "mono",
+      "bis"
+    ],
+    "polymer::Тип полимера": [
+      "ocp",
+      "hsd"
+    ],
+    "polymer::Номер CAS": [
+      "нет",
+      "cas_like"
+    ],
+    "antiwear::Номер CAS": [
+      "нет",
+      "cas_like"
+    ],
+    "antiwear::Тип спиртового радикала": [
+      "primary",
+      "secondary",
+      "mixed"
+    ],
+    "antiwear::Разветвленность радикала / радикалов": [
+      "mixed",
+      "single"
+    ],
+    "polymer::Соотношение мономеров (EO:PO)": [
+      "eo_po_ratio"
+    ],
+    "moly::Категория": [
+      "amine_complex",
+      "modtc"
+    ],
+    "moly::CAS": [
+      "cas_like"
+    ],
+    "moly::Тип лиганда": [
+      "amide",
+      "dithiocarbamate"
+    ]
+  },
+  "text_numeric_schema": {
+    "antioxidant": {
+      "Номер CAS / SMILES": [
+        "cas_count",
+        "has_text_value",
+        "text_length"
+      ],
+      "Тип АО": [
+        "ao_type_is_diphenylamine",
+        "ao_type_is_phenol",
+        "has_text_value",
+        "text_length"
+      ]
+    },
+    "base_oil": {
+      "Группа по API": [
+        "has_text_value",
+        "text_length"
+      ],
+      "Происхождение": [
+        "has_text_value",
+        "origin_is_hydrocracking",
+        "origin_is_mineral",
+        "origin_is_synthetic",
+        "text_length"
+      ],
+      "Номер CAS": [
+        "cas_count",
+        "has_text_value",
+        "text_length"
+      ]
+    },
+    "detergent": {
+      "Номер CAS": [
+        "cas_count",
+        "has_text_value",
+        "text_length"
+      ],
+      "Класс субстрата": [
+        "has_text_value",
+        "substrate_has_calcium",
+        "substrate_has_magnesium",
+        "substrate_is_phenate",
+        "substrate_is_salicylate",
+        "substrate_is_sulfonate",
+        "text_length"
+      ],
+      "Структура УВ-радикала": [
+        "formula_c_count",
+        "formula_h_count",
+        "formula_hc_ratio",
+        "has_text_value",
+        "text_length"
+      ],
+      "SMILES для наиболее вероятной (средней) молекулы сульфокислоты": [
+        "has_text_value",
+        "smiles_aromatic_atom_count",
+        "smiles_branch_count",
+        "smiles_c_count",
+        "smiles_ca_count",
+        "smiles_carboxylate_motif_count",
+        "smiles_charge_count",
+        "smiles_double_bond_count",
+        "smiles_has_ionic_pair",
+        "smiles_hetero_count",
+        "smiles_hetero_to_carbon_ratio",
+        "smiles_length",
+        "smiles_metal_count",
+        "smiles_mg_count",
+        "smiles_mo_count",
+        "smiles_n_count",
+        "smiles_o_count",
+        "smiles_p_count",
+        "smiles_ring_digit_count",
+        "smiles_s_count",
+        "smiles_sulfonate_motif_count",
+        "smiles_triple_bond_count",
+        "text_length"
+      ]
+    },
+    "dispersant": {
+      "Класс полиамина": [
+        "has_text_value",
+        "polyamine_is_tepa",
+        "text_length"
+      ],
+      "Номер CAS": [
+        "cas_count",
+        "has_text_value",
+        "text_length"
+      ],
+      "Модификация": [
+        "has_text_value",
+        "is_boronated",
+        "text_length"
+      ],
+      "Тип сукцинимида": [
+        "has_text_value",
+        "succinimide_is_bis",
+        "succinimide_is_mono",
+        "text_length"
+      ]
+    },
+    "polymer": {
+      "Тип полимера": [
+        "has_text_value",
+        "text_length"
+      ],
+      "Номер CAS": [
+        "cas_count",
+        "has_text_value",
+        "text_length"
+      ],
+      "Соотношение мономеров (EO:PO)": [
+        "has_text_value",
+        "text_length"
+      ]
+    },
+    "antiwear": {
+      "Номер CAS": [
+        "cas_count",
+        "has_text_value",
+        "text_length"
+      ],
+      "Тип спиртового радикала": [
+        "has_text_value",
+        "radical_is_mixed",
+        "radical_is_primary",
+        "radical_is_secondary",
+        "text_length"
+      ],
+      "Разветвленность радикала / радикалов": [
+        "branching_has_ethylhexyl",
+        "branching_has_iso",
+        "branching_is_mixed",
+        "chain_count_max",
+        "chain_count_mean",
+        "chain_count_n",
+        "has_text_value",
+        "text_length"
+      ]
+    },
+    "moly": {
+      "Категория": [
+        "category_is_amine_complex",
+        "category_is_modtc",
+        "category_is_modtp",
+        "has_text_value",
+        "text_length"
+      ],
+      "CAS": [
+        "cas_count",
+        "has_text_value",
+        "text_length"
+      ],
+      "Тип лиганда": [
+        "chain_count_max",
+        "chain_count_mean",
+        "chain_count_n",
+        "has_text_value",
+        "ligand_is_amide",
+        "ligand_is_dithiocarbamate",
+        "ligand_is_dithiophosphate",
+        "text_length"
+      ]
+    }
+  },
+  "files": {
+    "train_flat_csv": "train_flat_features_v2.csv",
+    "test_flat_csv": "test_flat_features_v2.csv",
+    "train_flat_npz": "train_flat_features_v2.npz",
+    "test_flat_npz": "test_flat_features_v2.npz",
+    "train_tokens_jsonl": "train_tokens_v2.jsonl",
+    "test_tokens_jsonl": "test_tokens_v2.jsonl"
+  }
+}
