@@ -1,0 +1,32 @@
+{
+  "input_train_path": "/Users/natasha/Desktop/хакатон/NeftecodeTeamRocket/plsreg/train_flat_features_v2.csv",
+  "n_splits": 5,
+  "random_state": 42,
+  "tested_n_components": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "best_n_components": 6,
+  "raw_feature_count": 631,
+  "final_feature_count": 120,
+  "min_non_na_ratio": 0.1,
+  "variance_threshold": 1e-12,
+  "max_features": 120,
+  "uses_groupkfold": true,
+  "feature_columns_file": "/Users/natasha/Desktop/хакатон/NeftecodeTeamRocket/plsreg/pls_flat_compact_output/pls_flat_compact_feature_columns.json",
+  "dropped_columns_file": "/Users/natasha/Desktop/хакатон/NeftecodeTeamRocket/plsreg/pls_flat_compact_output/pls_flat_compact_dropped_columns.json",
+  "outputs": {
+    "cv_fold_metrics": "/Users/natasha/Desktop/хакатон/NeftecodeTeamRocket/plsreg/pls_flat_compact_output/pls_flat_compact_cv_fold_metrics.csv",
+    "cv_summary": "/Users/natasha/Desktop/хакатон/NeftecodeTeamRocket/plsreg/pls_flat_compact_output/pls_flat_compact_cv_summary.csv"
+  }
+}
