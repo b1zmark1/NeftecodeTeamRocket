@@ -1,0 +1,10 @@
+feature,mean_abs_shap
+"Температура испытания | ASTM D445 Daimler Oxidation Test (DOT), °C",6.628858341331451
+phenol_share,5.319510477373151
+amine_phenol_interaction,5.23875873987216
+amine_share,5.02120218103424
+ao_total_share,4.579716103618495
+"Количество биотоплива | - Daimler Oxidation Test (DOT), % масс",3.3846825331753765
+amine_to_phenol_ratio,2.6803875186501465
+"Время испытания | - Daimler Oxidation Test (DOT), ч",2.4688409079526017
+"Дозировка катализатора, категория",1.3077829266805294

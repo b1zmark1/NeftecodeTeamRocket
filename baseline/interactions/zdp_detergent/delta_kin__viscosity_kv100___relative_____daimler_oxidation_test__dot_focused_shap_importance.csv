@@ -1,0 +1,15 @@
+feature,mean_abs_shap
+"Температура испытания | ASTM D445 Daimler Oxidation Test (DOT), °C",45.553934909836954
+"Время испытания | - Daimler Oxidation Test (DOT), ч",23.702589983819472
+"Количество биотоплива | - Daimler Oxidation Test (DOT), % масс",20.097152999940377
+zdp_detergent_interaction,9.737994561037185
+zdp_share,7.335718398547215
+detergent_share,6.64979941682896
+weighted_zdp_phosphorus,6.210996460920674
+detergent_weighted_tbn,5.878016317889345
+zdp_tbn_interaction,5.499315622925791
+zdp_ca_interaction,5.364224474938358
+weighted_zdp_zinc,5.296637359527968
+detergent_weighted_ca,4.544448778391203
+weighted_zdp_sulfur,3.421971283075247
+"Дозировка катализатора, категория",0.40663005597801943

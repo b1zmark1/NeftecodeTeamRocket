@@ -1,0 +1,86 @@
+{
+  "Delta Kin. Viscosity KV100 - relative | - Daimler Oxidation Test (DOT), %": [
+    {
+      "feature": "Температура испытания | ASTM D445 Daimler Oxidation Test (DOT), °C",
+      "mean_abs_shap": 45.553934909836954
+    },
+    {
+      "feature": "Время испытания | - Daimler Oxidation Test (DOT), ч",
+      "mean_abs_shap": 23.702589983819472
+    },
+    {
+      "feature": "Количество биотоплива | - Daimler Oxidation Test (DOT), % масс",
+      "mean_abs_shap": 20.097152999940377
+    },
+    {
+      "feature": "zdp_detergent_interaction",
+      "mean_abs_shap": 9.737994561037185
+    },
+    {
+      "feature": "zdp_share",
+      "mean_abs_shap": 7.335718398547215
+    },
+    {
+      "feature": "detergent_share",
+      "mean_abs_shap": 6.64979941682896
+    },
+    {
+      "feature": "weighted_zdp_phosphorus",
+      "mean_abs_shap": 6.210996460920674
+    },
+    {
+      "feature": "detergent_weighted_tbn",
+      "mean_abs_shap": 5.878016317889345
+    },
+    {
+      "feature": "zdp_tbn_interaction",
+      "mean_abs_shap": 5.499315622925791
+    },
+    {
+      "feature": "zdp_ca_interaction",
+      "mean_abs_shap": 5.364224474938358
+    }
+  ],
+  "Oxidation EOT | DIN 51453 Daimler Oxidation Test (DOT), A/cm": [
+    {
+      "feature": "detergent_weighted_tbn",
+      "mean_abs_shap": 6.444388688878365
+    },
+    {
+      "feature": "Температура испытания | ASTM D445 Daimler Oxidation Test (DOT), °C",
+      "mean_abs_shap": 6.257112522334144
+    },
+    {
+      "feature": "Количество биотоплива | - Daimler Oxidation Test (DOT), % масс",
+      "mean_abs_shap": 4.268215921722994
+    },
+    {
+      "feature": "detergent_share",
+      "mean_abs_shap": 3.543977257859134
+    },
+    {
+      "feature": "zdp_ca_interaction",
+      "mean_abs_shap": 3.3207649525420098
+    },
+    {
+      "feature": "zdp_tbn_interaction",
+      "mean_abs_shap": 2.4384575382183677
+    },
+    {
+      "feature": "weighted_zdp_sulfur",
+      "mean_abs_shap": 2.43142004700917
+    },
+    {
+      "feature": "Время испытания | - Daimler Oxidation Test (DOT), ч",
+      "mean_abs_shap": 2.429630442765366
+    },
+    {
+      "feature": "zdp_detergent_interaction",
+      "mean_abs_shap": 2.4163049427042105
+    },
+    {
+      "feature": "weighted_zdp_zinc",
+      "mean_abs_shap": 2.2269221181952004
+    }
+  ]
+}

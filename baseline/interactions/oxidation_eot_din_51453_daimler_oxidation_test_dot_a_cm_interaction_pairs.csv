@@ -1,0 +1,5 @@
+left_feature,left_feature_display_name,right_feature,right_feature_display_name,proxy_strength
+scenario__температура_испытания_astm_d445_daimler_oxidation_test_dot_c,Условие сценария: температура_испытания_astm_d445_daimler_oxidation_test_dot_c,scenario__количество_биотоплива_daimler_oxidation_test_dot_масс,Условие сценария: количество_биотоплива_daimler_oxidation_test_dot_масс,0.6120201109903635
+component_share__базовое_масло_1,Доля компонента: базовое_масло_1,component_share__детергент_1,Доля компонента: детергент_1,0.05355373292728802
+prop_037__max,"Массовая доля цинка, ASTM D6481 [max]",prop_035__max,"Массовая доля фосфора, ASTM D6481 [max]",-0.10176554203732946
+prop_042__wmean,"Плотность при 15°С, ASTM D4052 [weighted_mean]",prop_019__coverage,"Индекс вязкости, ГОСТ 25371 [coverage]",-0.02189190605934291

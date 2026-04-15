@@ -1,0 +1,86 @@
+{
+  "Delta Kin. Viscosity KV100 - relative | - Daimler Oxidation Test (DOT), %": [
+    {
+      "feature": "Температура испытания | ASTM D445 Daimler Oxidation Test (DOT), °C",
+      "mean_abs_shap": 47.70044342941801
+    },
+    {
+      "feature": "Время испытания | - Daimler Oxidation Test (DOT), ч",
+      "mean_abs_shap": 25.722600955842847
+    },
+    {
+      "feature": "Количество биотоплива | - Daimler Oxidation Test (DOT), % масс",
+      "mean_abs_shap": 19.611736541849293
+    },
+    {
+      "feature": "amine_ao_share",
+      "mean_abs_shap": 12.13907894095554
+    },
+    {
+      "feature": "weighted_amine_n",
+      "mean_abs_shap": 10.140067569949753
+    },
+    {
+      "feature": "moly_share",
+      "mean_abs_shap": 7.730006587926245
+    },
+    {
+      "feature": "moly_amine_interaction",
+      "mean_abs_shap": 7.448664400521516
+    },
+    {
+      "feature": "weighted_mo",
+      "mean_abs_shap": 7.110677040096904
+    },
+    {
+      "feature": "moly_n_interaction",
+      "mean_abs_shap": 6.043954002238593
+    },
+    {
+      "feature": "Дозировка катализатора, категория",
+      "mean_abs_shap": 0.6725325004842275
+    }
+  ],
+  "Oxidation EOT | DIN 51453 Daimler Oxidation Test (DOT), A/cm": [
+    {
+      "feature": "Температура испытания | ASTM D445 Daimler Oxidation Test (DOT), °C",
+      "mean_abs_shap": 5.76016536239443
+    },
+    {
+      "feature": "weighted_amine_n",
+      "mean_abs_shap": 4.782236227914182
+    },
+    {
+      "feature": "Количество биотоплива | - Daimler Oxidation Test (DOT), % масс",
+      "mean_abs_shap": 4.674997918948769
+    },
+    {
+      "feature": "amine_ao_share",
+      "mean_abs_shap": 4.177483724073468
+    },
+    {
+      "feature": "weighted_mo",
+      "mean_abs_shap": 3.7511605459346544
+    },
+    {
+      "feature": "moly_share",
+      "mean_abs_shap": 3.580798632367015
+    },
+    {
+      "feature": "Время испытания | - Daimler Oxidation Test (DOT), ч",
+      "mean_abs_shap": 2.5004797418490123
+    },
+    {
+      "feature": "moly_amine_interaction",
+      "mean_abs_shap": 1.9024148883537104
+    },
+    {
+      "feature": "Дозировка катализатора, категория",
+      "mean_abs_shap": 1.436087886251609
+    },
+    {
+      "feature": "moly_n_interaction",
+      "mean_abs_shap": 1.3960594812499854
+    }
+  ]
+}

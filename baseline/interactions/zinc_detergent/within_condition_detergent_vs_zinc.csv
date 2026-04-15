@@ -1,0 +1,6 @@
+"Температура испытания | ASTM D445 Daimler Oxidation Test (DOT), °C","Время испытания | - Daimler Oxidation Test (DOT), ч","Количество биотоплива | - Daimler Oxidation Test (DOT), % масс","Дозировка катализатора, категория",n_det_only,n_det_plus_zinc,delta_kin__viscosity_kv100___relative_____daimler_oxidation_test__dot_det_only,delta_kin__viscosity_kv100___relative_____daimler_oxidation_test__dot_det_plus_zinc,delta_kin__viscosity_kv100___relative_____daimler_oxidation_test__dot_diff,oxidation_eot___din_51453_daimler_oxidation_test__dot___a_cm_det_only,oxidation_eot___din_51453_daimler_oxidation_test__dot___a_cm_det_plus_zinc,oxidation_eot___din_51453_daimler_oxidation_test__dot___a_cm_diff
+150,168,7,1,1,11,157.99,279.3354545454546,121.34545454545457,105.26,72.57727272727273,-32.68272727272728
+150,216,7,1,1,11,241.52,486.5890909090909,245.06909090909087,126.73,86.91636363636363,-39.81363636363638
+150,216,7,2,1,1,141.4,29.31,-112.09,50.69,75.09,24.400000000000006
+160,168,0,1,29,83,-11.071724137931035,-0.5908433734939762,10.480880764437059,35.579655172413794,55.04807228915662,19.468417116742827
+160,168,5,2,2,4,51.25,15.439999999999998,-35.81,44.849999999999994,113.15499999999999,68.30499999999999
