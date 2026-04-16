@@ -1,0 +1,3 @@
+target_name,regime,model_name,rmse,mae,r2
+oxidation,dominant_base_oil,oxidation_backbone_ridge,24.84230583440302,18.918689461133102,0.523889598032056
+oxidation,dominant_base_oil,oxidation_direct_addon_ridge__ao_core_narrow,25.147594820078986,19.105653459336356,0.5121157813005581

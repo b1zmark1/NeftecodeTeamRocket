@@ -1,0 +1,100 @@
+continuously regenerating trap (CRT), which shortened the
+usual DPF regeneration interval. The trucks
+
+‘The vehicles were equipped with sensors to monitor certain
+On average, the regeneration
+
+miles rapidly, as they were driven on a specified route
+between Grand Rapids, MI and Dearborn, MI in a light load
+cycle that included roughly 80% highway and 20% city
+driving. Motorcraft SAE 15W-40 diesel engine oil was used,
+which meets the current API CI-4 specification.
+
+The ULSD and B20 trials were run in series for this
+experiment, first with ULSD and then with B20. A total of 42
+oil samples were collected throughout seven oil drain
+intervals from the fleet during the ULSD trial, which was run
+in August. The odometer reading of the vehicle fleet ranged
+from 74,000 to 87,000 miles at the start of the ULSD trial,
+thus the vehicles were well broken-in. Vehicle #142 was not
+available during the ULSD trial. Subsequently, 49 oil samples
+were collected throughout six oil drain intervals from the
+same fleet while it was running on B20 fuel. The odometer
+reading of the vehicle fleet ranged from 99,000 to 126,000
+miles at the start of the B20 trial, which was run in
+‘November. B20 fuel was obtained from the Ann Arbor-Saline
+Road Meijer fuel station in Ann Arbor, MI. Oil samples were
+collected at regular intervals throughout the duration of an oil
+change interval. The volume of each oil sample was four
+ounces, which was small enough to ensure that the engine did
+not have to be topped off with any additional fresh oil. The
+normal oil drain interval for this fleet was 7,500 miles. Four
+of the thirteen oil change intervals in this study were
+extended to ~12,000 miles, in which special care was taken
+to drain a portion of the oil after 7,500 miles to prevent the
+sump from overflowing from excessive fuel dilution.
+Vehicles #144 and #145 had an extended oil drain interval
+with ULSD, and Vehicles #140 and #143 had an extended
+drain interval with B20. The bulk engine oil temperature
+during vehicle operation generally ranged from 85-95 °C
+igure 1) and did not exceed 100 °C. Slightly lower bulk oil
+‘temperature with B20 is most likely due to the lower ambient
+‘temperature during the B20 trial in November.
+
+250
+
+ULSD (Aug)
+§B20 (Nov)
+
+200
+
+4
+Z
+
+60-65
+5-70,
+
+“bulk Oil Temperature (°C)
+Figure 1. Histogram of bulk oil temperature for Vehicle
+#143.
+
+interval was 50% longer with B20, compared to ULSD
+igure 2). The fact that regenerations were not required as
+frequently with B20 implies that the pores of the DPF were
+not plugged as rapidly with the use of B20. The vehicles were
+calibrated to regenerate the DPF when either the pressure
+reached a certain level, or after a certain number of miles
+travelled. With the use of B20, the mileage backstop usually
+triggered regenerations. However, this difference was
+partially offset by the fact that a greater mass of fuel was
+post-injected with B20 than with ULSD during each DPF
+regeneration event (Figure 3). The average mass of fuel
+consumed during a DPF regeneration event was 1,900 g and
+2,500 g for ULSD and B20, respectively (including both fuel
+for running the engine and regenerating the DPF over an
+interval of several minutes). This was due to several factors
+including cooler ambient temperatures during the B20 trial,
+lower energy density of B20, engine speed and load operation
+shift due to energy density change, and a longer regeneration
+event duration for the mileage backstop. Both the DPF
+regeneration interval and the mass of fuel injected per
+regeneration affect the fuel dilution rate. If the B20 trial was
+run at the same ambient temperature as the ULSD trial, it is
+likely that the mass of B20 injected per regeneration would
+decrease, and thus the B20 dilution rate would also decrease.
+
+au
+
+SD B20
+
+140
+1
+142
+
+143}
+44
+45
+
+Figure 2. Average DPF regeneration interval for each
+vehicle.
+

@@ -1,0 +1,139 @@
+US 2025/0136889 Al
+
+hydrocarbons made from synthesis gas (“syn gas”) contain-
+ing H2 and CO using a Fischer-Tropsch catalyst. These
+hydrocarbons typically require further processing in order to
+be useful as a base oil. For example, they may, by methods
+known in the art, be hydroisomerized; hydrocracked and
+‘ized; dewaxed; or and dew-
+axed. For further information on useful GTL base oils and
+blends thereof, please see U.S. Pat. No. 10,913,916 (col 4,
+In 62 to col 5, In 60) and U.S. Pat. No. 10,781,397 (col 14,
+In 54 to col 15, In 5, and col 16, In 44 to col 17, In 55).
+[0373] In particular, oils from renewable sources, i...
+based in part on carbon and energy captured from the
+environment, such as biological sources (biomass), are use-
+ful herein. The renewable source may be (or is derived from)
+vegetable oil (such as palm oil, coconut oil, rapeseed oil,
+soybean oil, jatropha oil, corn oil), microbial oil (such as
+algae oil), animal fats (such as cooking oil, animal fat,
+and/or fish fat). Renewable oils may be combined with
+refined oils (¢.g.. oils derived from petroleum, coal or other
+non-renewable, ic. not replaceable within 100 years,
+resources) for use herein. A useful base oil combination may
+comprise a refined Group III oil blended with one or more
+
+oils derived from renewable materials, such as a mixture of
+
+SynNova™ 4 and Nexbase™3043. A useful base oil con-
+taining renewable material is Nexbase™ 4Plus (KV100~4
+cSt).
+
+[0374] Renewable oil, also referred to as renewable base
+oil, refers to oil produced from renewable sources, i.e., based
+in part on carbon and/or energy captured from the environ-
+ment, such as from biological resources (¢.g., biomass)
+Renewable oils may have greater than 90% saturates, sulfur
+content of less than 0.3 mass %, and viscosity index prop-
+erties falling in API Groups II and or III, and thus for
+purposes of this invention and claims renewable oils can be
+Group II or Group III base oils (API EOLCS 1509 definition
+(American Petroleum Institute Publication 1509, see section
+E.1.3, 22th edition, October 2023, www.APL.org).
+
+[0375] The various base oils are often categorized as
+Group I, II, III, IV, or V according to the API EOLCS 1509
+definition (American Petroleum Institute Publication 1509,
+see section E.1.3, 19th edition, January 2021, www.
+org). Generally speaking, Group I base stocks have a vi
+cosity index of between about 80 to 120 and contain greater
+than about 0.03% sulfur and/or less than about 90% satu-
+rates, Group II base stocks have a viscosity index of between
+about 80 to 120 and contain less than or equal to about
+0.03% sulfur and greater than or equal to about 90%
+saturates. Group III base stocks have a viscosity index
+greater than about 120 and contain less than or equal to
+about 0.03% sulfur and greater than about 90% saturates.
+Group IV base stocks includes polyalphaolefins (PAO)
+Group V base stocks include base stocks not included in
+Groups I-IV. (Viscosity index measured by ASTM D 2270,
+saturates is measured by ASTM D2007, and sulfur is mea-
+sured by ASTM DS5185, D2622, ASTM D4294, ASTM.
+14927, and ASTM D3120).
+
+[0376] Base oils for use in the formulated lubricating
+compositions useful in the present disclosure are any one,
+two, three, or more of the variety of oils described herein. In
+desirable embodiments, base oils for use in the formulated
+lubricating compositions useful in the present disclosure are
+those described as API Group I (including Group I+), Group
+II (including Group I+), Group III (including Group III+),
+Group IV, and Group V oils and mixtures thereof, preferably
+
+May 1, 2025
+
+API Group II, Group III, Group IV, and Group V oils and
+mixtures thereof. The base oil may be a Group III, Group
+IlI+, IV, and Group V base oils due to their exceptional
+volatility, stability, viscometric, and cleanliness features.
+Minor quantities of Group I basestock, such as the amount
+used to dilute additives for blending into formulated lube oil
+products, can be tolerated but are typically kept to a mini-
+mum, e.g., amounts only associated with their use as diluent/
+carrier oil for additives used on an “as-received” basis. In
+regard to the Group II stocks, it is often more useful that the
+Group II base stock be in the higher quality range associated
+with that stock, i.e., a Group II stock having a viscosity
+index in the range from 100 to 120.
+0377] The base oil useful herein may be selected from
+any of the synthetic, natural, or re-refined oils (such as those
+typically used as crankcase lubricating oils for spark-ignited
+and compression-ignited engines). Mixtures of synthetic
+and/or natural and/or re-refined base oils may be used if
+desired. Multi-modal mixtures (such as bi- or tri-modal
+mixtures) of Group I, II, III, IV, and/or V base stocks may
+be used if desired.
+[0378] The base oil or base oil blend used herein conve-
+niently has a kinematic viscosity at 100° C. (KV100, as
+measured according to ASTM D445-19a, and reported in
+units of centistoke (cSt) or it its equivalent, mm2/s), of about
+2 to about 40 cSt, alternately of 3 to 30 cSt, alternately 4 to
+20 cSt at 100° C., alternately 5 to 10 cSt, alternately the base
+oil or base oil blend may have a kinematic viscosity at 100°
+C. of 2 to 20 cSt, of 2.5 to 2 cSt, and preferably of about 2.5
+St to about 9 cSt.
+[0379] The base oil or base oil blend preferably has a
+saturate content of at least 65 mass %, more preferably at
+least 75 mass %, such as at least 85 mass %, such as at least
+than 90 mass % as determined by ASTM D2007.
+[0380] Preferably, the base oil or base oil blend will have
+a sulfur content of less than 1 mass %, preferably less than
+0.6 mass %, most preferably less than 0.4 mass %, such as
+than 0.3 mass %, based on the total mass of the
+lubricating composition, as measured by ASTM DS185.
+[0381] In embodiments, the volatility of the base oil or
+base oil blend, as measured by the Noack test (ASTM
+15800, procedure B), is less than or equal to 30 mass %,
+such as less than or equal to 25 mass %, such as less than or
+equal to 20 mass %, such as less than or equal to 16 mass
+%, such as less than or equal to 12 mass %, such as less than
+or equal to 10 mass %, based on the total mass of the
+lubricating composition.
+[0382] In embodiments, the viscosity index (V1) of the
+base oil is at least 95, preferably at least 110, more prefer-
+ably at least 120, even more preferably at least 125, most
+preferably from about 130 to 240, in particular from about
+105 to 140 (as determined by ASTM D2270).
+[0383] The base oil may be provided in a major amount,
+in combination with a minor amount of one or more additive
+as described a lubri-
+cant. This preparation may be accomplished by adding the
+additives directly to the oil or by adding the one or more
+additives in the form of a concentrate thereof to disperse or
+dissolve the additive(s). Additives may be added to the oil by
+any method known to those skilled in the art, either before,
+at the same time as, or after addition of other additives.
+[0384] The base oil may be provided in a minor amount,
+in combination with minor amounts of one or more additive
+'s described ‘ing an addi-
+

@@ -1,0 +1,142 @@
+US 2025/0136889 Al
+
+52
+
+[0904] Ultra- Liquid Ch
+(UPLC) with UV and mass spectrometer detectors using the
+conditions detailed in Table A. The mass spectrometer
+chromatograms were used ‘to confirm identity of the mono-,
+
+May 1, 2025
+
+from AISL52100 grade steel and was uncoated, with surface
+roughness<0.02 jumRa and surface hardness=720-780 Hv.
+The contact between the ball and the disc was thus between
+two ferrous (steel) surfaces. The test conditions were: Oil
+
+di and ti-C, alkyl The UV
+chromatograms were used to establish the relative % of each
+Co-substi by the area under
+the curve for each constituent.
+
+[0905] Table A. UPLC method to analyse nonylated
+diphenylamines.
+
+100° C., Dise frequency 10 Hz, Ball speed 350
+mnvs, Stroke length 4 mm, Applied load 50 N, Contact
+pressure 0.74 GPa, Test duration 45 minutes. The wear scars
+formed on the lower disc specimens were analyzed using a
+Zemetrics ZeScope 3D optical profilometer using non-con-
+tact interferometric focal scanning. This permitted a mea-
+
+Ultra-performance
+liquid chromatograph
+Sample concentration 0.4 mg/mL in acetonitrile
+Injection volume 1mL
+
+Flow rate 0.50 mL/min
+
+‘Column description
+
+Agilent Infinite 11 1260
+
+% carbon load, Particle
+Water # 0.1% (wokimevolume) fom aid
+Acetontile + 0.1% (volumevolume) formic acid
+M% phase B for 1 min
+
+Mobile phase A
+Mobile phase B
+Gradient elution method
+
+We phase A, 100% phase B for 75
+
+tage
+UV detector At 1260 Infinity 1 Diode Array detector WR
+Detection wave length
+
+288
+Mass spectrometer ‘agilent MSD iQ
+
+InfsityLab Poroshell 120: Dimensions - $0 x 2:1 mm,
+
+60-09% phase A, D100 Blam B over 1.5 mine
+
+hase A, 100-40% phase B over 05 mins
+
+[0906] In event of conflict between Method 1 GC-FID and
+Method 2: UPLC, Method 2 UPLC shall control.
+
+[0907] Sequence IIH test for control of viscosity and
+piston deposits was carried out in a 2012 Chrysler Pentastar
+naturally aspirated 4 stroke port injection gasoline engine
+according test procedure ASTM D8111. The Sequence ITH
+test consists of 90 hours of engine operation at 3900 rpm
+which is broken up into 4x20-hour segments and 1x10-hour
+segment. Oil samples are drawn from the engine at the end
+of each segment, as well as after a 10-minute operation
+check. Oil samples taken at 10 min, 20 hours, 40 hours, 60
+hours, 80 hours, and 90 hours. Oil samples are measured for
+KV40 and KV100, ICP (Inductively Coupled Plasma
+Atomic Emission Spectrometry, ICP-AES, ASTM D5185),
+DIR oxidation and nitration (ASTM E168), total acid num-
+ber (TAN, ASTM D664) and total base number (TBN,
+ASTM D2896). The performance of the oil is determined by
+the average weighted piston deposits (merits, ASTM D8111)
+and the percentage kinematic viscosity change at 40° C. of
+the oil at the end of test relative to the start of test. The
+Sequence IIIH test is an industry standard test used to
+evaluate protection against oi thickening and piston depos-
+its by internal engin
+
+MHT4-TEOST
+
+[0908] Moderately high temperature deposits (MHT4-
+TEOST) was performed according to ASTM D 7097.
+
+MTMLR Test
+
+[0909] Fach oil was tested using a Mini-Traction Machine
+with reciprocating function (MTM-R) available from PCS
+Instruments, London, UK. This machine employs an inch
+(19 mm) diameter ball as an upper specimen which is
+reciprocated under an applied load against a lower specimen
+in the form of a disc. The ball was made from AIS152100
+grade steel and was uncoated, with surface roughness<0.02
+umRa and surface hardness-800-920 Hy. The disc was made
+
+surement of the amount of wear by determining the material
+Jost from the disc during the test. This. was reported as a wear
+scar volume (WSV) in units of um®. Additionally, the
+co-efficient of friction of the contact was recorded at the end
+of each test.
+
+MIM Test
+
+[0910] Each oil was tested using a Mini-Traction Machine
+(MTM) available from PCS Instruments, London, UK. This
+machine employs an inch (19 mm) diameter ball as an tipper
+specimen which is under an applied load against a lower
+specimen in the form of a disc. The ball was made from
+AJSIS2100 grade steel and was uncoated, with surface
+roughness<0.02 jumRa and surface hardness=800-920 Hy.
+The disc was made from AISI52100 grade steel and was
+uncoated, with surface roughness<0.02 1mRa and surface
+hardness=720-780 Hv. The contact between the ball and the
+disc was thus between two ferrous (steel) surfaces. The test
+conditions were: Oil temperatures of 60° C., 80° C., 100° C.
+and 135° C., Ball speed ranges from 2 m/s to 0.2 m/s,
+Applied load 30 N, Mean contact pressure 0.62 GPa, Test
+duration 70 minutes. Additionally, the mean Stribeck co-
+efficient of friction of the contact at 135° C. was recorded at
+the end of each test.
+
+High-Frequency Reciprocating Rig (HFRR)
+
+[0911] HFRR was measured according to (ISO 12156 (2"4
+Edition, 2018) as follows. An HERR device commercially
+available from PCS Instruments, London, UK(AUTOHFR
+software, v2.0 PCS4 user manual) was used. This device
+employs a ~6 mm diameter ball as an upper specimen which
+is reciprocated under an applied load against a lower speci-
+men in the form of a ~10 mm diameterx~3 mm thick disc.

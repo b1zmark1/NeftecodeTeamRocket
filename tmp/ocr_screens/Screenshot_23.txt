@@ -1,0 +1,71 @@
+80
+
+60
+
+40
+
+20
+
+Corrected FTIR Oxidat
+
+10/31/08
+Limos,
+
+¥ change in feedstock
+
+mix (11/12/08)
+
+1ians |
+
+los
+
+ire
+
+Sample Date
+
+Figure 13. Corrected FTIR oxidation vs. oil sample date. The biodiesel feedstock mix changed on 11/12/08.
+
+8
+= Crossover with 4 TBN- ULSD dilution
+& ULSD dilution © TBN- B20 dilution
+e 4 TAN- ULSD dilution
+Zz 4 @ TAN- B20 dilution
+z = “
+= th, eee
+° Crossover with “
+| * dilution NS
+0
+0 3,000 6,000 9,000 12,000
+Oil Age (miles)
+
+Figure 14. TAN and TBN vs. mileage.
+
+TBN depleted at a similar rate with B20 and ULSD dilution
+Figure 14). This indicates that TBN depletion is primarily a
+function of lubricant age, and not of biodiesel content. TBN
+values with B20 dilution were ~1 mg KOH/ g oil less than
+those with ULSD dilution across the entire oil interval. This,
+initial difference in TBN value is unexpected considering that
+both sets of vehicles had ~5% ULSD dilution at zero miles
+and the vehicles running on B20 did not yet contain any
+biodiesel. This may be explained by a difference in the TBN
+of residual sump oil carried over at the initial oil changes.
+After 12,000 miles, oi with B20 and ULSD dilution had
+TBN values of ~1.3 and 2.3 mg KOH) g oil, respectively.
+The TBN and TAN trend lines crossed over at ~8,600 miles
+and ~9,200 miles for B20 and ULSD dilution, respectively.
+
+Viscosity
+
+Oil viscosity decreased with increasing mileage for both fuels
+igure 15). The kinematic viscosity at 100 °C fell as low as
+6.6 cSt in vehicles running on B20, and as low as 8.4 cSt in
+vehicles running on ULSD. The oil generally fell out of its
+SAE viscosity grade after only ~1,000 miles. The viscosity
+grade dropped from SAE 15W-40 for fresh oil to xW-20 for
+highly diluted oil. The lower oil viscosity of vehicles running
+on B20 is explained by the higher fuel dilution levels as,
+compared to vehicles running on ULSD (Figure 16). A rapid
+increase in viscosity at high mileage, which is a sign of badly
+degraded oil, was not observed with either type of fuel
+dilution.

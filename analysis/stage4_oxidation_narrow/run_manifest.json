@@ -1,0 +1,83 @@
+{
+  "main_validator": "recipe_cluster",
+  "fixed_backbone": {
+    "dataset": "compact_v3_full",
+    "model": "ridge",
+    "config": "alpha_30.0"
+  },
+  "blocks": {
+    "ao_core_narrow": [
+      "synergy_ao_phenol_x_diphenylamine_active_no",
+      "ao_k_avg_weighted_active_no",
+      "ao_ionization_min",
+      "ao_homo_max",
+      "ao_dpa_phenol_ratio",
+      "ao_dpa_phenol_min",
+      "ao_dpa_phenol_imbalance",
+      "ao_ratio_x_baseoil_share",
+      "ao_pair_x_biofuel",
+      "active_no_coverage_share"
+    ],
+    "ao_mo_narrow": [
+      "synergy_ao_diphenylamine_active_no_x_mo",
+      "ao_mo_x_severity",
+      "ao_mo_x_biofuel",
+      "mo_coverage_share"
+    ],
+    "zddp_narrow": [
+      "zddp_sulfur_calcium_interaction",
+      "zddp_sulfur_camg_interaction",
+      "zddp_zinc_tbn_interaction",
+      "zddp_zinc_boron_log1p",
+      "zddp_calcium_coverage_share"
+    ],
+    "ao_family_narrow": [
+      "synergy_ao_phenol_x_diphenylamine_active_no",
+      "synergy_ao_diphenylamine_active_no_x_mo",
+      "ao_k_avg_weighted_active_no",
+      "ao_ionization_min",
+      "ao_homo_max",
+      "ao_dpa_phenol_ratio",
+      "ao_dpa_phenol_min",
+      "ao_dpa_phenol_imbalance",
+      "ao_ratio_x_baseoil_share",
+      "ao_pair_x_biofuel",
+      "ao_mo_x_severity",
+      "ao_mo_x_biofuel",
+      "active_no_coverage_share",
+      "mo_coverage_share"
+    ],
+    "oxidation_v4_narrow": [
+      "synergy_ao_phenol_x_diphenylamine_active_no",
+      "synergy_ao_diphenylamine_active_no_x_mo",
+      "ao_k_avg_weighted_active_no",
+      "ao_ionization_min",
+      "ao_homo_max",
+      "ao_dpa_phenol_ratio",
+      "ao_dpa_phenol_min",
+      "ao_dpa_phenol_imbalance",
+      "ao_ratio_x_baseoil_share",
+      "ao_pair_x_biofuel",
+      "ao_mo_x_severity",
+      "ao_mo_x_biofuel",
+      "zddp_sulfur_calcium_interaction",
+      "zddp_zinc_tbn_interaction",
+      "zddp_zinc_boron_log1p"
+    ]
+  },
+  "residual_blocks": [
+    "ao_core_narrow",
+    "ao_mo_narrow",
+    "ao_family_narrow",
+    "zddp_narrow",
+    "oxidation_v4_narrow"
+  ],
+  "outputs": {
+    "metrics": "E:\\Projects\\Neftecode\\analysis\\stage4_oxidation_narrow\\stage4_fold_and_summary_metrics.csv",
+    "summary": "E:\\Projects\\Neftecode\\analysis\\stage4_oxidation_narrow\\stage4_summary.csv",
+    "stability": "E:\\Projects\\Neftecode\\analysis\\stage4_oxidation_narrow\\stage4_stability.csv",
+    "oof": "E:\\Projects\\Neftecode\\analysis\\stage4_oxidation_narrow\\stage4_oof_predictions.csv",
+    "chemistry_v4": "E:\\Projects\\Neftecode\\analysis\\stage4_oxidation_narrow\\oxidation_chemistry_v4_narrow.csv",
+    "coefficients": "E:\\Projects\\Neftecode\\analysis\\stage4_oxidation_narrow\\narrow_block_coefficients.csv"
+  }
+}

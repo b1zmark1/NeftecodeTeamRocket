@@ -1,0 +1,55 @@
+{
+  "main_validator": "recipe_cluster",
+  "backbone_reference": {
+    "dataset": "compact_v3_full",
+    "model": "ridge",
+    "config": "alpha_30.0"
+  },
+  "ultra_sets": {
+    "chem5_core": [
+      "ao_pair_x_biofuel",
+      "ao_dpa_phenol_imbalance",
+      "synergy_ao_phenol_x_diphenylamine_active_no",
+      "ao_homo_max",
+      "ao_ionization_min"
+    ],
+    "chem7_core_mo": [
+      "ao_pair_x_biofuel",
+      "ao_dpa_phenol_imbalance",
+      "synergy_ao_phenol_x_diphenylamine_active_no",
+      "ao_homo_max",
+      "ao_ionization_min",
+      "ao_mo_x_biofuel",
+      "synergy_ao_diphenylamine_active_no_x_mo"
+    ],
+    "chem8_core_mo_zddp": [
+      "ao_pair_x_biofuel",
+      "ao_dpa_phenol_imbalance",
+      "synergy_ao_phenol_x_diphenylamine_active_no",
+      "ao_homo_max",
+      "ao_ionization_min",
+      "ao_mo_x_biofuel",
+      "synergy_ao_diphenylamine_active_no_x_mo",
+      "zddp_zinc_tbn_interaction"
+    ],
+    "chem10_balanced": [
+      "ao_pair_x_biofuel",
+      "ao_dpa_phenol_imbalance",
+      "synergy_ao_phenol_x_diphenylamine_active_no",
+      "ao_homo_max",
+      "ao_ionization_min",
+      "ao_mo_x_biofuel",
+      "synergy_ao_diphenylamine_active_no_x_mo",
+      "zddp_zinc_tbn_interaction",
+      "ao_dpa_phenol_min",
+      "ao_dpa_phenol_ratio"
+    ]
+  },
+  "outputs": {
+    "metrics": "E:\\Projects\\Neftecode\\analysis\\stage4b_oxidation_ultra_compact\\ultra_compact_fold_and_summary_metrics.csv",
+    "summary": "E:\\Projects\\Neftecode\\analysis\\stage4b_oxidation_ultra_compact\\ultra_compact_summary.csv",
+    "stability": "E:\\Projects\\Neftecode\\analysis\\stage4b_oxidation_ultra_compact\\ultra_compact_stability.csv",
+    "oof": "E:\\Projects\\Neftecode\\analysis\\stage4b_oxidation_ultra_compact\\ultra_compact_oof_predictions.csv",
+    "dominant_base_oil_sanity": "E:\\Projects\\Neftecode\\analysis\\stage4b_oxidation_ultra_compact\\dominant_base_oil_sanity.csv"
+  }
+}

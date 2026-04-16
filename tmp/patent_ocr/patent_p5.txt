@@ -1,0 +1,146 @@
+US 2025/0136889 Al
+
+LUBRICANT COMPOSITIONS CONTAIND
+HIGH C9 DISUBSTITUTED
+DIPHENYLAMINE ANTIOXIDANT
+CONTENT
+
+PRIORITY,
+
+[0001] This application claims priority to and the benefit
+of U.S. patent application Ser. No. 63/593,559, filed Oct. 27,
+2023
+
+FIELD OF THE INVENTION
+
+[0002] This disclosure relates to the use of di(alkyl-sub-
+stituted phenyl)amine antioxidants as additives in lubricant
+compositions having good oxidation properties in engine
+crankcase applications, especially in compression ignited
+engine and or spark ignited applications, where certain
+mono-C,-alkyl substituted diphenyl amine are
+
+May 1, 2025
+
+0008] EP4118170A1 discloses lubricating oil composi-
+tions with _ improved oxidative performance comprising
+alkylated y and. deter-
+gents.
+
+[0009] EP4118171A1 discloses lubricating oil composi-
+tions with improved oxidative performance comprising
+alkylated diphenylamine antioxidant and sulfonate deter-
+
+gents.
+0010] U.S. Pat. No. 9,315,760 discloses lubricant com-
+positions with improved antioxidant capability containing
+an additive composition containing a metal free sulfur-
+containing compound (such as ashless dithiocarbamates,
+such as methylenebis(dibutyldithiocarbamate), and sulfur-
+ized fatty acids), an aromatic amine, and a hindered amine.
+(See examples for use of Vanlube™ VL 7723, hindered
+amine, diaryl amine and dithiocarbamate or sulfated fatty
+acid methyl ester.)
+
+(0011) US. Pat. No. 11,499,117 discloses lubricating oil
+
+absent or present at less than 0.10 mass %.
+BACKGROUND OF THE INVENTION,
+
+[0003] The present invention relates to lubricating oil
+compositions which exhibit improved oxidation character-
+istics. More specifically, the present invention relates to
+automotive crankcase lubricating oil compositions for use in
+gasoline (spark-ignited) and diesel ignited)
+internal combustion engines, such compositions "being
+referred to as crankcase lubricants; and to the use of addi-
+tives in such lubricating oil compositions for reducing
+oxidation in use of such engines and/or improving the
+viscometric performance of an engine lubricated with the
+lubricating oil composition.
+
+[0004] Oxidation is a concem for in-service lubricating
+oils as it can cause thickening of the oil, sludge, varnish, acid
+number increase and corrosion. These outcomes are gener-
+ally detrimental to proper operation of automotive engines
+and limit useful life of the lubricating oil. With continually
+evolving engine designs, operating conditions and oil per-
+formance expectations, oxidation continues to be an impor-
+tant ongoing technical challenge.
+
+[0005] One way to slow down oxidation in engines is to
+introduce to oils. anti-
+oxidants can also extend drain intervals, maintain viscosity,
+reduce deposit, reduce foam formation, protect against cor-
+rosion as well as protect lubricating oil against high tem-
+perature.
+
+[0006] There are many antioxidants that have varying
+degrees of effectiveness. Commercial lubricants are usually
+formulated with one or more antioxidants to protect the fluid
+under a wide range of conditions (e.g.. temperature, time, air
+mixtures, pressure, etc.).
+
+a base oil and one or more addi-
+tives, wherein the composition has: a sulfated ash content of
+0.4 to 1.0 mass %; a total base number of 4.0 to 12 mg
+KOH/g; a total aromatics content contributed by the base oil
+in the range from 1 mass % to 30 mass %; and a sulfur
+content contributed by the base oil of 0.4 mass % or less; and
+where the base oil comprises a blend of (i) a first base oil
+which is a mineral base oil selected from an API Group I
+mineral base oil and an API Group II mineral base oil, and
+mixtures thereof, and (ii) a second base oil selected from an
+API Group II base oil and an API Group III base oil,
+preferably wherein the first base oil belongs to a different
+API group to that of the second base oil.
+
+0012] Other references of interest include: EP
+2155657B1; EP0630881; U.S. Pat. Nos. 5,449,829; 7,960,
+322; 7,145,038 B1; U.S. Pat. Nos. 8,999,903; 9,512,380;
+9,315,760; 11,518,732; WO 2020/194125; WO 2022/
+108298; WO 2023/133090A1; and WO2024/206388.
+[0013] It has now surprisingly been found by the present
+inventors that purified compositions of di(nonylpheny!)am-
+ine (such as di(para-nonylphenyl)amine can be used in a
+Jubricant composition, such as in internal combustion
+engines, to provide improved viscometric properties, such as
+reduced kinematic viscosity growth.
+
+SUMMARY OF THE INVENTION
+
+[0014] This disclosure relates to lubricating oil additives
+that maintain or improve oxidation performance and
+improve kinematic viscosity growth in lubricating oils.
+
+{0015] This invention further relates to compositions
+(such as booster packs, concentrates, lubricating oil compo-
+sitions and the like) comprising: diphenyl amine antioxidant
+comprising 1) di(C,-alkyl substituted diphenyl amine (such
+as 90 mass % or more of di(C,-alkyl substituted diphenyl)
+amine) and 2) from 0 to less than 10 mass % of mono-C,-
+
+[0007] _Isomer mixtures of alkylated (such
+as mixture of di(nonyl-phenyl)amine and (nonyl-pheny!)
+(phenyl)amine), such as Irganox™ L67, are commonly used
+as antioxidants in organic fluids such as engine oils, gear
+oils, hydraulic fluids, compressor oils, turbine oils, and
+grease. However, these antioxidant isomer blends contribute
+to viscometric problems (such as kinematic viscosity
+increase over time), and thus there is a desire to improve the
+kinematic viscosity increase over time of di(alkylphenyl)
+amines in organic fluids such as engine oils, gear oils,
+hydraulic fluids, compressor oils, turbine oils, and grease.
+
+alkyl diphenyl amine, based upon the weight of
+the mono- and di-phenyl amines present in the composition.
+[0016] This invention further relates to a lubricating oil
+composition comprising diphenyl amine antioxidant com-
+prising: 1) di(C,-alkyl substituted diphenyl) amine and 2)
+from 0 to less than 10 mass % of mono-C,-alkyl substituted
+diphenyl amine, based upon the weight of the mono- and
+
+di-phenyl amines present in the lubricating oil composition.
+[0017] This invention further relates to a lubricating oil
+composition wherein the diphenyl amine antioxidant com-
+prising 90 mass % or more of di(C,-alkyl substituted diphe-

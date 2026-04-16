@@ -1,0 +1,148 @@
+US 2025/0136889 Al
+
+[0214] 1) about 68 mass % di-C,-alkyl diphenyl
+amine,
+
+[0215] 2) about 29 mass % of mono-C,-alkyl diphe-
+nyl amine, and
+
+[0216] 3) about 3 mass % of tri-Cg-alkyl diphenyl
+amine, based on the weight of 1), 2) and 3).
+determined by UPLC in the Experimental section],
+an
+
+[0217] b) wherein the lubricating oil comp:
+percent viscosity increase between the it
+and the KV100 at 216 hours of the C
+Oxidation Test that is at least 2% less (such as at least
+5% less, such as at least 7% less, such as at least 8%
+less, such as at least 20% less, such as at least 30% less)
+than the percent viscosity increase of Comparative
+Formulation A.
+
+[0218] In embodiments, the lubricating oil composition
+may comprise less than 0.30 mass % (such as 0.29 mass %
+or less, such as 0.28 mass % or less, such as 0.27 mass % or
+less, such as 0.26 mass % or less, such as 0.25 mass % or
+less, such as 0.24 mass % or less, such as 0.23 mass % or
+less, such as 0.22 mass % or less, such as 0.21 mass % or
+less, such as 0.20 mass % or less such as 0.19 mass % or less.
+such as 0.18 mass % or less, such as 0.17 mass % or le:
+such as 0.16 mass % or less, such as 0.15 mass % or less
+such as 0.14 mass % or less, such as 0.13 mass % or less,
+such as 0.12 mass % or less, such as 0.11 mass % or les
+such as less than 0.10 mass %, such as 0.09 mass % or les
+such as 0.08 mass % or less, such as 0.07 mass % or less.
+such as 0.06 mass % or less, such as 0.05 mass % or le:
+such as 0.04 mass % or less, such as 0,03 mass % or less,
+such as 0.02 mass % or less, such as 0.01 mass % or less,
+such as 0 mass %) of mono-C,-alkyl substituted diphenyl
+amines represented by Formula (B) (preferably phenyl ami-
+nes represented by Formula (1), where n is 1 and z is 0),
+based upon the weight of the lubricating oil composition
+[0219] In embodiments, the lubricating oil composition
+may comprise 0.1 mass % or more (or 0.2 mass % or more,
+or 0.3 mass % or more, or 0.4 mass % or more, or 0.5 mass
+% or more, or 0.6 mass % or more, or 0.7 mass % or more,
+or 0.8 mass % or more, or 0.9 mass % or more, or 1.0 mass
+% or more, or 1.5 mass % or more, or 2.0 mass % or more,
+or 3.0 mass % or more, 4.0 mass % or more) of di-Cy-alkyl
+substituted diphenyl amines represented by Formula (A),
+preferably di-C,-alkyl substituted diphenyl amines repre-
+sented by Formula (I), where n is 1 and z is 1, based upon
+the weight of the phenyl amine antioxidant composition.
+[0220] This disclosure also relates to lubricating oil com-
+positions comprising or resulting from the admixing of:
+
+10221] A) from 1 to 99 mass % (alternately 30 to 95
+mass %, alternately 50 to 90 mass %, alternately 60 to
+95 mass %, alternately 70 to 85 mass %) based upon the
+weight of the lubricating oil composition, of one or
+more base oils;
+
+[0222] B) from 0.01 to 20 mass % (in particular 0.10 to
+15 mass %, alternately, 0.15 to 10 mass %, alternately
+0.20 mass % to 5 mass %, alternately 0.25 to 2.5 mass
+%, alternately 0.5 to 1 mass %), based upon the weight
+of the lubricating oil composition, of diphenyl amine
+antioxidant comprising (or consisting essentially of, or
+consisting of):
+
+[0223] i) one or more di-C,-alkyl substituted diphe-
+nyl amine represented by Formula (III) below, where
+nis 1, w is 0, and zis 1, and
+
+May 1, 2025
+
+[0224] _ ii) from 0 to less than 0.3 mass % (such as less
+than 0.1 mass %, such as less than 0.01 mass %, such
+as less than 0.001 mass %, such as less than 0.0005
+mass %) based upon the weight of the lubricating oil
+composition, of mono-C,-alkyl substituted diphenyl
+amines represented by the Formula (II), where n is
+1, w is 0, and z is 0, and
+
+[0225] iii) from 0 to less than 0.3 mass % (such as
+less than 0.1 mass %, such as less than 0.01 mass %,
+such as less than 0.001 mass %, such as less than
+0.0005 mass %) of tri-C,-alkyl substituted diphenyl
+amines represented by the Formula (IIT), where n is
+1, w is 1, and z is 1, based upon the weight of the
+lubricating oil composition, where Formula (II]) is:
+
+ay
+Ry
+
+ae
+
+[0226] where each R* is independently a linear C,
+alkyl or branched C, alkyl group. n is 1, z is 0 or 1,
+and w is 0 or 1;
+
+[0227] C) from 0.10 to 20 mass % (in particular, 0.15 to
+10 mass %, alternately 0.20 mass % to 5 mass %,
+alternately 0.25 to 2 mass %), based upon the weight of
+the lubricating oil composition, of one or more deter-
+gents, preferably carboxylate detergents (such as
+blends of detergents);
+
+[0228] D) optionally, from 0.01 to 5 mass % (in par-
+ticular 0.1 to 4 mass %, alternately 0,25 to 3 mass %,
+alternately 0.045-0.15 mass %), based on total weight
+of the lubricating oil composition, of one or more
+friction modifiers (such as blends of friction modifiers);
+
+[0229] F) optionally, from 0.01 to 5 mass % (in par-
+ticular, 0.01 to 3 mass %, alternately 0.1 to 1.5 mass %),
+based on total weight of the lubricating oil composi-
+tion, of one or more pour point depressants (such as
+blends of pour point depressants);
+
+[0230] G) optionally, from 0.001 to 3 mass % (in
+particular, 0.01 to 2 mass %, alternately 0.1 to 1.5 mass
+%), based on total weight of the lubricating oil com-
+position, of one or more anti-foam agents (such as
+blends of anti-foam agents);
+
+[0231] H) optionally, from 0.001 to 10 mass % (in
+particular, 0.01 to 6 mass %, alternately 0.01 to 5 mass
+%, alternately 0.1 to 4 mass %, alternately 0.1 to 2 mass
+%, alternately 0.1 to 1 mass %), based on total weight
+of the lubricating oil composition, of one or more
+viscosity modifiers (such as blends of viscosity modi-
+
+ier):
+
+(Ry
+
+[0232] 1) optionally, from 0.01 to 20 mass % (in par-
+ticular, 0.1 to 12 mass %, alternately 0.1 to 8 mass %),
+based on total weight of the lubricating oil composi-
+tion, of one or more dispersants (such as blends of
+dispersants);
+
+[0233] De optionally, from 0.01 to 5 mass % (in particu
+lar, 0.1 to 3 mass %, alternately 0.1 to 1.5 mass %),
+based on total weight of the lubricating oil composi-
+tion, of one or more inhibitors and/or anti-rust agents
+(such as blends of inhibitors and/or anti-rust agents);

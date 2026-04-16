@@ -1,0 +1,147 @@
+US 2025/0136889 Al
+
+mgKOH/g, such as 7 to 12 mgKOH/g, such as 8 to II
+mgKOH/g, as measured by ASTM D2896.
+
+[0285] The lubricating compositions of the present disclo-
+sure may contain low levels of phosphorus, namely not
+greater than 1600, preferably not greater than 1200, more
+preferably not greater than 800, such as 1 to 1600, such as
+50 to 1200, such as 100 to 800 parts per million (ppm) by
+mass of phosphorus, expressed as atoms of phosphorus,
+based on the total mass of the lubricating compositions, as
+measured by ASTM DS5185.
+
+[0286] Suitably, the lubricant composition may have a
+phosphorus level of 1200 ppm or less, alternately 1000 ppm
+or less, alternately 800 ppm or less, as measured by ASTM
+DS5185.
+
+[0287] The lubricating compositions of the present disclo-
+
+sure may contain a ratio of atoms of Magnesium to atoms of
+
+Calcium based on the total mass of the lubricating compo-
+sitions, as measured by ASTM DS5185, of at least to 0.5,
+preferably at least 0.6, more preferably at least 0.65.
+
+[0288] Typically, the lubricating compositions may con-
+tain low levels of sulfur. Preferably, the lubricating compo-
+sition contains up to 0.4, more preferably up to 0.3, most
+preferably up to 0.2, such as 0.1 to 0.4 mass % sulfur, based
+on the total mass of the lubricating oil composition, as
+measured by ASTM D5185.
+
+[0289] Typically, the lubricating compositions may con-
+tain low levels of sulfated ash, such as 1.2% or less, such as
+1.0 mass % or less, preferably 0.9 mass or less %, preferably
+0.8 mass % or less, alternately 0.0001 to 0.5 mass % or less
+sulfated ash, based on the total mass of the lubricating
+composition, as measured by ASTM D874-13a (2018).
+
+[0290] Generally, the kinematic viscosity at 100° C
+(“KV 100”) of the lubricating composition may range from
+2 to 30 cSt, such as 2 to 20 cSt, such as 5 to 15 cSt as
+determined according to ASTM D 445-19a).
+
+[0291] _Inembodiments, the kinematic viscosity at 100° C.
+(“KV 100") of the lubricating composition may range from
+1 to 30 cSt, alternately 3 to 20, alternately 3 to 17 cSt,
+alternately 3.5 to 16.3 cSt alternately 9.3 to less than 12.5
+cSt, alternately 12.5 to less than 16.3 cSt, as determined
+according to ASTM D 445-19a).
+
+[0292] Preferably, the lubricating composition of the pres-
+ent disclosure may be a multigrade oil identified by the
+viscometric descriptor SAE 40W-X, SAE 30W-X, SAE
+25W-X, SAE 20W-X, SAE 1SW-X, SAE 10W-X, SAE
+SW-X or SAE OW-X, where X represents any one of 8, 12,
+16, 20, 30, 40, and 50; the characteristics of the different
+viscometric grades can be found in the SAE 1300 classifi-
+cation. Alternately, the lubricating composition may be the
+form of viscosity grade SAE 15W-X, SAE 10W-X, SAE
+SW-X or SAE OW-X, such as in the form of SAE 15W-X or
+SAE 10W-X, wherein X represents any one of 8, 12, 16, 20,
+
+30, 40, and 50, Alternately, the of
+
+May 1, 2025
+
+[0294] In i the icating oil
+may comprise 1 to 500 ppm of boron, such as 25 to 400 ppm
+of boron, such as 50 to 300 ppm boron, such as 50 to 200
+ppm boron.
+[0295] In i the lubricating oil
+may comprise less than 75 ppm boron, alternately less than
+60 ppm boron, alternately from 1 to 70 ppm boron. Alter-
+nately, the lubricating oil composition may be absent boron.
+[0296] In the oil
+may comprise acylated polymers, such as polyisobutylene
+succinic acid (PIBSA), optionally having an Mn of 500 to
+50,000 g/mol, such as 600 to 5,000 g/mol, such as 700 to
+3000 g/mol, such as 700 to 2000 g/mol, such as 700 to 1500
+g/mol such as 800 to 1400 g/mol, such as 800 to less than
+1000 g/mol. In embodiments, the lubricating oil composi-
+tion may comprise acylated polymers, such as polyisobuty-
+lene succinic acid, having an Mn of 500 to 1600 g/mol, such
+as 700 to 1200 g/mol. In embodiments, the lubricating oil
+composition comprises more than 0.1 mass % (such as 0.1
+to 10 mass %, such as 0.5 to 8 mass %), functionalized (such
+as aminated) polybutene (such as polyisobutylene), such as
+PIBSA-PAM.
+[0297] In i the lubricating oil
+may comprise 20 mass % or less (such as 15 mass % or less,
+such as 10 mass % or less, such as 5 mass % or less, such
+as 3 mass % or less, such as 1 mass % or less) of block
+copolymer, such as block, radial (aka “star”), random, and/or
+tapered block copolymer. In embodiments, the lubricating
+oil composition may be substantially free of or may be
+absent block copolymer, such as block, radial, random,
+and/or tapered block copolymer
+[0298] In oil
+may comprise 20 mass % or ress (such as 15 mass % or less,
+such as 10 mass % or less, such as 5 mass % or less, such
+as 3 mass % or less, such as 1 mass % or less) styrenic
+copolymer, such as block, radial, random, and/or tapered
+styrenic block copolymer, In embodiments, the lubricating
+oil composition may be substantially free or absent styrenic
+copolymer, such as block, star, random, and/or tapered
+styrenic block copolymer.
+[0299] In another advantageous form, the lubricating oil
+composition of the instant disclosure further optionally
+includes one or more functionalized polymers at from 0.2 to
+2.0 mass %, or 0.4 to 1.8 mass %, or 0.6 to 1.6 mass %, or
+0.8 to 1.4 mass %, or 1.0 to 1.2 mass % of the composition
+comprising an amide, imide, and/or ester functionalized
+partially or fully saturated polymer comprising C, , olefins
+having:
+[0300] i) an Mw/Mn of less than 2, or less than 1.8, or
+less than 1.6,
+[0301] ii) a Functionality Distribution (Fd) value of 3.5
+or less, or 3.2 or less, or 3.0 or less, or 2.5 or less, and
+[0302] iii) an Mn of 10,000 g/mol or more, or 15,000
+g/mol or more, or 20,000 g/mol or more, or 25,000
+wmol or more (GPC-PS) of the polymer prior to
+
+the present disclosure may be a multigrade oil identified by
+the viscometric descriptor SAE 10W-30, 15W-40, 5W-30,
+SW-40, 10W-40, SW-50. (See standard SAE J300 published
+January 2015 by SAE International, formerly known as
+Society of Automotive Engineers).
+
+[0293] Optionally, the lubricating oil composition contain-
+ing diphenyl amine antioxidants described herein may be
+absent phenolic antioxidant.
+
+provided that, if the polymer prior to
+functionalization is a copolymer of isoprene and buta-
+diene, then the Mn of the copolymer is greater than
+25,000 g/mol, or 30,000 g/mol or more, or 35,000
+g/mol or more, or 40,000 g/mol or more (GPC-PS).
+(GPC-PS is determined as set out in U.S. patent appli-
+cation Ser. No. 18/480,571, filed Oct. 4, 2023.)
+
+[0303] The polymer of the oil
+
+composition of the instant disclosure may include at Teast
+

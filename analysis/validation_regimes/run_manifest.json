@@ -1,0 +1,37 @@
+{
+  "train_features": "E:\\Projects\\Neftecode\\compact_v3\\train_flat_features_v3_compact.csv",
+  "train_components": "E:\\Projects\\Neftecode\\new_datasets\\train_component_level_transformed.csv",
+  "regimes": [
+    "random_kfold",
+    "dominant_base_oil",
+    "recipe_cluster"
+  ],
+  "configs": {
+    "viscosity": {
+      "config_id": "relu_wide",
+      "hidden_layers": [
+        128,
+        128
+      ],
+      "alpha": 0.001,
+      "learning_rate_init": 0.0005,
+      "activation": "relu"
+    },
+    "oxidation": {
+      "config_id": "relu_mid",
+      "hidden_layers": [
+        128,
+        64
+      ],
+      "alpha": 0.0001,
+      "learning_rate_init": 0.001,
+      "activation": "relu"
+    }
+  },
+  "outputs": {
+    "fold_metrics": "E:\\Projects\\Neftecode\\analysis\\validation_regimes\\validation_regime_fold_metrics.csv",
+    "summary": "E:\\Projects\\Neftecode\\analysis\\validation_regimes\\validation_regime_summary.csv",
+    "oof_predictions": "E:\\Projects\\Neftecode\\analysis\\validation_regimes\\validation_regime_oof_predictions.csv",
+    "group_summary": "E:\\Projects\\Neftecode\\analysis\\validation_regimes\\group_summary.json"
+  }
+}

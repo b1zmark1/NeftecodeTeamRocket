@@ -1,0 +1,93 @@
+140, ULSD.
+141, ULSD.
+143-1, ULSD
+143-2, UL
+
+FTIR Oxidation (uncorrected)
+
++ 144-1, U
+144-2, ULSD
+145, ULSD.
+—o— 140, B20
+—+— 141, B20
+a 142, B20
+—A— 143, B20
+a 144, B20
+
+*O-0
+
+6,000
+Oil Age (mii
+
+9,000
+
+les)
+
+—— 145, B20
+12,000
+
+- 140, ULSD
+
+- 144-2, ULSD.
++ 145, ULSD
+—e— 140, B20
+—+— 141, B20
+—— 142, B20
+—A— 143, B20
+a 144, B20
+
+a
++
+a
+es
+-
+io
+od
+
+0 3,000 6,000
+
+Figure 12. a) FTIR oxidati
+
+9,000
+
+il Age (miles)
+
+145, B20
+
+12,000
+
+|. b) Corrected FTIR
+
+mileage (below).
+
+from esters in biodiesel- samp!
+oxidation measurements. Finally, it is not clear which
+material(s) are oxidizing (oil, biodiesel, ULSD).
+
+The method used here to determine the comected IR
+oxidation values of biodiesel-containing samples allows for a
+reasonable comparison of the oxidation level between oils
+with ULSD and B20 dilution, and the method was applied
+with caution after considering earlier findings that 1)
+biodiesel degradation with increasing mileage was relatively
+limited in GC analysis, 2) the oil oxidation with ULSD
+dilution is minimal, and 3) a rapid increase in viscosity at
+high mileage was not observed (shown later). Chemical
+changes to the oil and/or fuel with aging and possible
+interactions between them are not accounted for with the
+
+relationship shown in Figure 11, and could explain why the
+corrected oxidation values of some of the biodiesel-
+containing samples are negative.
+
+TAN and TBN
+
+With either B20 or ULSD dilution, TAN values of fresh oil
+and 12,000 mile aged oil ranged from 2 to 4 mz KOW g oil,
+respectively (Figure 14). Generally, somewhat TAN
+values were seen with ULSD dilution. With B20 dilution, the
+TAN value stayed constant or decreased slightly for the first
+~6,000 miles, prior to increasing after higher mileage
+accumulation. The increase in TAN values at ~6,000 miles
+occurs in the same timeframe as the increase in oxidation
+values with B20 dilution.

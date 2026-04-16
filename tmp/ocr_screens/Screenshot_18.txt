@@ -1,0 +1,109 @@
+squared errors between the two was used to determine
+goodness of match. In cases where a reasonably good fit was
+not obtained with a single feedstock, combinations of up to
+three common feedstocks (soy oil. com oil, or lard) were used
+and best-fit proportions were again determined by
+minimizing the sum of squared errors.
+
+FRICTION AND WEAR TESTING
+
+Friction and wear protection capability of vehicle-aged oils
+were evaluated with a High Frequency Reciprocating Rig
+(HERR) from PCS Instruments. HFRR is a bench test to
+study wear in the boundary lubrication regime. HFRR allows
+for fast, inexpensive testing of a large number of samples,
+and only requires an oil volume of 2 mL. In the bench test, a
+non-rotating steel ball (6 mm diameter) slides against a
+stationary steel disk (9.8 mm diameter). The ball material is
+AISI E-52100 steel with hardness of 58-66 HRC, and the disk
+material is AISI E-52100 steel with hardness of 190-210 HV
+30. The rubbing interface is submerged in oil. The test
+conditions used in this study were selected to represent
+severely loaded engine contacts. They include a 1,000 g
+normal load, 20 Hz reciprocating frequency, 1,000 micron
+stroke length, and three hour test duration. The oil
+‘temperature was 105 °C. The initial contact stress with a
+1,000 g load is 1.3 GPa. A new ball and disk were used in
+each test. Generally, oil with better boundary wear protection
+‘will produce a smaller wear scar.
+
+Prior to testing, the steel balls and disks were ultrasonically
+cleaned in hexane for five minutes, and then rinsed again
+with hexane. The ffiction coefficient and the electrical
+contact resistance (ECR) are measured by HFRR during
+testing. The reported friction coefficient and ECR values are
+the average values over the three hour test duration. ECR
+provides a measure of the formation of an electrically
+insulating film at the sliding contact. It does not provide an
+indication of film thickness. Zero percent ECR can be
+interpreted as either metal-to-metal contact, or the presence
+of an electrical conducting film. One-hundred percent ECR
+indicates the formation of a fully insulating film between the
+sliding surfaces. After the completion of testing, wear was
+determined by measuring the volume of material that was
+removed from a steel disk during a test using a Wyko
+‘NT3300 optical profilometry instrument from VEECO and
+‘Vision software program. The surface of each steel disk was
+rinsed with hexane to remove all residual oil and non-
+ial prior to the wear
+
+SURFACE FILM ANALYSIS
+
+The chemical constituents of lubricant-derived films that
+formed on selected HFRR disks were analyzed through UV
+and visible Raman spectroscopy. Details of Raman analysis
+have been described earlier22. Raman spectroscopy provides
+information on the identities of molecular species. UV (244
+
+nm) and visible (532 nm) Raman spectroscopy are both
+
+utilized because of differences in penetration depth and
+fences in resonance which can lead to
+
+observations of different components when both laser
+
+wavelengths are used. The continuity of a film can be
+
+assessed with Raman, as it has a spatial resolution of ~1-2
+
+um in diameter. Multiple spectra were taken from each
+ol ‘he results the ordi
+
+RESULTS
+OIL ANALYSIS
+
+Fuel Dilution
+
+Fuel dilution in the oil (based on the ASTM D3524 method)
+reached higher levels with the use of B20, compared to
+ULSD Gigure 4). After 12,000 miles, the fuel dilution with
+B20 and ULSD reached roughly 35% and 25%, respectively
+At low mileage, the dilution levels were similar.
+difference between B20 and ULSD dilution levels grew as Pa
+miles increased, due to the slower evaporation rate of
+biodiesel at the oil temperatures in this study. In addition, the
+oil sump temperature with B20 was lower, which would
+further reduce the evaporation rate. Other factors that were
+described earlier, including the frequency of DPF
+regenerations and the mass of fuel post injected into
+cylinders, were seen to vary with fuel type, which also affect
+the fuel dilution rate. Initial oil samples that were collected
+right after an oil change contained ~5% fuel dilution, which
+is partly attributed to carryover from the previous oil drain. It
+is also possible that light ends of the oil were counted as fuel.
+
+‘O ULSD dilution
+
+B20 dilution
+
+0 3,000 6,000 9,000 12,000.
+Oil Age (n )
+Figure 4. Fuel dilution vs. mileage.
+
+‘The fuel in the oil samples from vehicles that ran with B20
+consists of both ULSD and biodiesel. The biodiesel
+concentration in oil (measured by differential IR) reaches
+~13% after 12,000 miles (Figure _5). Initial biodiesel
+accumulation in oil was ~2-3% wt. per 100 gallons of B20
+consumed. Of the total fuel accumulated in the oil after 7,000
+miles, the biodiesel fraction was ~40% wt, while the other

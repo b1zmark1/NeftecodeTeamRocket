@@ -1,0 +1,83 @@
+{
+  "train_path": "E:\\Projects\\Neftecode\\new_datasets\\train_component_level_transformed.csv",
+  "test_path": "E:\\Projects\\Neftecode\\new_datasets\\test_component_level_transformed.csv",
+  "best_config": {
+    "name": "pair_small",
+    "d_model": 48,
+    "ctx_dim": 24,
+    "pair_hidden": 80,
+    "dropout": 0.15,
+    "lr": 0.001,
+    "weight_decay": 0.0002,
+    "batch_size": 16,
+    "epochs": 140,
+    "patience": 20
+  },
+  "component_numeric_cols": [
+    "Массовая доля, %",
+    "% масс. (Mo)",
+    "Активный Азот / Кислород, % масс. (N или O)",
+    "Потенциал ионизации,эВ",
+    "Энергия ВЗМО, эВ",
+    "Дипольный момент, Д",
+    "Массовая доля цинка, ASTM D6481",
+    "Массовая доля серы, ASTM D6481",
+    "Массовая доля кальция, ASTM D6481",
+    "Содержание металла (Ca/Mg), % масс.",
+    "Содержание Бора",
+    "Щелочное число, ASTM D2896",
+    "Кинематическая вязкость, при 40°C, ASTM D445",
+    "Кинематическая вязкость, при 100°C, ASTM D445",
+    "Динамическая вязкость CCS -35°C, ASTM D5293",
+    "Температура застывания, ГОСТ 20287, метод Б",
+    "Индекс вязкости, ГОСТ 25371",
+    "Испаряемость по NOACK, ASTM D5800",
+    "Массовая доля фосфора, ASTM D6481",
+    "Длина углеродной цепи"
+  ],
+  "component_feature_layout": {
+    "raw_numeric": 20,
+    "missing_flags": 20,
+    "source_flags": [
+      "is_typical_batch",
+      "is_measured_batch"
+    ]
+  },
+  "context_cols": [
+    "temperature_c",
+    "time_h",
+    "biofuel_pct",
+    "catalyst_category",
+    "severity_exp",
+    "temperature_x_time",
+    "temperature_x_biofuel",
+    "severity_x_biofuel",
+    "severity_x_catalyst",
+    "regime_load"
+  ],
+  "max_components": 20,
+  "n_families": 9,
+  "n_components": 112,
+  "cv_summary": [
+    {
+      "config": "pair_small",
+      "rmse_viscosity": 146.5939598431668,
+      "rmse_oxidation": 23.667707966565438,
+      "mae_viscosity": 48.12215805053711,
+      "mae_oxidation": 16.498519897460938,
+      "r2_viscosity": 0.44300347566604614,
+      "r2_oxidation": 0.5678482055664062,
+      "mean_rmse": 85.13083390486612
+    },
+    {
+      "config": "pair_medium",
+      "rmse_viscosity": 171.30799086550223,
+      "rmse_oxidation": 25.12111166857159,
+      "mae_viscosity": 52.87245559692383,
+      "mae_oxidation": 17.181442260742188,
+      "r2_viscosity": 0.2393662929534912,
+      "r2_oxidation": 0.5131428241729736,
+      "mean_rmse": 98.21455126703691
+    }
+  ]
+}

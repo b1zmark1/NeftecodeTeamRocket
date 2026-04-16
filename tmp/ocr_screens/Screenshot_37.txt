@@ -1,0 +1,133 @@
+oils (measured for oils A and B, inferred for oils C and D based
+
+P
+oxidation targets. While neither oxidation stability method
+
+results are suggestive of a systematic difference between the
+USand EU formulations, ultimately manifested in differences
+in resistance to acid formation.
+
+Oxidation Stability with
+Biodiesel Fractions after
+Vacuum Distillation
+
+) showed
+
+additional resistance to oxidation inthe presence of 5 wi%
+biodiesel
+
+not present in this fraction and that the FAMEs are distilling
+without significantly separating the more reactive unsatu-
+rated FAMEs (methyl linolenate, methyl linoleate, and
+methyl oleate) and their less reactive saturated analo log
+(methyl stearate). It also suggests that the antioxidants may
+
+play a nontrivial role in the oxidation stability of the
+Biodiesel ise.
+
+Aging of Diesel Engine Oil
+with Biodiesel
+
+Ina manner similar to previous aging studies with biodiesel/
+diesel blends [8, 44, 45, 46], fully formulated engine Oil A,
+with and without the addition of 20 wt% biodiesel, was aged
+for 7 days at 160°C with ANT [8, 44, 45, 46] while moni-
+
+and RSSOT). Shs was ao tee for fully formulated oils C
+and D, which were compositionally unrelated to base oils
+Ajase and Bygge- Above 5 wt% biodiesel content, this oxidation
+stability progressively decreased as the biodiesel content
+increased to 10 wt% and further to 20 wt% (Figures 1 and
+3). This trend of enhanced stability with 5 wt% biodiesel
+content was confirmed in a statistical analysis of the RSSOT
+and Rancimat data. We hypothesize that the SME biodiesel
+used in this study contains natural oxidants that are
+somewhat protective when the biodiesel is added at 5 wi%.
+‘The antioxidants presumably react with reactive oxygen
+species formed from oxidation ofthe biodiesel and base ol
+
+). When
+sional bios is: added (more than 5 with) the greater
+
+‘TBN, ester content, kinematic
+viscosity, density, and IR abeorption spectra.
+
+Peroxides, which are formed in the first step of FAME
+oxidation, increased for the Oil A sample with 20 wt%
+biodiesel from 5 meq O,/kg on day 0 to a peak value of 20-35
+‘meq O,/kg on day 2, then rapidly declined with continued
+aging over the 7-day period (Figure 6). Low levels of peroxides
+were detected in Oil A without biodiesel. The peak peroxide
+content with 20 wt% biodiesel in Oil A was much less than
+that observed with 10 vol% or 30 vol% biodiesel in diesel fuel
+aged at 90°C (~350 and ~450 meq O,/kg, respectively) [8]. It
+i likely that peroxides are decomposing faster at the 160°C
+
+tudy than at the 90°C t r
+used in the prior rial study ‘This temperature dependence was
+seen in an aging study of rapesced biodiesel in diesel fue, in
+which 30% lower at 90°C.
+
+to a degree greater than the protective effect of the
+additional antioxidants.
+
+To test this hypothesis, SME biodiesel was vacuum
+distilled and the fractions from the distillate and the distil-
+lation pot were retained. ‘Three distillations were performed
+leaving a progresivsly greater concentration of the lest
+volatile fraction in , 18 wt%, and 5 wt%
+feat Both the distillate and pot fractions were then
+
+ith base Oil Byase
+tol ‘both “oxidation stability methods (RSSOT and Rancimat).
+
+in the pot act to inhibit the oxidation of biodiesel (Figures 4
+and 5) and that more complete distillation enhanced the
+protective effect of the residual pot fraction. Specialy, for
+induction periods measured on the base oil with 5 w
+biodiesel the lea
+
+imparted considerably more stability than undistilled
+biodiesel, which in turn provided more stability than the
+biodiesel ion. M A
+
+of the pot fraction increased with increasing distillation
+percentage. ‘These data are consistent with natural antioxi-
+dants being present at a small fraction (less than 5 wt%) in
+the SME biodiesel and being less volatile than the FAMEs
+that compris the vas majority ofthe biodiesel sample: The
+lowand relati
+
+mixtures with the base ol suggests that the anoxidantis
+
+© 2019 SAE Internationa: Ford Motor Company. Al RightsReserved
+
+than at 70°C [45].
+
+TAN showed little increase over the 7-day aging period
+both with and without 20 wi% biodiesel
+however, exhibited a substantial decline and then a posible
+stabilization for oil with and without biodiesel. Acids formed
+will be neutralized by engine oil additives (e.g., overbased
+detergents) included for this purpose [49, 53]. The higher
+initial TBN without biodiesel is a simple dilution effect. For
+the oil with biodiesel, the TBN appears to drop more rapidly
+and to a lower stabilized value than without biodiesel
+(Figure 8). Uy et al. [10] and Kovac etal. 29], using different
+"TN methods than used here, similarly found that TBN of
+motor oils decreased to a greater extent with biodiesel than
+without. The TBN values cannot be compared directly because
+of differences in oils and ‘TBN method [49]. Both studies,
+howe found that TAN increased with biodiesel presence,
+
+ties for the ols inthe present study.
+
+Esters were present initially in both samples (Figure 9),
+from the biodiesel and from certain additives in Oil A. Ester
+content increased over time in the sample with 20 wt%
+biodiesel, rising through day 5 and then declining on day 7
+when the oil/biodiesel mixtures had formed a black, tar-like
+material. Ester formation has been shown to result from
+reaction of acid and alcohol products of biodiesel oxidation
+[8, 46}, and the increase in ester content observed in these
+

@@ -1,0 +1,140 @@
+US 2025/0136889 Al
+
+aliphatic (Cy to C,,) hydrocarbyl, most preferably aliphatic
+(C,, to C,,) hydrocarbyl fatty acid C, to Cao aliphatic
+hydrocarbyl! ester(s). Suitably, to permit functionalization,
+such as sulfurization, of the aliphatic hydrocarbyl fatty acid
+ester(s) a proportion of the aliphatic hydrocarbyl chain(s) of
+the fatty acid ester(s) is unsaturated and includes at least one
+carbon-to-carbon double bond.
+
+[0119] The term “sulfurized aliphatic hydrocarbyl fatty
+acid ester” means a compound obtained by sulfurizing an
+aliphatic hydrocarbyl fatty acid ester as defined herein.
+[0120] The term “absent” as it relates to components
+included within the lubricating oil compositions described
+herein and the claims thereto means that the particular
+component is present at 0 mass %, based upon the weight of
+the lubricating oil composition, or if present in the lubricat-
+ing oil composition the component is present at levels that
+do not impact the lubricating oil composition properties,
+such as less than 10 ppm, or less than 1 ppm or less than
+0.001 ppm. When the term “absent” is used in relation to
+monomer reactants and/or to repeat units in (co)polymers
+described herein, it means present at 0 mass %, based upon
+the weight of all (co)monomers in the (co)polymer, or, if
+present at all, at levels so low that they do not substantially
+impact the physical properties of the (co)polymer, such as at
+0.2 mass % or less, or at 0.1 mass % or less.
+
+[0121] ‘The term “absent or present at less than 0.3 mass
+%"" as it relates to components included within the lubri
+ing oil compositions described herein and the claims thereto
+means that the particular component is absent as defined
+above, or is present at any of the following amounts: less
+than 0.3 mass %, 0.29 mass % or less, 0.28 mass % or less,
+0.27 mass % or less, 0.26 mass % or less, 0.25 mass % or
+less, 0.24 mass % or less, 0.23 mass % or less, 0.22 mass %
+or less, 0.21 mass % or less, 0.20 mass % or less, 0.19 mass
+% or less, 0.18 mass % or less, 0.17 mass % or less, 0.16
+mass % or less, 0.15 mass % or less, 0.14 mass % or less,
+0.13 mass % or less, 0.12 mass % or less, 0.11 mass % or
+less, 0.10 mass % or less, 0.09 mass % or less, 0.08 mass %
+or less, 0.07 mass % or less, 0.06 mass % or less, 0.05 mass
+%, or less 0.04 mass % or less, 0.03 mass % or less, 0.02
+mass % or less, 0.01 mass % or less. If any of the lesser
+amounts are referred to (for example a component is “pres-
+ent at 0.19 mass % or less”), each of the lesser amounts
+above are included therein.
+
+[0122] The term “absent or present at less than 0.2 mass
+°%"" as it relates to components included within the lubricat-
+
+means that the particular component is absent as defined
+above, or is present at any of the following amounts: 0.19
+mass % or less, 0.18 mass % or less, 0.17 mass % or less,
+0.16 mass % or less, 0.15 mass % or less, 0.14 mass % or
+
+less, 0.13 mass % or less, 0.12 mass % or less, 0.11 mass %
+or less, 0.10 mass % or less, 0.09 mass % or less, 0.08 ma:
+% or less, 0.07 mass % or less, 0.06 mass % or less, 0.05
+mass % or less, 0.04 mass % or less, 0.03 mass % or less,
+0.02 mass % or less, 0.01 mass % or less. If any of the lesser
+amounts are referred to (for example a component is “pres
+ent at 0.19 mass % or less”), each of the lesser amounts
+above are included therein.
+
+[0123] As used herein, Mn is number average molecular
+weight, Mw is weight average molecular weight, and Mz is
+z average molecular weight. Molecular weight distribution
+(MWD), also referred to as polydispersity index (PDD), is
+
+May 1, 2025
+
+defined to be Mw divided by Mn. Unless otherwise noted, all
+molecular weight units (e.g., Mw, Mn, Mz) are reported in
+
+‘mol
+[0124] Total Base Number also referred to as “IBN”, in
+relation to an additive component or of a lubricating ail
+(ie., unused oil mean:
+total base number as one by ASTM D2896 cand
+reported in units of mgkKOH,
+[0125] Total Acid Number TAN”) is determined by
+ASTM D664.
+[0126] Phosphorus, Boron, Calcium, Zinc, Molybdenum,
+Sodium, Silicon, and Magnesium content are measured by
+ASTM DS185.
+0127] Sulfur content in oil formulations is measured by
+ASTM DS5185.
+[0128] Sulfated ash (“SASH”) content is measured by
+ASTM D874.
+[0129] Kinematic viscosity (KV100, KV40, etc.) is deter-
+mined pursuant to ASTM D445-19a and reported in units of
+cSt, unless otherwise specified.
+[0130] Viscosity index is determined according to ASTM
+D2270.
+[0131] Saponification number is determined by ASTM
+D94, and reported in units of mgKOH/g.
+[0132] Unless otherwise indicated, all _ percentages
+reported are mass % on an active ingredient basis, i.e.,
+without regard to carrier or diluent oil, unless otherwise
+indicated.
+[0133] Also, it will be understood that various components
+used, essential as well as optimal and customary, may react
+under conditions of formulation, storage or use and that the
+disclosure also provides the product obtainable or obtained
+as a result of any such reaction.
+0134] Further, it is understood that any upper and lower
+quantity, range and ratio limits set forth herein may be
+independently combined.
+[0135] Also, it will be understood that the preferred fea-
+tures of each aspect of the present disclosure are regarded as.
+preferred features of every other aspect of the present
+disclosure. Accordingly, preferred and more preferred fea-
+tures of one aspect of the present disclosure may be inde-
+pendently combined with other preferred and/or more pre-
+ferred features of the same aspect or different aspects of the
+present disclosure.
+
+DETAILED DESCRIPTION OF THE
+INVENTION,
+
+[0136] The features of the disclosure relating, where
+appropriate, to each and all aspects of the disclosure, will
+now be described in more detail as follows.
+10137] The lubricating oil compositions, concentrates and
+booster packs of the disclosure comprise components that
+may or may not remain the same chemically before and after
+mixing with an oleaginous carrier (such as a base oil) and/or
+other additives. This disclosure encompasses compositions
+which comprise the components before mixing, or after
+mixing, or both before and after mixing.
+[0138], alkylated di (such as
+438L, Songnox™ L670, Inanox™ L67, Vanlube™ DND)
+are antioxidants that are commonly used in the lubricant,
+rubber and plastics industries. The C, alkylated diphenylam-
+ines are typically prepared from the reaction of diphenylam-
+ine with tripropylene or other C, alkene. These reactions
+give a complex mixture of products made of a mixture of C.
+

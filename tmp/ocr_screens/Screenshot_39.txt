@@ -1,0 +1,76 @@
+RSSOT oxidation (at 160°C) of vacuum distilled SME biodiesel. RSSOT oxidation of 5 wt% SME biodiesel in Bpase
+engine oil (dashed green line), 5 wt% of the pot from distilled SME biodiesel in By... engine oil (black line), and 5 wt% of the
+distillate of SME biodiesel in Byace engine oll (blue line). Error bars show #1 standard deviation of the mean determined from
+
+duplicate samples.
+
+20
+e Pot
+. Distillate
+e —-— 5wt.-% Biodiesel
+E 16-4
+@
+—
+Ee
+© 12-
+2
+3
+5
+H
+= os
+=
+R
+72
+12 2
+gO T T T T T
+g 5 40 15 20 25
+
+SME Biodiesel Mass Remaining in the Pot (wt.-%)
+
+T T
+95 90
+
+SME Biodiesel Mass Di:
+
+T T T
+85 80 75
+
+illed (wt.-% )
+
+‘The FTIR spectra of the oil-biodiesel for
+daysis compared to the initial mixture in Figure 12; the F IR
+
+SP
+[8, 11]. The difference spectrum shows a marked increase and
+broadening in the carbonyl vibration frequency region
+(approximately 1,730 cm) consistent with the formation of
+carboxylic acids, esters, aldehydes, and ketones, and as
+reported previously for aging studies with SME, castor oil
+
+shylest (8, 11,46, ].
+
+reactions in unsaturated FAM
+
+Conclusion
+
+Biodiesel tha is entrained into diesel engine ll through
+
+However, the C-OH vibration frequency of alcohols or
+
+also known as fuel dilution of oll can adversely affect
+
+carboxylic acids (1,000-1,300 cm~) did not
+increase in contrast to the previous fuel studies without oil.
+‘This could be due to the neutralization of acids by engine oil
+‘ftv andor the formation of exes from lool and
+
+Declines in the
+the C-H stretching of hydrogen bond to double Donde
+
+engine oil Oxidation stability
+experiments were conducted at 160°C using a modified
+RSSOT and the Rancimat method with 0, 5, 10, and 20 wt%
+biodiesel in four fully formulated engine oil:
+formulated engine oils, and two base oils. These experi-
+‘ments generally exhibited the expected trend of decreasing
+

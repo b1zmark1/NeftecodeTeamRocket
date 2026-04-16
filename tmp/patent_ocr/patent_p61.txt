@@ -1,0 +1,142 @@
+US 2025/0136889 Al
+
+[0925] At all treat rates the oils containing Component 1
+(Batch 1) maintained oxidation control. at 0.5 mass %
+Comparative Oil S performs better than Oil O at viscosity
+control. Oil P and Comparative Oil T have the same relative
+increase in viscosity at end of test. At the two highest treat
+rates, 1.0 mass % and 1.25 mass %, Component 1 (Batch 1)
+has a 5.50% and 7.8% lower relative viscosity increase in
+line with Examples 1, 2 and 3
+
+Example 5
+
+[0926] Component 1 (Batch 3) and Component 2 were
+each blended into the formulation as described in Table 10
+below to form Oils W and X, respectively.
+
+TABLE 10
+Components (Mass %)***** w x
+Dispersant viscosity modifier 1.156 1.156
+Borated PIBSA-PAM os 0s
+PIBSA-PAM 60 6.0
+Ca sulfonate 08 08
+Mg sulfonate 08 0.8
+DDP 1.0 1.0
+Cenonen 1 (Batch 3) 1.6
+Component 2 16
+Group Il ase ol 820 82.0
+Elemental Analysis ICP
+0.76 0.76
+6 66
+0.09 0.09
+0.07 0.07
+66 66
+0.16 0.16
+0.08 0.08
+031 031
+15 15
+
+mount of PIBSA,
+
+Group | diluent ot LOFT, and Olefin Copolymer VM.
+
+[0927] Oils W and Comparative Oil X were tested for
+oxidation stability and viscosity control using the Daimler
+Truck Oxidation Test doped with biodiesel as described
+above. The data are reported in Table 11.
+
+TABLE 11
+Oil W Comparative Oil X
+Component (mass %) (mass %)
+‘Component 2 16
+Component 1 (Batch 3) 1.6
+Daimler Trick Oxidation, FTIR. 30.3 295
+Oxidatior (A/cm)
+Test results % Change in K100 64.9 708
+
+[0928] Oil W and Comparative Oil X at end of test have
+the same level of oxidation; however, Oil W has a lower
+relative increase in viscosity at end of test. This is consistent
+with the results for CEC-L-109-14 tests above.
+
+Example 6
+
+[0929] Component 1 (Batch 2) and Component 2 were
+each blended into the formulation described in Table 12 to
+form Oil Y and Comparative oil Z, respectively.
+
+May 1, 2025
+
+TABLE 12
+
+Constituent (Mass %) Y Z
+PIBSA-PAM 3.300 3.300
+Ca sulfonate 0.850 0.850
+Mg sulfonate 0.475 0.475
+
+0.88 0.88
+Component 1 (Batch 2) 1.0
+Component 2 10
+Group II base oil 85.9 35.9
+Elemental Analysis ICP
+Ash (mass %) 0.63 0.63
+B ppm 0 0
+Ca (mass %) 0.10 0.10
+Mg (mass %) 0.04 0.04
+Mo ppm oy oy
+N (inass %) 0.09 0.09
+P (mass %) 0.06 0.06
+S (mass %) 0.20 0.20
+Si ppm 9.2 9.2
+
+the same mount of ODA, Me Friston mdi, Er ton modi,
+Group I dilvent oil, LOFI, and Star H-SD block
+
+[0930] Oils Y and Comparative Oils Z were tested for their
+ability to control viscosity increase (PVIS) and piston depos-
+its (WPD) in the Seq IIIH test (ASTM D8111) as described
+above. The data are reported in Table 13.
+
+TABLE 13
+OilY Comparative Oil Z
+Component (mass %) (mass %)
+‘Component 2 10
+Component 1 (Batch 2) 10
+Sequence TH PVIS (%) TL8 768
+WPD (merits) 5.21 436
+
+[0931] Following similar trend to the blown air oxidation
+test, the viscosity growth is lower for Oil Y (Component 1,
+Batch 2) than Comparative Oil Z (Component 2). Unex-
+pectedly, there was a greater difference in the level of piston
+deposits. Comparative Oil Z has weighted piston deposits
+(WPD) of 4.36 which is less than the anticipated API GF-7
+evel of 4.6; however, Oil Y has a WPD of 5.21 which
+represents a significant improvement in deposit control
+compared to Comparative Oil Z and the anticipated API
+GP-7 specification limit for WPD.
+
+Example 7
+
+[0932] It is shown in the preceding examples that the
+aminic antioxidant with low levels of mono-C.-alkyl phe-
+nylamine performs better in a range of formulations in the
+CEC-L-109-14 test. In the examples below, it is demon-
+
+strated that this improved performance enables the use of
+higher treat rates of components that have been shown or are
+thought to be detrimental to performance in the CEC-L-109-
+14 test. The higher treat rates of such components give
+engine oils improved performance in areas such as friction
+lowering, metal wear, deposit control and low speed pre-
+ignition.
+
+[0933] Component 1 Bx 5 and Component 2 were each
+blended into the formulations described in Tables 14 to 18
+below.
+
+[0934] In Table 14 lubricating oil formulations are formu-
+lated with and without glycerol mono-oleate (GMO) to
+compare the performance in the CEC-L-109-14 test. The
+

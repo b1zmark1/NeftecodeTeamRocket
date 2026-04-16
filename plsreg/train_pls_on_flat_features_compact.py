@@ -9,6 +9,7 @@ import math
 from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
 
+import matplotlib
 import numpy as np
 import pandas as pd
 from sklearn.cross_decomposition import PLSRegression
@@ -18,6 +19,9 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import GroupKFold, KFold
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 
 
 TARGET_VISC = "Delta Kin. Viscosity KV100 - relative | - Daimler Oxidation Test (DOT), %"
@@ -299,6 +303,247 @@ def evaluate_pls_cv(
     return pd.DataFrame(rows)
 
 
+def _ensure_feature_target_matrix(coef: np.ndarray, n_features: int, n_targets: int) -> np.ndarray:
+    coef = np.asarray(coef, dtype=float)
+    if coef.shape == (n_features, n_targets):
+        return coef
+    if coef.shape == (n_targets, n_features):
+        return coef.T
+    raise ValueError(f"Unexpected coef_ shape: {coef.shape}")
+
+
+def compute_vip_scores(pls: PLSRegression) -> np.ndarray:
+    t = np.asarray(pls.x_scores_, dtype=float)
+    w = np.asarray(pls.x_weights_, dtype=float)
+    q = np.asarray(pls.y_loadings_, dtype=float)
+
+    p = w.shape[0]
+    s = np.diag(t.T @ t @ q.T @ q)
+    total_s = float(np.sum(s))
+    if total_s <= 0:
+        return np.zeros(p, dtype=float)
+
+    vip = np.zeros(p, dtype=float)
+    for j in range(p):
+        weight = 0.0
+        for a in range(w.shape[1]):
+            w_col = w[:, a]
+            denom = float(np.dot(w_col, w_col))
+            if denom <= 0:
+                continue
+            weight += s[a] * (w[j, a] ** 2) / denom
+        vip[j] = math.sqrt(p * weight / total_s)
+    return vip
+
+
+def save_horizontal_barplot(
+    series: pd.Series,
+    path: Path,
+    title: str,
+    color_positive: str = "#d55e00",
+    color_negative: str = "#0072b2",
+) -> None:
+    data = series.iloc[::-1]
+    colors = [color_positive if val >= 0 else color_negative for val in data.values]
+
+    fig, ax = plt.subplots(figsize=(10, max(6, len(data) * 0.28)))
+    ax.barh(range(len(data)), data.values, color=colors)
+    ax.set_yticks(range(len(data)))
+    ax.set_yticklabels(data.index, fontsize=8)
+    ax.axvline(0.0, color="black", linewidth=0.8)
+    ax.set_title(title)
+    ax.set_xlabel("Value")
+    fig.tight_layout()
+    fig.savefig(path, dpi=180, bbox_inches="tight")
+    plt.close(fig)
+
+
+def save_scores_scatter(
+    scores_df: pd.DataFrame,
+    value_col: str,
+    path: Path,
+    title: str,
+) -> None:
+    fig, ax = plt.subplots(figsize=(8, 6))
+    scatter = ax.scatter(
+        scores_df["component_1"],
+        scores_df["component_2"],
+        c=scores_df[value_col],
+        cmap="viridis",
+        s=36,
+        alpha=0.9,
+        edgecolors="none",
+    )
+    ax.set_xlabel("PLS component 1 score")
+    ax.set_ylabel("PLS component 2 score")
+    ax.set_title(title)
+    cbar = fig.colorbar(scatter, ax=ax)
+    cbar.set_label(value_col)
+    fig.tight_layout()
+    fig.savefig(path, dpi=180, bbox_inches="tight")
+    plt.close(fig)
+
+
+def save_heatmap(df: pd.DataFrame, path: Path, title: str) -> None:
+    fig, ax = plt.subplots(figsize=(7, max(3, len(df.index) * 0.55)))
+    im = ax.imshow(df.values, cmap="coolwarm", aspect="auto", vmin=-1.0, vmax=1.0)
+    ax.set_xticks(range(len(df.columns)))
+    ax.set_xticklabels(df.columns, rotation=45, ha="right")
+    ax.set_yticks(range(len(df.index)))
+    ax.set_yticklabels(df.index)
+    ax.set_title(title)
+    for i in range(df.shape[0]):
+        for j in range(df.shape[1]):
+            ax.text(j, i, f"{df.iat[i, j]:.2f}", ha="center", va="center", fontsize=8)
+    fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
+    fig.tight_layout()
+    fig.savefig(path, dpi=180, bbox_inches="tight")
+    plt.close(fig)
+
+
+def build_interpretation_artifacts(
+    final_model: Pipeline,
+    X: pd.DataFrame,
+    y: np.ndarray,
+    scenario_ids: np.ndarray | None,
+    outdir: Path,
+) -> Dict[str, str]:
+    imputer = final_model.named_steps["imputer"]
+    scaler = final_model.named_steps["scaler"]
+    pls: PLSRegression = final_model.named_steps["model"]
+
+    X_imputed = imputer.transform(X)
+    X_scaled = scaler.transform(X_imputed)
+    x_scores = pls.transform(X_scaled)
+
+    n_components = pls.n_components
+    n_features = X.shape[1]
+    n_targets = y.shape[1]
+    feature_names = list(X.columns)
+    component_names = [f"component_{i + 1}" for i in range(n_components)]
+    target_names = ["target_viscosity", "target_oxidation"]
+
+    coef = _ensure_feature_target_matrix(pls.coef_, n_features, n_targets)
+    coef_df = pd.DataFrame(coef, index=feature_names, columns=target_names)
+    coef_df["abs_sum_coef"] = coef_df[target_names].abs().sum(axis=1)
+    coef_df = coef_df.sort_values("abs_sum_coef", ascending=False).reset_index(names="feature")
+
+    x_weights_df = pd.DataFrame(pls.x_weights_, index=feature_names, columns=component_names).reset_index(names="feature")
+    x_loadings_df = pd.DataFrame(pls.x_loadings_, index=feature_names, columns=component_names).reset_index(names="feature")
+    y_loadings_df = pd.DataFrame(pls.y_loadings_, index=target_names, columns=component_names).reset_index(names="target")
+
+    vip = compute_vip_scores(pls)
+    vip_df = pd.DataFrame({"feature": feature_names, "vip": vip}).sort_values("vip", ascending=False).reset_index(drop=True)
+
+    scores_df = pd.DataFrame(x_scores, columns=component_names)
+    if scenario_ids is not None:
+        scores_df.insert(0, SCENARIO_COL, scenario_ids)
+    scores_df["target_viscosity"] = y[:, 0]
+    scores_df["target_oxidation"] = y[:, 1]
+
+    component_target_corr = pd.DataFrame(index=component_names, columns=target_names, dtype=float)
+    for comp in component_names:
+        component_target_corr.loc[comp, "target_viscosity"] = pd.Series(scores_df[comp]).corr(pd.Series(y[:, 0]))
+        component_target_corr.loc[comp, "target_oxidation"] = pd.Series(scores_df[comp]).corr(pd.Series(y[:, 1]))
+
+    top_by_weight_rows = []
+    weights_indexed = x_weights_df.set_index("feature")
+    loadings_indexed = x_loadings_df.set_index("feature")
+    for comp in component_names:
+        top_features = weights_indexed[comp].abs().sort_values(ascending=False).head(15).index
+        for rank, feature in enumerate(top_features, start=1):
+            top_by_weight_rows.append(
+                {
+                    "component": comp,
+                    "rank": rank,
+                    "feature": feature,
+                    "abs_weight": abs(float(weights_indexed.at[feature, comp])),
+                    "weight": float(weights_indexed.at[feature, comp]),
+                    "loading": float(loadings_indexed.at[feature, comp]),
+                }
+            )
+    component_feature_df = pd.DataFrame(top_by_weight_rows)
+
+    coef_path = outdir / "pls_flat_compact_coefficients.csv"
+    weights_path = outdir / "pls_flat_compact_x_weights.csv"
+    loadings_path = outdir / "pls_flat_compact_x_loadings.csv"
+    y_loadings_path = outdir / "pls_flat_compact_y_loadings.csv"
+    vip_path = outdir / "pls_flat_compact_vip_scores.csv"
+    scores_path = outdir / "pls_flat_compact_x_scores.csv"
+    component_corr_path = outdir / "pls_flat_compact_component_target_correlations.csv"
+    component_feature_path = outdir / "pls_flat_compact_component_feature_ranking.csv"
+
+    coef_df.to_csv(coef_path, index=False)
+    x_weights_df.to_csv(weights_path, index=False)
+    x_loadings_df.to_csv(loadings_path, index=False)
+    y_loadings_df.to_csv(y_loadings_path, index=False)
+    vip_df.to_csv(vip_path, index=False)
+    scores_df.to_csv(scores_path, index=False)
+    component_target_corr.reset_index(names="component").to_csv(component_corr_path, index=False)
+    component_feature_df.to_csv(component_feature_path, index=False)
+
+    save_horizontal_barplot(
+        vip_df.head(20).set_index("feature")["vip"],
+        outdir / "pls_flat_compact_vip_top20.png",
+        "PLS VIP: top 20 features",
+        color_positive="#009e73",
+        color_negative="#009e73",
+    )
+    save_horizontal_barplot(
+        coef_df.assign(abs_target_viscosity=lambda d: d["target_viscosity"].abs())
+        .sort_values("abs_target_viscosity", ascending=False)
+        .head(20)
+        .set_index("feature")["target_viscosity"],
+        outdir / "pls_flat_compact_coef_viscosity_top20.png",
+        "PLS coefficients: top 20 by |coef| for viscosity",
+    )
+    save_horizontal_barplot(
+        coef_df.assign(abs_target_oxidation=lambda d: d["target_oxidation"].abs())
+        .sort_values("abs_target_oxidation", ascending=False)
+        .head(20)
+        .set_index("feature")["target_oxidation"],
+        outdir / "pls_flat_compact_coef_oxidation_top20.png",
+        "PLS coefficients: top 20 by |coef| for oxidation",
+    )
+
+    if n_components >= 2:
+        save_scores_scatter(
+            scores_df,
+            "target_viscosity",
+            outdir / "pls_flat_compact_scores_pc1_pc2_viscosity.png",
+            "PLS scores: component 1 vs 2, colored by viscosity",
+        )
+        save_scores_scatter(
+            scores_df,
+            "target_oxidation",
+            outdir / "pls_flat_compact_scores_pc1_pc2_oxidation.png",
+            "PLS scores: component 1 vs 2, colored by oxidation",
+        )
+
+    save_heatmap(
+        component_target_corr.T,
+        outdir / "pls_flat_compact_component_target_correlations.png",
+        "Correlations: PLS components vs targets",
+    )
+
+    return {
+        "coefficients_csv": str(coef_path),
+        "x_weights_csv": str(weights_path),
+        "x_loadings_csv": str(loadings_path),
+        "y_loadings_csv": str(y_loadings_path),
+        "vip_csv": str(vip_path),
+        "x_scores_csv": str(scores_path),
+        "component_target_correlations_csv": str(component_corr_path),
+        "component_feature_ranking_csv": str(component_feature_path),
+        "vip_plot": str(outdir / "pls_flat_compact_vip_top20.png"),
+        "coef_viscosity_plot": str(outdir / "pls_flat_compact_coef_viscosity_top20.png"),
+        "coef_oxidation_plot": str(outdir / "pls_flat_compact_coef_oxidation_top20.png"),
+        "scores_viscosity_plot": str(outdir / "pls_flat_compact_scores_pc1_pc2_viscosity.png"),
+        "scores_oxidation_plot": str(outdir / "pls_flat_compact_scores_pc1_pc2_oxidation.png"),
+        "component_target_correlations_plot": str(outdir / "pls_flat_compact_component_target_correlations.png"),
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Compact PLSRegression on prepared flat features."
@@ -394,12 +639,21 @@ def main() -> None:
 
     final_model = build_pipeline(best_n_components)
     final_model.fit(X, y)
+    scenario_ids = df[SCENARIO_COL].astype(str).to_numpy() if SCENARIO_COL in df.columns else None
 
     cv_results_path = args.outdir / "pls_flat_compact_cv_fold_metrics.csv"
     cv_summary_path = args.outdir / "pls_flat_compact_cv_summary.csv"
     feature_cols_path = args.outdir / "pls_flat_compact_feature_columns.json"
     manifest_path = args.outdir / "pls_flat_compact_run_manifest.json"
     dropped_report_path = args.outdir / "pls_flat_compact_dropped_columns.json"
+
+    interpretation_outputs = build_interpretation_artifacts(
+        final_model=final_model,
+        X=X,
+        y=y,
+        scenario_ids=scenario_ids,
+        outdir=args.outdir,
+    )
 
     cv_results.to_csv(cv_results_path, index=False)
     cv_summary.to_csv(cv_summary_path, index=False)
@@ -430,6 +684,7 @@ def main() -> None:
         "outputs": {
             "cv_fold_metrics": str(cv_results_path),
             "cv_summary": str(cv_summary_path),
+            **interpretation_outputs,
         },
     }
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")

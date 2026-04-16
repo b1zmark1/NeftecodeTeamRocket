@@ -1,0 +1,86 @@
+~60% wt. is ULSD Figure 6), as calculated from the ratio of
+biodiesel concentration (Figure 5) to total fuel concentration
+in oil (Figure 4). Multiple samples of the fresh B20 fuel from
+the fuel station were analyzed to confirm that fresh fuel
+pumped into the fuel tank was indeed B20, or 20% biodiesel.
+
+In other words, the fuel pumped into the fuel tank is B20, but
+the fuel in the oil resembles B40 because ULSD boils off at a
+lower temperature range than biodiesel, and ULSD is
+volatilized faster than biodiesel at the oil temperatures in this,
+study. The slightly increasing trend shown in Figure 6 is
+attributed to ongoing evaporation of ULSD from the oil, and
+to ULSD dilution that was carried over fom the previous oil
+drains.
+
+0 3,000 6,000 9,000 12,000
+
+Oil Age (miles)
+
+Figure 5. Biodiesel concentration in oil vs. mileage. The
+oil consists of oil, biodiesel, and ULSD.
+
+0 3,000 6,000 9,000 12,000
+Oil Age (miles)
+
+Figure 6. BXX concentration of fuel in the oil vs.
+mileage. The fuel consists of biodiesel and ULSD.
+
+The biodiesel concentration shown in Figures 5 and 6 was
+measured with a differential IR method. Oil degradation
+could interfere with the accuracy of the IR method, so the
+biodiesel dilution of selected samples was confirmed through
+a GC method. Results from the two methods show high
+correlation and good absolute agreement (Figure_7). The
+agreement suggests that the methyl ester absorptions at 1746
+
+cm! of IR spectra were not greatly disturbed by the
+absorption of oxidation products near 1700 cm7!.
+
+a.
+
+P<)
+y = LOD7x+ 0.434
+0.963
+0 4 8 2 16
+Biodiesel Concentration (% wt)
+
+per GC Method
+Figure 7. Comparison of IR vs. GC biodiesel
+‘measurement methods.
+
+Additionally, the speciation of FAMEs in  biodiesel-
+containing oils changed only modestly and the location and
+cis-trans isomerism of carbon-carbon double bonds in
+unsaturated FAMEs did not change with age. The fatty acid
+ester composition of the biodiesel fraction of oil samples
+collected from Vehicle #143 is shown in Figure 8. Afier
+1,499 miles, the oil contained 24 wt% biodiesel. The
+biodiesel was made up of 29.5% methyl linoleate (C18:2),
+33.9% methyl oleate (C18:1), 16.6% methyl palmitate
+(C16:0), 10.1% methyl stearate (C18:0), 3.7% methyl
+linolenate (C18:3), 3.0% methyl palmitoleate (C16:1), and
+3.1% other acid esters, suggesting a biodiesel feedstock
+containing about 40% soy oil and 60% lard (pig fat). As the
+biodiesel fraction in the oil increased to 5.3 wit% after 3,994
+miles, the proportion of fatty acid esters remained the same,
+indicating the biodiesel feedstock did not change. At 5,398
+miles, the proportion of fatty acid esters began to shift. The
+C18:2 fraction increased from 29.5% to 38.0%, whereas the
+fractions of C18:1, C16:0, and C18:0 decreased. The timing
+of the shift corresponded to when the fuel station supplying
+the B20 received a new batch of fuel. Based on the FAME
+composition of the new fuel (in a fuel sample collected on
+11/24/08), the biodiesel contained a different feedstock mix
+(most closely matched by 20% soy oil, 20% lard, and 60%
+com oil) than in the biodiesel used at the start of the B20 trial.
+After this change in fuel, the proportion of FAMEs in the oil
+gradually shifted through the end of the oil interval,
+consistent with the accumulation/depletion of FAMEs from
+the new fuel in the existing mixture from the prior fuel.
+
+‘The poly-unsaturated FAMEs (eg., C18:3 and C18:2) are
+known to be considerably more oxidatively unstable than
+mono-unsaturated (¢.g., C18:1, C16:1) and saturated FAMEs
+(eg.. C18:0, C16:0). Given the change in B20 fuel FAME
+composition during the trial, determining whether the poly-

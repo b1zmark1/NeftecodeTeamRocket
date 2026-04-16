@@ -1,0 +1,152 @@
+US 2025/0136889 Al
+
+may include, for example, hindered 2,6-di-alkyl-phenolic
+
+May 1, 2025
+
+[0451] Typical aromatic amines antioxidants have alkyl
+
+proprionic ester such as CC )-alkyl
+3-(3, 1-4 available
+as IRGANOX™ L135. Bis-phenolic antioxidants may also
+be advantageously used herein. Examples of ortho-coupled
+phenols include: 2,2-bis(4-heptyl-6-t-butyl-phenol);2,2-bis
+/i-phenol); and 2,2'-bis(4-dodecyl-6-t-b
+
+phenol). Pamouped Digphenols ined, for example, 44.
+bis(2.6-di phenol) ai 2,6-di-t-
+butyl-phenol).
+
+0447] Particularly useful hindered phenol
+
+groups of at least about 6 carbon atoms.
+Examples of aliphatic groups include hexyl, heptyl, octyl,
+nonyl, and decyl. Generally, the aliphatic groups will not
+contain more than about 14 carbon atoms. The general types
+of amine antioxidants useful in the present compositions
+include phenyl naphthylamines, phenothiazines, imidod-
+ibenzyls and diphenyl phenylene diamines. Mixtures of two
+or more aromatic amines are also useful. Polymeric amine
+antioxidants can also be used.
+
+l
+
+often contains a secondary butyl and/or a tertiary butyl
+group as a sterically hindering group. The phenol group is
+often further substituted with a hydrocarbyl group and/or a
+bridging group linking to a second aromatic group. Suitable
+hindered phenols include, but are not limited to, 2,6-di-tert-
+4-methyl-2, 4-ethyl-
+
+[0452] Sulfi also useful
+herein. In particular, one or more oil- Soluble or oil-dispers-
+ible sulfur-containing antioxidant(s) can be used as an
+antioxidant additive. For example, sulfurized alkyl phenols
+and alkali or alkaline earth metal salts thereof also are useful
+antioxidants herein. Suitably, the lubricating oil composition
+(8) of the present disclosure may inelude the one or more
+
+4-propyl-2,6-di or
+
+4-butyl-2,6-di-tert-butylphenol, _ a -dodecyl-2,6-di-tert-
+4-alkylester-2.6-di-t
+
+in an amount to provide the
+
+lubricating oil composition with from 0.02 to 0.2, preferably
+
+from 0.02 to 0.15, even more preferably 0.02 to 0.1, even
+
+more preferably 0.04 to 0.1, mass % sulfur based on the total
+
+mass of the lubricating oil composition. Optionally the
+‘soluble or oil dispesi rr Me a
+
+bl
+
+phenol, such as
+CC )-alkyl 3-G,5-di-tert-butyl-4 y
+nyl)propanoate).
+[0448] _A preferred hindered phenol may be by
+the formula:
+HO.
+OCLs
+
+°
+
+[0449] Effective amounts of one or more catalytic anti-
+oxidants may also be used. The catalytic antioxidants com-
+prise an effective amount of a) one or more oil soluble
+polymetal organic compounds: and, efetive amounts of b)
+one or more N,N'-di
+
+compounds or c) one or more ined phenol compounds;
+or a combination of both b) and c). Catalytic antioxidants
+useful herein are more fully described in U.S. Pat. No.
+8,048,833.
+
+[0450] Non-phenolic oxidation inhibitors, which may be
+used include aromatic amine antioxidants (other than those
+represented by Formula (A) or Formula (1) above) and these
+may be used either as such or in combination with phenolics
+Typical examples of non-phenolic antioxidants include:
+alkylated and non-alkylated aromatic amines such as aro-
+matic monoamines of the formula RgRjR, oN, where Ry is an
+aliphatic, aromatic or substituted aromatic group, R, is an
+aromatic or a substituted aromatic group, and Ro is H, alkyl,
+aryl or R,,S(O)XR,, where R,, is an alkylene,
+
+(s) are selected from sulfurized C,, to C,,, olefin(s), sulfurized
+aliphatic (C, to Cao) hydrocarbyl fatty acid ester(s), ashless
+sulfurized phenolic antioxidant(s), sulfur-containing organo-
+), and nati thereof. For
+further information, on sulfurized materials useful as anti-
+oxidants herein, please see U.S. Pat. No. 10,731,101 (col 15,
+In 55 to col 22, In 12).
+[0453] An additional antioxidant employed in the lubri-
+cating oil of the present invention may be a molybdenum
+succinimide. The mono and polysuccinimides that can be
+used to prepare the molybdenum succinimide complexes
+described herein are disclosed in numerous references and
+are well known in the art. Certain fundamental types of
+succinimides and the related materials encompassed by the
+term of art “succinimide” are taught in U.S. Pat. Nos.
+3,219,666; 3,172,892; and 3,272,746, the disclosures of
+which are hereby incorporated by reference. The term “suc-
+cinimide” is understood in the art to include many of the
+amide, imide, and amidine species which may also be
+formed. The predominant product however is a succinimide
+and this term has been generally accepted as meaning the
+product of a reaction of an alkenyl substituted succinic acid
+or anhydride with a nitrogen-containing compound.
+[0454] Suitable dithiocarbamates include, but are not lim-
+ited to, dithiocarbamates wherein the metal is zinc, copper or
+molybdenum, ashless thiocarbamates or dithiocarbamates
+(ie, essentially metal free) such as methylenebis(dialkyldi-
+and
+isobutyl disulfide-2, 2'-bis(dialkyldithiocarbamate) where
+the alkyl groups of the dialkyldithiocarbamate can prefer-
+ably have from 1 to 6 carbon atoms. Examples of preferred
+
+or aralkylene group, R'? is an alkyl group, or an alkenyl,
+aryl, or alkaryl group, and x is 0, 1, or 2. The aliphatic group
+R, may contain from 1 to about 20 carbon atoms, and
+preferably contains from about 6 to 12 carbon atoms. The
+aliphatic group is typically a saturated aliphatic group.
+Preferably, both Ry and Ry are aromatic or substituted
+aromatic groups, and the aromatic group may be a fused ring
+aromatic group such as naphthyl, Aromatic groups Ry and Ry,
+may be joined together with other groups such as S.
+
+ashless
+
+bamate), ethylenebis(dibutylthiocarbamate) and isobutyl
+disulfide-2, 2'-bis(dibutyldithiocarbamate),
+
+[0455] The additional antioxidant employed in the lubri-
+cating oil of the present invention may be a sterically
+hindered phenol described in U.S. Pat. No. 9,512,380, such
+as those shown at columns 82 to 100.
+
+[0456] Antioxidant additives may be used in an amount of
+about 0.01 to 10 (alternately 0.01 to 5, alternately 0.01 to 3)

@@ -1,0 +1,50 @@
+{
+  "best_model": "rbf_svr",
+  "selected_feature_count": 496,
+  "dropped_feature_count": 135,
+  "cv_summary": [
+    {
+      "mae_viscosity": 64.75737548808084,
+      "mae_oxidation": 27.406107127139745,
+      "rmse_viscosity": 183.50344337358706,
+      "rmse_oxidation": 32.55208803113593,
+      "r2_viscosity": 0.12721227646999167,
+      "r2_oxidation": 0.1825116647797076,
+      "nmae_viscosity_iqr": 1.3242817073227164,
+      "nmae_oxidation_iqr": 0.453293204219976,
+      "mean_nmae_iqr": 0.8887874557713462,
+      "model_name": "rbf_svr",
+      "n_features_input": 496,
+      "n_folds": 25
+    },
+    {
+      "mae_viscosity": 198.90284988190447,
+      "mae_oxidation": 45.853986444304596,
+      "rmse_viscosity": 565.1967566845738,
+      "rmse_oxidation": 75.23279488168203,
+      "r2_viscosity": -7.279793679191894,
+      "r2_oxidation": -3.36654815409595,
+      "nmae_viscosity_iqr": 4.067542942370234,
+      "nmae_oxidation_iqr": 0.7584185650728514,
+      "mean_nmae_iqr": 2.4129807537215426,
+      "model_name": "linear_svr",
+      "n_features_input": 496,
+      "n_folds": 25
+    }
+  ],
+  "best_model_details": {
+    "base_estimator_type": "SVR",
+    "kernel": "rbf",
+    "C": 3.0,
+    "epsilon": 0.1
+  },
+  "artifacts": {
+    "summary_csv": "svm_v2_cv_summary.csv",
+    "best_model_joblib": "svm_v2_best_model.joblib",
+    "test_predictions_csv": "svm_v2_test_predictions.csv",
+    "oof_prediction_files": {
+      "linear_svr": "linear_svr_v2_oof_predictions.csv",
+      "rbf_svr": "rbf_svr_v2_oof_predictions.csv"
+    }
+  }
+}

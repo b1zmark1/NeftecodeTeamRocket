@@ -1,0 +1,64 @@
+5.398 6,805 7,858
+
+9 18:119
+OIs:1cll
+8:1 09
+
+9,241
+
+Oil Age (miles)
+
+Figure 10. Composition of oleic acid ester (C18:1) vs. mileage for Vehicle #143.
+
+20% Soy
+tallow
+
+© 60% Corn/ 20% Lard
+
+15 20
+
+Biodiesel Concentration (% wt.)
+
+Figure 11. Calibration curve for FTIR oxidation vs. fresh biodiesel concentration.
+
+subtracted from the measured oxidation value to determine
+what we refer to as the ‘corrected oxidation’ value. The IR
+oxidation values of biodiesel from beef tallow and soy
+fe shown. For a given concentration of
+biodiesel, all three feedstocks give the same IR oxidation
+value, suggesting that the type of biodiesel feedstock does not
+impact the corrected IR oxidation value.
+
+‘Without any correction, increasing oxidation values with B20
+dilution are dominated by increasing biodiesel concentration
+(Figure_12a), and a reasonable comparison with ULSD
+dilution can not be made. In the figure, the trucks in the fleet
+are identified by numbers ranging from 140 to 145. The
+corrected oxidation values increased faster with B20 dilution
+than with ULSD dilution Figure 12b). Oxidation values with
+ULSD dilution (requiring no correction) remained at a
+remarkably low level throughout the duration of the oil
+interval, even after 12,000 miles. The low bulk oil
+temperature of less than 95 °C in this fleet helped to
+minimize the oil oxidation rate. The corrected oxidation with
+
+biodiesel dilution was low for the first ~6,000 miles, and
+then increased rapidly. The increase in oxidation appeared to
+correspond with the change in biodiesel feedstock mix
+Figure_13). The reason that the B20 fuel from second
+biodiesel feedstock mix corresponded to increased oxidation
+is difficult to determine, considering that it contained a lower
+concentration of C18:3 which is most susceptible to
+oxidation, as observed in GC analysis (Figure 9). We can
+only speculate that the fresh B20 fuel from second biodiesel
+feedstock mix had decreased oxidation stability, increased
+TAN, increased contaminants, or some other less desirable
+fuel property compared to the B20 fuel from the first
+biodiesel feedstock. Alternatively, as is observed in biodiesel
+oxidation stability testing, there may have been an induction
+period before the oxidation commenced, e.g., corresponding
+to depletion of antioxidants in the fuel or oil. The data in
+Figure 9 suggest a steady rate of oxidation of C18:3
+accumulated in the oil with increasing mileage. However,
+since the concentration of C18:3 in the oil was very low
+(0-0.2% wt), its steady depletion was not detected in IR

@@ -1,0 +1,88 @@
++ 140, ULSD
+
++ 141, ULSD
+143-1, ULSD
+143-2, ULSD,
+ULSD
+- 144-2, ULSD
+X-+ 145, ULSD
+—e— 140, B20
+
+—+— 141, B20
+—*— 142, B20
+—A— 143, B20
+
+Normalized Iron Concentration (ppm)
+
+—a— 144, B20
+
+0 3,000 6,000
+
+Figure 17.
+
+Oil Age (miles)
+
+x 145, B20
+12,000
+
+dilution) vs. mileage.
+
++ 140, ULSD
++ 141, ULSD
+
+143-1, ULSD
+143-2, ULSD
++ 144-1, ULSD,
++ 144-2, ULSD,
+
+a
++
+a
+ra
+=
+ray
+
+--¢-+ 145, ULSD
+—— 140, B20
+—+— 141, B20
+142, B20
+—A— 143, B20
+—S— 144, B20
+
+0 3,000 6,000
+Oil Age (miles)
+
+145, B20
+
+12,000
+
+Figure 18. Lead
+
+dilution are likely due to corrosion, rather than mechanical
+wear. Lead concentration increased sharply after roughly
+7,000 miles for all but one vehicle, which corresponds with
+~10% biodiesel in the oil. The increase in lead concentration
+for all vehicles came shortly after discrete increases in
+oxidation and TAN, suggesting that oxidation product
+species, including organic acids, caused lead corrosion.
+Evaluation of the data by oil sample date (rather than oil
+miles) suggests that B20 fuel from the second biodiesel
+feedstock mix caused oxidation and TAN values to increase,
+which led to lead corrosion. Altematively, there may have
+‘been an induction period before the oxidation commenced,
+which delayed the onset of lead corrosion.
+
+dilution) vs. mileage.
+
+The rate of lead corrosion is closely related to the
+concentration of biodiesel oxidation products such as
+peroxides and organic acids!3. 26 and also to the length of
+time that lead-containing components are exposed to
+biodiesel oxidation products. Since this fleet was
+accumulating miles at a high rate, lead-containing parts were
+‘only exposed to biodiesel and its oxidation products for a
+relatively short period of time before changing the oil. It is
+reasonable to believe that lead concentrations would be much
+higher in the presence of biodiesel dilution if the oil intervals
+were extended over longer time periods for the same amount
+of miles.

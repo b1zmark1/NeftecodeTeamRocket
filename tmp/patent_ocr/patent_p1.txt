@@ -1,0 +1,88 @@
+as) United States
+
+US 20250136889A1
+
+a2) Patent Application Publication co) Pub. No.: US 2025/0136889 A1
+
+KEILY et al. (43) Pub. Date: May 1, 2025
+(54) LUBRICANT COMPOSITIONS CONTAINING CION 30/00 (2006.01)
+HIGH C9 DISUBSTITUTED CION 30/02 (2006.01)
+DIPHENYLAMINE ANTIOXIDANT CION 30/04 (2006.01)
+CONTENT CION 30/06 (2006.01)
+CION 30/10 (2006.01)
+(71) Applicant; INFINEUM INTERNATIONAL CION 4025 (2006.01)
+LIMITED, Abingdon (GB) CION 70/00 (2006.01)
+
+; : (52) US. CL
+(72) Inventors: John KEILY, Oxford (GB); Oliver J. CPC... C1OM 169/044 (2013.01); COM 129/10
+
+DELAMORE, Abingdon (GB); Paul
+WILSON, Wantage (GB); Ronak M.
+SHAH, Piscataway, NJ (US); Stephen
+ARROWSMITH., Abingdon (GB):
+Marcus POPOWICZ, Watchfield (GB)
+
+(73) Assignee: INFINEUM RNATIONAL
+LIMITED, Abingdon (GB)
+
+(21) Appl. No.: 18/924,430
+(22) Filed: Oct. 23, 2024
+
+Related U.S. Application Data
+(60) Provisional application No. 63/593,559, filed on Oct.
+
+27, 2023.
+Publication Classification
+(51) Int. Cl.
+
+C10M 169/04 (2006.01)
+C10M 129/10 (2006.01)
+C10M 129/54 (2006.01)
+C10M 129/76 (2006.01)
+CIOM 133/12 (2006.01)
+CIOM 135/18 (2006.01)
+COM 137/10 (2006.01)
+C10M 141/10 (2006.01)
+C10M 149/10 (2006.01)
+COM 155/00 (2006.01)
+COM 157/10 (2006.01)
+C1OM 161/00 (2006.01)
+C1OM 177/00 (2006.01)
+CION 20/04 (2006.01)
+
+(2013.01); C1OM 129/54 (2013.01); C1OM
+129/76 (2013.01); CIOM 133/12 (2013.01);
+CIOM 135/18 (2013.01); C1OM 137/10
+(2013.01); C1OM 141/10 (2013.01); COM
+149/10 (2013.01); C1OM 155/00 (2013.01);
+CIOM 157/10 (2013.01): CIM 161/00
+(2013.01); C10M 177/00 (2013.01); CIOM
+2203/003 (2013.01); C1OM 2207/023
+(2013.01); C1OM 2207/14 (2013.01); CIOM
+2207/289 (2013.01): CI0M 2215/26 (2013.01);
+CIOM 2217/028 (2013.01); CIOM 2219/068
+(2013.01); COM 2223/045 (2013.01); C1OM
+2229/00 (2013.01); CLON 2020/04 (2013.01);
+CION 2030/02 (2013.01); CION 2030/04
+(2013.01); C1ON 2030/06 (2013.01); C1ON
+2030/10 (2013.01); C1ON 2030/42 (2020.05);
+CION 2040/25 (2013.01); CION 2070/02
+(2020.05)
+
+(57) ABSTRACT
+
+This disclosure relates to the use of di(alkyl substituted
+phenyl)amine antioxidants as additives in lubricant compo-
+sitions having good oxidation properties in engine crankcase
+applications, especially in compression ignited engine and
+or spark ignited engine applications, where the antioxidant
+comprises from 0 to 10 mass % mono-C,-alkyl substituted
+diphenyl amine, and 90 to 100 mass % di-Cy-alky i
+tuted phenyl amines based upon the weight of the mono- and
+alkyl substituted phenyl amines, preferably where
+tri-C,-alkyl substituted phenyl amines are minimized and
+ortho substituted di-C,-alkyl substituted phenyl amines are
+minimized.
+
+V100% Increase
+

@@ -1,0 +1,36 @@
+Copyright © 2019
+SAE international
+Ford Motor Company
+
+dot 10.427/04-12-03-0015,
+
+Oxidation of Soybean Biodiesel Fuel
+in Diesel Engine Oils
+
+James C. Ball and James E. Anderson, Ford Motor Company, USA
+Jacob A. Duckworth, Michigan State University, USA
+Dalrene Uy and Timothy J. Wallington, Ford Motor Company, USA
+
+History
+Abstract Recewved: 10 Aug 2019
+During diesel engine operation, some fuel is entrained in engine oil, particularly asa consequence Revised: 24 Sep 2019
+of strategies to regenerate NOx traps or particle filters. This “fuel dilution” of oil can adversely affect Accepted: 22. Oct 2019
+engine oil properties and performance. Compared to diesel fuel, biodiesel is more prone to fuel “Available: 05 Dec 2019
+0: eC
+
+using a modified Rapid Small-Scale Oxidation Test (RSSOT) and a Rancimat instrument with 0,5, Keywords
+10, and 20 wt% biodiesel in four fully formulated engine oils, two partially formulated engine oils, __Blodlese, Engine ol
+Onidation
+content a the least h
+5 wt% biodiesel improved the oxidation stability relative to oil without biodiesel. Experiments with Citation
+Bal, J, Anderson, J,
+fraction, consistent with natural antioxidants inthe biodiesel, Omission of two engine oil additives, Duckworth, J. Uy D.etal,
+antioxidants and zinc dialkyldithiophosphates (ZDDP), led to an unexpected increase in oxidation “Oxidation of Soybean
+stability (with and without biodiesel). Time-series oxidation experiments at 160°C with one of the _Blodlese Fue in Diesel
+fully formulated engine oils, with and without 20 wt% biodiesel, demonstrated that the biodiesel Engine Os” SAE nt.
+caused greater oxidation instability and extent of oxidation, greater formation of peroxides and Fuels Lubr 12(3)223-228,
+reduc BN), tent, viscosity 2019
+increased with aging time and eventually surpassed that of the engine oil aged without biodiesel, °°"
+With extended aging time, the fully formulated engine oil containing biodiesel “broke,” forming
+black tar-like materials with high viscosity. eee een
+

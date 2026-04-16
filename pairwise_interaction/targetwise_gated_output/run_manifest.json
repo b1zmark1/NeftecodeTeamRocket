@@ -1,0 +1,127 @@
+{
+  "train_components": "E:\\Projects\\Neftecode\\new_datasets\\train_component_level_transformed.csv",
+  "test_components": "E:\\Projects\\Neftecode\\new_datasets\\test_component_level_transformed.csv",
+  "train_scenario": "E:\\Projects\\Neftecode\\new_datasets\\train_scenario_level_features.csv",
+  "test_scenario": "E:\\Projects\\Neftecode\\new_datasets\\test_scenario_level_features.csv",
+  "component_numeric_cols": [
+    "Массовая доля, %",
+    "% масс. (Mo)",
+    "Активный Азот / Кислород, % масс. (N или O)",
+    "Потенциал ионизации,эВ",
+    "Энергия ВЗМО, эВ",
+    "Дипольный момент, Д",
+    "Массовая доля цинка, ASTM D6481",
+    "Массовая доля серы, ASTM D6481",
+    "Массовая доля кальция, ASTM D6481",
+    "Содержание металла (Ca/Mg), % масс.",
+    "Содержание Бора",
+    "Щелочное число, ASTM D2896",
+    "Кинематическая вязкость, при 40°C, ASTM D445",
+    "Кинематическая вязкость, при 100°C, ASTM D445",
+    "Динамическая вязкость CCS -35°C, ASTM D5293",
+    "Температура застывания, ГОСТ 20287, метод Б",
+    "Индекс вязкости, ГОСТ 25371",
+    "Испаряемость по NOACK, ASTM D5800",
+    "Массовая доля фосфора, ASTM D6481",
+    "Длина углеродной цепи"
+  ],
+  "context_cols": [
+    "temperature_c",
+    "time_h",
+    "biofuel_pct",
+    "catalyst_category",
+    "severity_exp",
+    "temperature_x_time",
+    "temperature_x_biofuel",
+    "severity_x_biofuel",
+    "severity_x_catalyst",
+    "regime_load",
+    "synergy_ao_phenol_x_diphenylamine_active_no",
+    "synergy_ao_diphenylamine_active_no_x_mo",
+    "synergy_zn_x_boron_dispersant",
+    "synergy_aw_sulfur_x_ca_ca_mg",
+    "ao_k_avg_weighted_active_no",
+    "ao_k_avg_arithmetic",
+    "ao_ionization_min",
+    "ao_homo_max"
+  ],
+  "pair_type_names": {
+    "0": "none",
+    "1": "ao_ao",
+    "2": "ao_mo",
+    "3": "zddp_detergent",
+    "4": "zn_dispersant",
+    "5": "antiwear_ca_mg"
+  },
+  "pair_coverage": {
+    "mean_allowed_pairs_per_scenario": 7.401197604790419,
+    "median_allowed_pairs_per_scenario": 7.0,
+    "pair_type_counts": {
+      "ao_ao": 134,
+      "ao_mo": 152,
+      "zddp_detergent": 349,
+      "zn_dispersant": 212,
+      "antiwear_ca_mg": 389
+    }
+  },
+  "viscosity": {
+    "best_config": {
+      "name": "viscosity_gated_medium",
+      "d_model": 64,
+      "ctx_dim": 32,
+      "pair_hidden": 96,
+      "dropout": 0.2,
+      "lr": 0.0008,
+      "weight_decay": 0.0003,
+      "batch_size": 16,
+      "epochs": 160,
+      "patience": 24
+    },
+    "summary": [
+      {
+        "config": "viscosity_gated_medium",
+        "rmse": 111.10955847439499,
+        "mae": 40.62969207763672,
+        "r2": 0.680019736289978,
+        "target": "viscosity"
+      },
+      {
+        "config": "viscosity_gated_small",
+        "rmse": 122.25600301595624,
+        "mae": 46.558414459228516,
+        "r2": 0.6125990152359009,
+        "target": "viscosity"
+      }
+    ]
+  },
+  "oxidation": {
+    "best_config": {
+      "name": "oxidation_gated_medium",
+      "d_model": 64,
+      "ctx_dim": 32,
+      "pair_hidden": 96,
+      "dropout": 0.2,
+      "lr": 0.0008,
+      "weight_decay": 0.0003,
+      "batch_size": 16,
+      "epochs": 160,
+      "patience": 24
+    },
+    "summary": [
+      {
+        "config": "oxidation_gated_medium",
+        "rmse": 20.965094485062025,
+        "mae": 14.531170845031738,
+        "r2": 0.660908043384552,
+        "target": "oxidation"
+      },
+      {
+        "config": "oxidation_gated_small",
+        "rmse": 25.39456459821299,
+        "mae": 17.93439483642578,
+        "r2": 0.5024858713150024,
+        "target": "oxidation"
+      }
+    ]
+  }
+}

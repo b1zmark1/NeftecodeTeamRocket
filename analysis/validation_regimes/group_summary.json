@@ -1,0 +1,38 @@
+[
+  {
+    "regime": "dominant_base_oil",
+    "n_groups": 10,
+    "min_group_size": 2,
+    "median_group_size": 9.5,
+    "max_group_size": 42,
+    "groups": {
+      "Базовое_масло_1": 38,
+      "Базовое_масло_14": 42,
+      "Базовое_масло_16": 21,
+      "Базовое_масло_2": 29,
+      "Базовое_масло_3": 2,
+      "Базовое_масло_4": 6,
+      "Базовое_масло_5": 9,
+      "Базовое_масло_6": 7,
+      "Базовое_масло_7": 10,
+      "Базовое_масло_8": 3
+    }
+  },
+  {
+    "regime": "recipe_cluster",
+    "n_groups": 8,
+    "min_group_size": 9,
+    "median_group_size": 18.0,
+    "max_group_size": 33,
+    "groups": {
+      "cluster_0": 15,
+      "cluster_1": 28,
+      "cluster_2": 33,
+      "cluster_3": 16,
+      "cluster_4": 17,
+      "cluster_5": 30,
+      "cluster_6": 19,
+      "cluster_7": 9
+    }
+  }
+]

@@ -1,0 +1,85 @@
+Oi Age om
+
+O Other
+D16:1
+gis:3
+18:0
+16:0
+18:1
+18:2
+
+les)
+
+Figure 8. Composition of fatty acid esters in biodiesel vs. mileage for Vehicle #143.
+
+120%
+
+100%
+
+80%
+
+60%
+
+40%
+
+—4— C18:2, Vehicle #140
+—#— C18:2, Vehicle #143
+C18:3, Vehicle #140
+
+20%
+
+0%
+
+C18:3, Vehicle #143
+
+3,000 6,000
+
+Oil Age (miles)
+
+12,000
+
+Figure 9. Percentage of expected (non-degraded) concentration of poly-unsaturated FAMEs (C18:2 and C18:3) versus mileage
+for is calculated based on C18:0 concentrations in oil samples and in fuel
+sample and assumes no degradation.
+
+unsaturated FAMEs degraded during the trial requires that
+changes in FAME proportions be considered in relative
+tems. To accomplish this, the concentration of a relatively
+stable FAME (C18:0) was used as reference. Based on C18:0
+concentrations in the oil samples and in the fuel sample, the
+concentration of the other FAMEs can be predicted assuming
+no behavioral differences. Figure 9 shows how different the
+
+two vehicles. Methyl linolenate (C18:3), which is much more
+susceptible to oxidation than C18:0 and C18:1, did show
+depletion with increasing mileage. Methyl linoleate (C18:2),
+which is somewhat more stable than C18:3, snowed little to
+no depletion. The overall impact on total FAME
+concentrations is minor, as C18:3 makes up only a small
+fraction of the biodiesel
+
+The relative proportions of C18:1 isomers remained
+approximately constant with oil age Figure 10). Natural fats
+and oils used as biodiesel feedstocks contain primarily the cis
+
+isomers of carbon-carbon double bonds in unsaturated fatty
+acids. Long-term exposure (hours) to high temperatures (e.g.,
+220 °C) can result in conversion to a mixture of cis and trans
+isomers, but this was not observed. It should also be noted
+that the change in biodiesel feedstock did not have a
+measureable effect on friction and wear performance, which
+will be discussed later.
+
+Oxidation
+
+The IR-derived oxidation value of biodiesel-containing
+samples cannot be interpreted the same way as samples that
+do not contain biodiesel. This is because biodiesel is
+composed of esters, which get counted as oxidation products
+with the IR method. The oxidation value determined with IR
+increases linearly with increasing concentration of fresh B20
+in fresh oil (Figure 11). Fresh fuel from the second feedstock
+mix (which most closely matched 60% com oil, 20% lard,
+and 20% soy oil) was mixed with Motorcraft SAE 15W-40,
+API CI-4 oil to make the calibration curve. With the use of
+this relationship, the biodiesel contribution to oxidation was

@@ -1,0 +1,31 @@
+{
+  "grouping": "recipe_cluster",
+  "train_components": "E:\\Projects\\Neftecode\\new_datasets\\train_component_level_transformed.csv",
+  "candidates": {
+    "viscosity": [
+      [
+        "compact_v3_full",
+        "E:\\Projects\\Neftecode\\compact_v3\\train_flat_features_v3_compact.csv"
+      ],
+      [
+        "viscosity_focus",
+        "E:\\Projects\\Neftecode\\compact_v3\\feature_ablation\\targetwise_feature_sets\\viscosity_focus.csv"
+      ]
+    ],
+    "oxidation": [
+      [
+        "compact_v3_full",
+        "E:\\Projects\\Neftecode\\compact_v3\\train_flat_features_v3_compact.csv"
+      ],
+      [
+        "oxidation_focus_v2",
+        "E:\\Projects\\Neftecode\\compact_v3\\oxidation_enhancement\\oxidation_focus_v2_train.csv"
+      ]
+    ]
+  },
+  "outputs": {
+    "summary": "E:\\Projects\\Neftecode\\analysis\\backbone_recipe_cluster\\recipe_cluster_backbone_summary.csv",
+    "fold_metrics": "E:\\Projects\\Neftecode\\analysis\\backbone_recipe_cluster\\recipe_cluster_backbone_fold_metrics.csv",
+    "selected_backbones": "E:\\Projects\\Neftecode\\analysis\\backbone_recipe_cluster\\selected_backbones.csv"
+  }
+}

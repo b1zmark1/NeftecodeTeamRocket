@@ -1,0 +1,80 @@
++ 140, ULSD
+
++ 141, ULSD
++ 143-1, ULSD
++ 143-2, ULSD
+
+brie
+
++ 144-1, ULSD
+-B-- 144-2, ULSD,
++++ 145, ULSD
+
+—e— 140, B20
+
+—+— 141, B20
+
+—*— 142, B20
+—A— 143, B20
+—a— 144, B20
+
+0 3,000 6,000
+
+Oil Age (miles)
+
+x 145, B20
+12,000
+
+Figure 19. Sc
+
+Also, copper concentration in the oil remained at a low level
+of less than 5 ppm in all vehicle-aged oil samples, regardless
+of fuel type (data not shown). The sodium concentration was
+similar with B20 and ULSD dilution. Sodium hydroxide is
+typically used as a catalyst in the production of biodiesel, and
+if it is not adequately removed, the sodium forms fatty acid
+soaps that can be problematic. Water concentration ranged
+from 87 to 145 ppm in four oil samples with B20 dilution,
+which is not unusually high.
+
+Soot
+Soot-containing engine oil has been shown to produce
+increased engine wear2/. The normalized soot concentration
+was similar in oil with B20 dilution and ULSD dilution
+Figure_19). In both cases, the soot concentration steadily
+increased throughout an oil interval, as expected. The soot
+concentration was relatively low in all samples, and did not
+exceed 1%. Slightly less soot was found in the oil of Vehicles
+#144 and #145 than in the oil of the other vehicles, for both
+uLsp and B20. Soot concentration determined through IR
+lysis Figure 19) and through the Wilke method (not
+ove here) followed similar trends. Even though B20 fuel is
+known to decrease particulate exhaust emissions! it did not
+greatly affect the amount of soot that collected in the oil
+sump. This may be a result of the different size distributions
+of soot particles that are found in the engine oil compared to
+those produced in the combustion chamber. Smaller soot
+particles are more likely to reach the oil through the small
+clearance between the piston rings and cylinder bores than
+larger particles, so the size distribution of soot particles that
+reach the engine oil are expected to be smaller than the soot
+particles produced in the combustion chamber.
+
+dilution) vs. mileage.
+
+FRICTION AND WEAR
+HERR tests were run to are the wear protection
+properties of oils with B20 and ULSD dilution under
+boundary lubrication conditions. A 3D image of a typical
+wear scar on a steel disk after a three hour test is shown in
+‘igure 20. With both types of fuel dilution, wear increased as
+oil age increased (Figure 21). The wear scar volume of oil
+samples aged less than 1,000 miles were less than 0.5 million
+m3, and that of oil samples aged 12,000 miles were
+generally greater than 3 million um3. Several factors could
+contribute to increasing wear, such as increasing fuel
+concentration, increasing soot concentration, increasing
+oxidation values, and decreasing TBN.
+
+Figure 20. 3D image of wear scar on steel disk after 3h
+HERR test.

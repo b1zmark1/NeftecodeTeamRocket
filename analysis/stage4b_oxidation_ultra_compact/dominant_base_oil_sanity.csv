@@ -1,0 +1,3 @@
+model_name,rmse,mae,r2,regime
+backbone_ridge,24.84230583440302,18.918689461133102,0.523889598032056,dominant_base_oil
+addon_ridge__chem5_core,24.65492206763716,18.81449987042574,0.5310450439486198,dominant_base_oil

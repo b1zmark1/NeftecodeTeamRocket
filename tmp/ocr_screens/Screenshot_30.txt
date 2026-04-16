@@ -1,0 +1,98 @@
+The UV and visible Raman spectra of films derived from oil
+with ULSD dilution indicate that iron sulfides are formed
+early on, but disappear as oil aging continues, and are
+replaced with Fe;0,. The ratio of phosphates to carbonates,
+decreases with increasing oi age, based on the relative peak
+heights shown in Figure 26. Phosphates are likely from the
+antiwear additive. As the waive phosphorus intensity in the
+surface film decreases, the wear volume increased.
+
+‘Visible Raman spectra of films derived from relatively fresh
+oil and aged oil with B20 dilution are compared in Figure 27
+The spectra were taken from oils from the beginning, middle,
+and end of same oil interval from Vehicle #140. The
+spectrum from the 1,618 mile aged oil sample shows iron
+sulfides, Fe304, and amorphous carbon. The spectra from the
+6.177 and 11,728 mile aged samples show Fe;04 and
+amorphous carbon. The peak at ~313 cm™! is unknown. The
+intensity of the carbon peaks varied from location to location
+within a given film.
+
+Relative Raman Intensity
+
+‘a) 1,618 miles
+T T
+500 1000 ©1500-2000
+Raman shift, crm-1
+Figure 27. Visible Raman spectra of films formed from
+HERR tests from oil with B20 dilution with a) 1,618
+miles, b) 6,177 miles, and c) 11,728 miles. Oil samples
+were obtained from Vehicle #140.
+
+Findings from oil with B20 and ULSD dilution are similar in
+that 1) iron sulfides were seen in films from oil with little
+aging (eg., less than 1,600 miles), but not from oil with
+considerable aging (e.g., greater than 6,100 miles), and 2)
+Fe3Oy intensity increases with increasing mileage. In general,
+films with more Fe304 and less iron sulfides had more wear.
+Additionally, analysis of films derived from ULSD-
+containing oil suggests that the ratio of mixed phosphates to
+carbonates in films decreases with increased oil age, which
+may also contribute to increased wear.
+
+CONCLUSIONS
+
+Biodiesel usage will increase in the future and any impacts on
+vehicles with diesel engines need to be characterized. In this,
+study, several oil samples were collected from a fleet of
+medium-duty vehicles equipped with an experimental
+aftertreatment system to determine the effect of biodiesel
+dilution on engine lubrication. The vehicles in the fleet used
+post injection strategy to regenerate the DPF, which led to
+high levels of fuel dilution in the engine oil. The general
+findings are summarized below:
+
++ Use of B20 fuel increased fuel dilution more than ULSD,
+mainly due to the slower evaporation rate of biodiesel at the
+oil temperatures in this study. Of the total fuel accumulated in
+the oil, the biodiesel fraction was ~40% wt. (B40) when
+using B20. Engine oil viscosity decreased more with B20
+dilution, due to its higher fuel dilution level.
+
++ Gas chromatography data was used to determine the
+speciation of FAMEs, which allowed changes in the
+feedstock of biodiesel sold at fuel stations to be tracked over
+a period of time. With vehicle aging, the expected
+concentration of the methyl linolenate (C18:3) fraction in the
+biodiesel decreased because of its lower oxidative stability,
+while that of methyl linoleate (C18:2) stayed relatively
+unchanged. Methyl linolenate is the most oxidatively unstable
+FAME present in typical biodiesel.
+
++ Use of B20 increased engine oil oxidation more than ULSD
+as determined through IR analysis, but only minimal changes
+in TAN and TBN were observed. Oil oxidation was
+remarkably low with ULSD dilution after 12,000 miles, likely
+due to the low bulk oil temperature of the vehicles.
+
++ With both types of fuel dilution, the iron concentration in
+the oil increased with increased oil miles, but remained
+within an acceptable level. However, lead concentration
+increased more with B20 than with ULSD, indicating
+increased lead corrosion of bearings.
+
++ Laboratory ball-on-disk wear tests (boundary lubrication
+regime) showed increased wear with oil aging in vehicles for
+both B20 and ULSD dilution. Wear with B20 dilution was
+similar or slightly greater near the end of the recommended
+oil change interval. However, the addition of fresh B20 to
+fresh oil did not increase wear, suggesting that other oil and/
+or fuel aging factors play a major role in wear protection
+capability.
+
++ The chemistry of additive-derived thin films that formed on
+ball-on-flat tests was similar with B20 and ULSD. At low oil
+miles, the surface film is composed of iron sulfides, mixed
+phosphates, and carbonates. Phosphates are likely from the
+antiwear additive. With continued aging, the surface film
+contained more Fe; and less iron sulfides, and the ratio of

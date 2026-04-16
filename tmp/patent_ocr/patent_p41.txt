@@ -1,0 +1,147 @@
+US 2025/0136889 Al
+
+may include i kyl
+(eg. y hex-
+yl i etc.), aryl substi
+alkylaryl- or arylalkyl-substituted b:
+
+oles, and the like, as well as combinations thereof. For
+instance, the triazole may comprise or be a benzotriazole
+and/or an alkylbenzotriazole in which the alkyl group con-
+tains from 1 to about 20 carbon atoms or from 1 to about 8
+carbon atoms. Non-limiting examples of such corrosion
+inhibitors may comprise or be benzotriazole, triazoles such
+as tolyltriazole, and/or optionally, substituted benzotriaz-
+oles, such as Irgamet™ 30 and Irgamet™ 39, which are
+commercially available from BASF of L Ger-
+
+May 1, 2025
+
+[0572] Still further, additionally or alternatively, the cor-
+rosion inhibitor may include a trifunctional borate having
+the structure, B(OR,)3. in which each R,, may be the same
+or different. As the borate may typically be desirably com-
+patible with the queous medium of the
+
+each Ry, may, in particular, comprise or be a hydrocarbyl
+C,-Cx moiety. For compositions in which the non-aqueous
+medium comprises or is a lubricating oil basestock, for
+example, better compatibility can typically be achieved
+when the hydrocarbyl moieties are each at least C,. Non-
+limiting examples of such corrosion inhibitors thus include,
+but are not limited to, triethylborate, tripropylborates such as
+
+many. A preferred corrosion inhibitor may comprise or be
+benzotriazole and/or tolyltriazole. A preferred corrosion
+inhibitor may comprise or be 1H-1,2,4-triazole-1-meth-
+anamine, N,N-bis(2-ethylhexyl) and or 1H-benzotriazole-1-
+methanamine, N,N-bis(2-ethylhexyl)-4-methyl).
+
+[0567] Additionally, or alternatively, the corrosion inhibi-
+tor may include one or more substituted thiadiazoles repre-
+sented by the structure:
+
+s Sw
+
+wherein R,; and R,, are independently hydrogen or a
+hydrocarbon group, which group may be aliphatic or aro-
+matic, including cyclic, alicyclic, aralkyl, aryl and alkaryl,
+and wherein each’ w is independently 1, 2, 3, 4, 5, or 6
+(preferably 2, 3, or 4, such as 2). These substituted thiadi-
+
+such as tri-tert-butylbo-
+tr such as
+i . and the
+
+rate, trip tri
+tri-(2-ethylhexyl)borate,
+like, as well as combinations thereof.
+
+[0573] When used, a corrosion inhibitor may comprise a
+
+a nzotriazole, a sub-
+stituted triazole, a trisubstituted borate, or a combination
+thereof.
+
+0574] When desired, corrosion inhibitors can be used in
+any effective amount, but, when used, may typically be used
+in amounts from about 0.001 mass % to 5.0 mass %, based
+on the weight of the composition, e.g., from 0.005 mass %
+to 3.0 mass % or from 0.01 mass % to 1.0 mass %.
+Alternately, such additives may be used in an amount of
+about 0.01 to 5 mass %, preferably about 0.01 to 1.5 mass
+%, based upon the weight of the lubricating composition.
+[0575] Insome 3,4-oxypyridi
+
+ing compositions may contain substantially no (eg., 0, or
+Jess than 0.001 mass %, 0.0005 mass % or less, not inten-
+tionally added, and/or absolutely no) triazoles, benzotria
+
+azoles are detived from the 2,5 1,3,4-thiadi
+ole (DMTD) molecule. Many derivatives of DMTD have
+been described in the art, and any such compounds may be
+included in the fluid used in the present disclosure. For
+example, U.S. Pat. Nos. 2,719,125; 2,719,126; and 3,087,
+937; describe the preparation of various 2, 5-bis-(hydrocar-
+bon dithio)-1,3,4-thiadiazoles.
+[0568] Further, additionally or alternatively, the corrosion
+inhibitor may include one or more other derivatives of
+DMTD, such as a carboxylic ester in which R,, and R,, may
+be joined to the sulfide sulfur atom through a carbonyl
+group. Prep: of these thi
+derivatives is described, for example, in US. wie No.
+2,760,933. DMTD derivatives produced by condensation of
+DMTD with alpha-halogenated aliphatic carboxylic acids
+having at least 10 carbon atoms are described, for example,
+in U.S. Pat. No. 2,836,564. This process produces DMTD
+derivatives wherein x,; and Ry, are HOOC—CH(R,»)
+(Ry, being a hydrocarbyl group). DMTD derivatives further
+produced by amidation or esterification of these terminal
+carboxylic acid groups may also be useful.
+[0569] The preparation of 2-hydrocarbyldithio-5-mer-
+capto-1,3,4-thiadiazoles is described, for example, in U.S.
+Pat. No. 3,663,561.
+10570] Aclass of DMTD derivatives may include mixtures
+ofa2
+
+oles, thiazoles, tetra-
+zoles,
+thiophenes, indoles, indazoles, quinolines, benzoxazines,
+dithiols, oxazoles, oxatriazoles, pyridines, piperazines, tri-
+azines, derivatives thereof, combinations thereof, or all
+corrosion inhibitors.
+
+[0576] Compositions according to the present disclosure
+may contain an additive having a different enumerated
+function that also has secondary effects as a corrosion
+inhibitor (for example, Component B, may also have cor-
+rosion inhibitor effects). These additives are not included as
+corrosion inhibitor for purposes of determining the amount
+of corrosion inhibitor in a lubricating oil composition or
+concentrate herein.
+
+K. Antiwear Agents
+
+[0577] The lubricating oil composition of the present
+disclosure can contain one or more antiwear agents that can
+reduce friction and excessive wear. Any antiwear agent
+known by a person of ordinary skill in the art may be used
+in the lubricating oil composition. Non-limiting examples of
+suitable antiwear agents include zine dithiophosphate, metal
+(e.g., Pb, Sb, Mo, and the like) salts of dithiophosphat
+metal (e.g., Zn, Pb, Sb, Mo, and the like), salts of dithio-
+
+2,5-bis-hydrocarbyldithio-13,4-1 atisrte Such mixtures
+may be sold under the tradename HiTEC™ 4313 and are
+commercially available from Afton Chemical Company.
+[0571] The preparation of 2-hydrocarbyldithio-5S-mer-
+capto-1,3,4-thiadiazoles is described, for example, in U.S.
+Pat. No. 3,663,561
+
+metal (e.g, Zn, Pb, Sb, and the like) salts of
+fatty acids, boron compounds, phosphate esters, phosphite
+esters, amine salts of phosphoric acid esters or thiophos-
+phoric acid esters, reaction products of dicyclopentadiene
+and thiophosphoric acids and combinations thereof. The
+amount of the antiwear agent may vary from about 0.01
+mass % to about 5 mass %, from about 0.05 mass % to about

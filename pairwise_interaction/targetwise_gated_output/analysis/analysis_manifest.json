@@ -1,0 +1,9 @@
+{
+  "analysis_dir": "E:\\Projects\\Neftecode\\pairwise_interaction\\targetwise_gated_output\\analysis",
+  "targets": [
+    "viscosity",
+    "oxidation"
+  ],
+  "score_definition": "proxy_score = attention * gate * ||pair_embedding||_2",
+  "note": "Это proxy-важность pair block, а не строгая SHAP/causal attribution."
+}

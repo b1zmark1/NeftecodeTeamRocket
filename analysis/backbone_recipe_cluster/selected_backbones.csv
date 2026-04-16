@@ -1,0 +1,3 @@
+target_name,dataset_name,model_type,config_id,rmse,mae,r2
+oxidation,compact_v3_full,ridge,alpha_30.0,30.157043923807578,22.958661277793233,0.2983809070087263
+viscosity,compact_v3_full,mlp,relu_small,182.2636063455749,66.23514882724277,0.1389663762919986

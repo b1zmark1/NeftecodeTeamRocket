@@ -1,0 +1,105 @@
+5,000,000
+
+4,000,000
+
+3,000,000
+
+2,000,000
+
+Wear Volum
+
+1,000,000
+
++ 140, ULSD
+
+- 14d SD
+143-1, ULSD,
+143-2, ULSD
+~ 144-1, ULSD
+~ 144-2, ULSD
+~ 145, ULSD
+—— 140, B20
+—+— 141, B20
+142, B20
+—A— 143, B20
+
+0 3,000 6,000
+
+a 144, B20
+
+9, 2,000
+000 12,000 145, B20
+
+Oil Age (miles)
+Figure 21. Wear volume vs. mileage.
+
+For a given mileage, the wear was similar with B20 and
+ULSD dilution when making a vehicle-to-vehicle pairwise
+comparison. In a couple of cases (Vehicles #140 and #145),
+wear was greater with B20 dilution near the end of the
+recommended oil drain interval. For a given mileage, the
+highest wear was with oil samples from Vehicle #142 with
+B20 dilution. Oil samples from this vehicle had a higher than
+average soot and iron content. Samples with ULSD dilution
+were not taken from this vehicle, so a direct vehicle-to-
+vehicle comparison can not be made in this case. The oil
+samples from 144-2 (ULSD dilution) gave the lowest HFRR.
+wear. The oil samples from 144-2 had the lowest fuel
+dilution, highest viscosity, lowest soot concentration, and
+lowest iron concentration for a given mileage. Any
+combination of these oil properties could have contributed to
+its relatively low HFRR wear. Given the variability of the
+data, we can not conclusively determine that vehicle-aged oil
+with B20 dilution gives higher HFRR wear than that with
+ULSD.
+
+Fuel dilution decreases the viscosity of the engine oil,
+reducing its film thickness, and decreases the concentration
+of oil additives. To isolate the effect of fuel concentration on
+wear, a series of HFRR wear tests were run with fresh oil
+doped with 0%, 16%, and 32% fresh B20 using the same oil
+formulation that was used in fleet testing (Motorcraft SAE
+15W-40, API CJ-4). A repeat test was also run with 32%
+B20. Wear volumes from the two tests with 32% fresh B20
+were 0.2 million um3 and 0.3 million um3, while vehicle-
+aged samples with a similar fuel concentration had wear
+‘volumes greater than 3 million um3. Unlike vehicle-aged oil,
+the concentration of fresh fuel in fresh oil did not affect the
+degree of wear Figure 22), which implies that wear under
+‘boundary lubrication conditions does not increase solely from
+
+increased fuel dilution, decreased viscosity, or decreased
+concentration of oil additives. To better understand the wear
+
+ism, changes in the chemistry of wear-protective
+tribofilms with increasing oil age are investigated in the
+Surface Analysis section.
+
+In the HFRR tests with B20 and ULSD dilution, the friction
+coefficient of vehicle-aged oil followed similar trends Figure
+23). With both types of fuel dilution, the friction coefficient
+typically decreased to a minimum level around 1,500 miles.
+After 3,000 miles or more, the friction coefficient became
+‘greater than that of fresh oil. Overall, the friction coefficient
+ranged from 0.144 to 0.178, a 24% difference between
+lowest and highest values.
+
+‘There is no observable difference in HFRR-derived electrical
+contact resistance (ECR) between B20 and ULSD dilution
+igure 24). ECR was generally high from 0 to 3,000 miles,
+then decreased to nearly 0% from 3,000-6,000 miles, and
+remained close to 0% with greater than 6,000 miles.
+
+SURFACE FILM ANALYSIS
+Selected surfaces of HFRR disks tested in contact with a steel
+
+protection is related to the chemical composition of surface
+films (Table 1). These samples were selected to 1) investigate
+changes in the chemical composition of surface films as oil
+age increases, and 2) compare surface films generated from
+samples with B20 and ULSD dilution.
+
+Visible Raman spectra of films derived from relatively fresh
+and aged oil with ULSD dilution are compared in Figure 25.
+Both spectra were taken from the same oil interval from
+Vehicle #144 one was taken early in the oil interval and the

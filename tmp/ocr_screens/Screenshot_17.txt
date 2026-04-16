@@ -1,0 +1,113 @@
+ULSD @ B20
+
+3,000
+
+2,000
+
+So,
+
+1,000
+
+(g/regeneration)
+.
+
+140
+14
+
+143,
+144
+145,
+
+Vehicle #
+
+Figure 3. Average mass of post injected fuel per
+regeneration for each vehicle.
+
+ENGINE OIL ANALYSIS
+Vehicle-aged oils were analyzed for several properties
+including: fuel dilution, kinematic viscosity, metal content,
+oxidation, total acid number (TAN), total base number
+(TBN), and soot content. Analysis of the biodiesel fraction
+and oxidation measurements were conducted at the Ford
+Research and Innovation Center, and all other oil properties
+were determined at Intertek. Intertek’s oil analyses were
+‘based on in-house methods that are similar to the ASTM
+methods. Fuel dilution determination was similar to ASTM
+D3524, a gas chromatography (GC) method. Elemental
+analysis was done similarly to ASTM D5185, and kinematic
+viscosity was based on ASTM D445. Water concentration
+was determined through Karl Fischer analysis, based on
+ASTM 6304.
+
+Oxidation was determined by differential IR analysis using
+the fresh oil as a reference and the IR peak near 1700 cm™!
+with a Nicolet Avatar 360 FTIR and OMNIC Integra analysis,
+software. In the case of biodiesel-containing samples, the
+interference of esters on oxidation was removed, as described
+later. Oil oxidation products are composed of many different
+carbonyl-containing compounds including esters, aldehydes,
+ketones, and carboxylic acids. Oxidation can cause viscosity
+increase, sludge formation, additive depletion, TAN increase,
+and base oil breakdown. TAN and TBN were determined by
+titration methods similar to those described in ASTM D664
+and ASTM D4739, respectively. TAN refers to the amount of
+acid species in the oil, and is an indicator of the potential to
+have corrosion problems. TBN indicates the total base
+components remaining in the oil to neutralize the buildup of
+harmful acidic species in the oil.
+
+The biodiesel fraction of vehicle-aged oil samples was
+measured and compared with the use of two different
+methods, a differential IR method similar to ASTM D7371,
+and a second GC method. The differential IR method uses the
+differential height of the ester peak near 1746 m7, which
+grows linearly with increasing concentration of fresh
+Diodiesel in fresh oil. Due to possible oil and/or fuel
+degradation with aging or possible oil/fuel interactions that
+could interfere with the IR peak at 1746 cm”, the biodiesel
+dilution of selected samples was verified through a GC
+method, using a GC column optimized for biodiesel
+rather de ibed bel
+
+‘The identity and concentration of individual FAMEs in oil
+and fuel were quantified by GC. Approximately 0.010 g
+(about one drop) of oil or fuel sample was first diluted in 10
+mL of dichloromethane, with the actual amounts determined
+gravimetrically. The diluted sample was then analyzed using
+a Model 7890A GC (Agilent Technologies) equipped with a
+flame ionization detector and autosampler. Injections (1 uL)
+were in split mode (50:1 split ratio) onto a DB-23 capillary
+column (J&W Scientific) having 30-m length, 0.32-mm outer
+diameter, and 0.25-m film thickness. Oven temperature was
+initially 130 °C for 1 min, then ramped to 170 °C at 6.5 °C/
+min, then ramped to 215 °C at 2.75 °C/min and held for 12
+min, then ramped to 270 °C at 40 °C/min and held for 3 min.
+Helium carrier gas was held at constant pressure of 100 kPa.
+Injector and detector temperatures were 270 °C and 280 °C,
+respectively. Nitrogen was used as the detector make-up gas.
+For quantification and peak identification, peak areas and
+retention times were compared to those of known FAME,
+standards.
+
+The GC data were used to provide information on total
+biodiesel
+the composition (Section of the TAME and the location
+and cis-trans isomerism of carbon-carbon double bonds. The
+type of feedstock used to produce biodiesel can be
+determined from the composition of the resulting FAMEs.
+Typically, a biodiesel feedstock oil is comprised of
+triglycerides containing a variety of different fatty acids, each
+having different carbon chain length and/or number of
+carbon-carbon double bonds in its chain. Typical biodiesel in
+the US, made from soy oil, com oil, or animal fat, is
+composed of FAMEs with carbon chain lengths of 16-18
+carbon atoms, and 0-3 double bonds. The notation commonly
+used is Cx:y, where x is the chain length and y is the number
+of double bonds. For example, methyl linoleate (also known
+as linoleic acid methyl ester) is identified as C18:2, indicating
+acarbon chain length of 18 and 2 double bonds.
+
+Biodiesel feedstock determination was accomplished by
+‘comparing the FAME composition of samples (normalized to
+100% of identified FAMEs) to the fatty acid profiles of
+reference materials in published sources23- 24. The sum of

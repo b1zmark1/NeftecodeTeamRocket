@@ -1,0 +1,78 @@
+ABSTRACT
+
+High concentrations of diesel fuel can accumulate in the
+engine oil, especially in vehicles equipped with diesel particle
+filters. Fuel dilution can decrease the viscosity of engine oil,
+reducing its film thickness. Higher concentrations of fuel are
+believed to accumulate in oil with biodiesel than with diesel
+fuel because biodiesel has a higher boiling temperature range,
+allowing it to persist in the sump. Numerous countries are
+taking actions to promote the use of biodiesel. The growing
+interest for biodiesel has been driven by a desire for energy
+
+d di IL d), the i ing cost of
+petroleum-derived fuels, and an interest in reducing
+greenhouse gas emissions.
+
+Biodiesel can affect engine lubrication (through fuel
+dilution), as its physical and chemical properties are
+significantly different from those of petrodiesel. Many risks
+associated with excessive biodiesel dilution have been
+identified, yet its actual impact has not been well quantified.
+In this study, diesel engine oil samples were collected from a
+fleet of prototype medium-duty trucks with diesel particulate
+filters running on either ULSD (ultra low sulfur diesel) or
+B20 (20 vol% biodiesel in ULSD) fuel to determine the effect
+
+INTRODUCTION
+
+Modern diesel vehicles are equipped with emissions control
+equipment to help meet stringent particulate matter and NOx
+emissions regulations. Diesel particle filters (DPFs) are used
+to help meet stringent particulate matter emissions
+regulations. As the pores of DPFs become blocked with soot
+particles, the filter is cleaned through regeneration.
+R ion is currently lished by post injection of
+fuel into the engine cylinders, which heats the DPF to high
+
+required for ion of the DPF. However,
+late fuel injections create higher levels of fuel dilution of the
+engine oil.
+
+Fuel dilution decreases the viscosity of the engine oil,
+reducing its film thickness, and also decreases the
+
+of oil additives. Higher ions of fuel
+are believed to accumulate in the oil with biodiesel than with
+petrodiesel because biodiesel has a higher boiling
+
+temperature range, allowing it to persist in the sump, The
+wear protection capability of engine oil is primarily
+influenced by 1) the oil film thickness and 2) the nature of the
+additive-derived film that forms on the surface of ferrous
+substrate materials in contact with each other. The film
+
+of biodiesel on engine lubrication. The study d of
+three parts: 1) oil analysis, 2) laboratory friction and wear
+testing with the vehicle-aged oil samples, and 3) chemical
+analysis of the wear-protective tribofilms that formed on
+ferrous substrates during laboratory friction and wear testing.
+Results showed B20 dilution caused increased lead corrosion,
+fuel dilution, and oxidation, and decreased viscosity.
+Laboratory wear test results showed increased wear with
+vehicle miles for both ULSD and B20 fuels. However,
+increased wear is not directly related to decreased viscosity
+resulting from fuel dilution.
+
+thick d as viscosity d The viscosity of
+both ultra low sulfur (<15 ppm sulfur) diesel (USLD) and
+B20, a blend of 20 vol% biodiesel blended with 80 vol%
+ULSD, (1.9-4.1 cSt at 40 °¢2. 3) is much lower than Ford's
+recommended SAE 15W-40 API CJ-4 service fill diesel oil
+(116 cSt at 40 °C), increasing the potential for excessive wear
+with fuel dilution.
+
+Pure biodiesel fuel is referred to as B100. It has significantly
+different physical and chemical properties from ULSD. This
+raises concerns over the effect of biodiesel on the
+performance of engine oil. Biodiesel is composed of fatty

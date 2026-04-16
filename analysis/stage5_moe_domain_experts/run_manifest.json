@@ -1,0 +1,31 @@
+{
+  "main_validator": "recipe_cluster",
+  "global_models": {
+    "viscosity": {
+      "dataset": "compact_v3_full",
+      "model": "mlp",
+      "config": "relu_small"
+    },
+    "oxidation": {
+      "dataset": "compact_v3_full+chem5_core",
+      "model": "ridge",
+      "config": "alpha_30.0"
+    }
+  },
+  "schemes": [
+    "recipe_cluster_moe",
+    "dominant_base_oil_moe",
+    "package_type_moe"
+  ],
+  "gating": {
+    "hard_min_samples": 12,
+    "soft_tau": 18.0
+  },
+  "outputs": {
+    "metrics": "E:\\Projects\\Neftecode\\analysis\\stage5_moe_domain_experts\\moe_fold_and_summary_metrics.csv",
+    "summary": "E:\\Projects\\Neftecode\\analysis\\stage5_moe_domain_experts\\moe_summary.csv",
+    "stability": "E:\\Projects\\Neftecode\\analysis\\stage5_moe_domain_experts\\moe_stability.csv",
+    "expert_group_sizes": "E:\\Projects\\Neftecode\\analysis\\stage5_moe_domain_experts\\moe_expert_group_sizes.csv",
+    "oof": "E:\\Projects\\Neftecode\\analysis\\stage5_moe_domain_experts\\moe_oof_predictions.csv"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "input_train_path": "compact_v3\\train_flat_features_v3_compact.csv",
+  "n_splits": 5,
+  "random_state": 42,
+  "max_iter": 700,
+  "max_features_per_target": 20,
+  "base_feature_count": 30,
+  "feature_count_with_nonlinear_terms": 49,
+  "candidate_configs": [
+    {
+      "config_id": "relu_small",
+      "hidden_layers": [
+        64,
+        32
+      ],
+      "alpha": 0.0001,
+      "learning_rate_init": 0.001,
+      "activation": "relu"
+    },
+    {
+      "config_id": "relu_mid",
+      "hidden_layers": [
+        128,
+        64
+      ],
+      "alpha": 0.0001,
+      "learning_rate_init": 0.001,
+      "activation": "relu"
+    },
+    {
+      "config_id": "relu_wide",
+      "hidden_layers": [
+        128,
+        128
+      ],
+      "alpha": 0.001,
+      "learning_rate_init": 0.0005,
+      "activation": "relu"
+    },
+    {
+      "config_id": "tanh_mid",
+      "hidden_layers": [
+        64,
+        64
+      ],
+      "alpha": 0.001,
+      "learning_rate_init": 0.001,
+      "activation": "tanh"
+    },
+    {
+      "config_id": "tanh_wide",
+      "hidden_layers": [
+        128,
+        64
+      ],
+      "alpha": 0.001,
+      "learning_rate_init": 0.0005,
+      "activation": "tanh"
+    },
+    {
+      "config_id": "relu_deep",
+      "hidden_layers": [
+        256,
+        128
+      ],
+      "alpha": 0.001,
+      "learning_rate_init": 0.0005,
+      "activation": "relu"
+    }
+  ],
+  "selected_features_file": "compact_v3\\mlp_targetwise_output\\targetwise_selected_features.json",
+  "outputs": {
+    "cv_fold_metrics": "compact_v3\\mlp_targetwise_output\\targetwise_mlp_cv_fold_metrics.csv",
+    "cv_summary": "compact_v3\\mlp_targetwise_output\\targetwise_mlp_cv_summary.csv",
+    "oof_predictions": "compact_v3\\mlp_targetwise_output\\targetwise_mlp_oof_predictions.csv",
+    "models_dir": "compact_v3\\mlp_targetwise_output\\models"
+  }
+}

@@ -1,0 +1,35 @@
+FTIR of Oil A with 20 wt% SME biodiesel (day 0, top panel), aged at 160°C with aeration (middle panel), and
+difference spectrum (day 0 subtracted from day 7,
+
+8
+Day 0
+64
+a4
+24
+bs T T T T T
+3000 2500 2000 1500 1000
+8
+Day 7
+@ 6&4
+3
+2
+SG
+Bag
+3
+o
+2
+< 24
+i T T T T T
+3000 2500 2000 1500 1000
+3 08
+Fa Difference Spectrum
+2 064
+= 044
+= 02-4
+£ 004
+02 T
+
+T T T T
+3000 2500 2000 1500 1000
+
+Wavenumber (cm)

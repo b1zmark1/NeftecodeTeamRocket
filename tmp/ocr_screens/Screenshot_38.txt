@@ -1,0 +1,97 @@
+Rancimat oxidation (at 160°C) of vacuum-distilled SME biodiesel at 5 wt% in oil Bya.-. Undistilled (dashed green line),
+5 wt% of the pot from distilled SME biodiesel in Base engine oil (black line), and 5 wt% of the distillate of SME biodiesel in Base
+engine oil (blue line). Error bars show #1 standard deviation of the mean determined from duplicate samples.
+
+3.5
+
+_ @ Pot
+
+= 304 = Distillate
+
+= —-— 5wt.-% Biodiesel
+
+3
+
+= 25-
+
+o
+
+a
+
+& 20-
+
+g
+
+3B 15-
+
+=
+
+3
+
+£ 104 ——— — — — — — — — —— — — — — — — 4
+
+i]
+
+5
+
+fd 054 as
+0.0 T T T T T
+
+5 10 15 20 25
+
+z
+:
+
+T
+95
+
+T
+90
+
+SME Biodiesel Mass Distilled (wt-%)
+
+SME Biodiesel Mass Remaining in the Pot (wt.-%)
+T T
+
+85 80 75
+
+© 2019SAE nto
+
+ur for biodiesel
+in engine oil. Besides the coplnation already suggested, the
+lack of TAN accumulation in the present experiment may
+be because alcohols (which were not measured) are reacting
+with acids (to form esters) as fast as the acids are formed.
+‘The initial kinematic viscosity (at 40°C) of Oil A with
+20 wt% biodiesel was considerably lower (26 mm/s) than
+the oil without biodiesel (46 mm?/s), due to the much lower
+viscosity of the added biodiesel (4.1 mm/s), and consistent
+with an estimated value from log-linear mass blending
+(28 mm?/s) [54]. While the viscosity of the oil aged without
+biodiesel decreased slightly, the viscosity of the oil with
+biodiesel increased steadily and after 4-5 days matched that
+of the oil without biodiesel (Figure 10). After day 5, the
+viscosity of the oil with biodiesel increased dramatically
+when the oil “broke” and formed tar-like material. ‘The
+viscosity of neat biodiesel and blends with diesel fuel also
+
+viscosity with aging at 90°C
+ands aeration [8], which was due in large part to the formation
+ced polymers [46]. The ester formation observed
+through day 5 of the present study suggests that esters may
+be forming similar linkages and contributing to the
+viscosity increase.
+
+‘The initial density of the oil-biodiescl mixture
+(0.837 g/cm*) was higher than that of Oil A (0.831 g/cm*)
+consistent with the higher density of the biodiesel. With aging,
+the density of the oil-biodiesel mixture increased monotoni-
+cally over the course of the aging experiment from 0.837 to
+0.857 g/cm? (Figure 11). The density of Oil A without biodiese!
+also increased, but to a much lesser extent. Density also
+increased with agi ioned fuel-only expe
+ments [8, 46]. Some of this density increase was attributed to
+incorporation of oxygen which increased mass without a
+corresponding increase in volume.
+
+{©2019 SAE Internationa Ford Motor Compan. Al RightsReserved.

@@ -1,0 +1,138 @@
+US 2025/0136889 Al
+
+[0511] Illustrative borated glycerol fatty acid esters
+include, for example, borated glycerol monooleate, borated
+saturated mono-, di-, and tri-glyceride esters, borated glyc-
+erol monosterate, and the like. In addition to glycerol
+polyols, these can include trimethylolpropane, pentaeryth-
+ritol, sorbitan, and the like. These esters can be polyol
+esters, polyol ylate esters, and on
+
+occasion polyoltricarboxylate esters. Preferred can be the
+glycerol_monooleates, glycerol di-oleates, glycerol tri-
+oleates, glycerol mono-oleates, glycerol di-stearates, and
+glycerol tri-stearates and the corresponding glycerol mono-
+palmitates, glycerol di-palmitates, and glycerol tri-palmi-
+tates, and the respective isostearates. linoleates, and the like.
+an fatty acid
+
+esters of polyols, especially ting glycerol as underlying
+polyol are useful herein. Ashless friction modifiers, such as
+lycerol-based friction modifiers useful herein, such as in
+
+and ad
+
+May 1, 2025
+
+G. Anti-Foam Agents
+
+[0515] Anti-foam agents may advantageously be added to
+lubricant compositions described herein. These agents pre-
+vent or retard the formation of stable foams. Silicones,
+fluoro-silicones, and/organic polymers are typical anti-foam
+agents. For example, polysiloxanes. such as silicon oil or
+polydimethyl siloxane, provide anti-foam properties.
+[0516] Anti-foam agents are commercially available and
+may be used in minor amounts such as 5 mass % or less, 3
+mass % or less, 1 mass % or less, 0.1 mass % or less, such
+as from 5 to mass % to 0.1 ppm such as from 3 mass % to
+0.5 ppm, such as from I mass % to 10 ppm.
+
+[0517] For example, it may be that the lubricating oil
+composition comprises an anti-foam agent comprising poly-
+alkyl siloxane, such as a polydialky! siloxane, for example,
+wherein the alkyl is a C,-C,o alkyl group, e.g., a polydim-
+(PDMS), also known as a silicone oil. Alter-
+
+oils, include ‘ibed in
+Dand may in any include glycerol-
+based friction modifiers such as glycerol monooleates, satu-
+rated mono-, di-, and tri-glyceride esters, glycerol monos-
+tearates, and polyols. In a preferred embodiment the
+glycerol-based friction modifier is glycerol mono-oleate.
+[0512] Illustrative fatty alcohol ethers include, for
+example, stearyl ether, myristyl ether, and the like. Alcohols,
+including those that have carbon rumbers from C, to Cs,
+to form the
+corresponding fatty alkyl thers. ‘The underlying alcohol
+portion can preferably be stearyl, myristyl, Cu——C,, hydro-
+carbon, oleyl, isosteryl, and the like.
+[0513] Useful concentrations of friction modifiers may
+range from 0.01 mass % to 5 mass %, or about 001 mass %
+to about 2.5 mass %, or about 0.05 mass % to about 1.5 mass
+%, or about 0.051 mass % to about 1 mass %. Concentra-
+tions of molybdenum-containing materials are often
+described in terms of Mo metal concentration. Advanta-
+geous concentrations of Mo may range from 25 ppm to 700
+ppm or more, and often with a preferred range of 50-200
+ppm. Friction modifiers of all types may be used alone or in
+mixtures with the materials of this disclosure. Often mix-
+tures of two or more friction modifiers, or mixtures of
+friction modifier(s) with alternate surface-active material(s),
+are also desirable. For example, combinations of Mo-con-
+taining compounds with polyol fatty acid esters, such as
+glycerol mono-oleate are useful herein.
+
+thi tis
+
+F. Pour Point Depressants
+[0514] Conventional pour point depressants (also known
+as lube oil flow improvers) may be added to the compo:
+tions of the present disclosure if desired. These pour point
+
+may be added to of the
+present disclosure to lower the minimum temperature at
+which the fluid will flow or can be poured. Examples of
+suitable pour ein depressants include polymethacrylat
+oducts of
+haloparaffin waxes and aromatic compounds, vinyl carboxy-
+late polymers, and terpolymers of dialkylfumarates, vinyl
+esters of fatty acids and allyl vinyl ethers. U.S. Pat. Nos.
+1,815,022: 2,015,748; 2,191,498; 2,387,501; 2,655,479;
+2,666,746; 2,721,877; 2,721,878; and 3,250,715 describe
+usefull pour point depressants and/or the preparation thereof.
+Such additives may be used in an amount of about 0.01 to
+%, preferably about 0.01 to 1.5 mass %, based upon
+the eciake of the lubricating composition.
+
+nately, the siloxane is a poly(R*)siloxane, wherein R° is one
+or more same or different linear branched or cyclic hydro-
+carbyls, such as alkyls or aryls, typically having 1 to 20
+carbon atoms. It may be that, for example, the lubricating oil
+composition comprises a polymeric siloxane compound
+according to Formula 1 below wherein R! and R? are
+independently methyl, ethyl, propyl, butyl, pentyl, hexyl,
+eptyl, octyl, nonyl or decyl, phenyl, naphthyl, alkyl sub-
+stituted phenyl, or isomers thereof (such as methyl, phenyl)
+and n is from 2 to 1000, such as 50 to 450, alternately such
+as 40 to 100.
+[0518] _ Additionally, or alternatively, it may be that the
+oil ition comprises an org: dified
+siloxane (OMS), such as a siloxane modified with an organo
+group such as a polyether (eg,, ethylene-propyleneoxide
+copolymer), long chain hydrocarbyl (e.g., C,-Cioo alkyl),
+or aryl ce, _ CoG aryl). It may be that, for example, the
+comprises an
+siloxane puna according to Formula 1, wherein n is
+from 2 to 2000, such as 50 to 450 (alternately such as 40 to
+100), and wherein R* and R® are the same or different,
+optionally wherein each of R' and R? is, independently an
+organo group, such as an organo group selected from
+polyether (e.g., ethylene-propyleneoxide copolymer), long
+chain hydrocarbyl (¢.g.,Ci1-C 99 alkyl), oraryl (@.g..Co-Ci4
+aryl). Preferably, one of R! and R? is CH.
+
+Formula 1
+
+[0519] Based on the total weight of the lubricant compo-
+sition, the siloxane according to Formula 1 is incorporated
+so as to provide about 0.1 to less than about 30 ppm Si, or
+about 0.1 to about 25 ppm Si, or about 0.1 to about 20 ppm
+Si, or about 0.1 to about 15 ppm S Si, or about 0.1 to about 10
+pm Si. More preferably, it is in the range of about 3-10 ppm
+
+10520] In embodiments, silicone anti-foam agents useful
+herein are available from Dow Coming Corporation and
+Union Carbide Corporation, such as Dow Corning FS-1265
+(1000 centistokes), Dow Corning DC-200, and Union Car-
+bide UC-LAS. Silicone anti-foamants useful herein include

@@ -1,0 +1,109 @@
+US 2025/0136889 Al May 1, 2025
+62
+TABLE 18
+Coil CO CO CO Oi Oil Ol CO
+Constituent (mass %) AL As’ CD_— CLs“ sD PR G2
+Borated-PIBSA-PAM 0.60.6 06 06 «06 06 06 06 06
+06 10-06 06 10 06 OR
+1420 10° 14 «14201010
+10 10 1.0 10 1010 10
+Mi Ml
+1010 10 10 1.0
+10 1010
+Organic Friction 06 06 06 06 06 «06 ~— 06 06
+Group III base oil balance balance balance ce balance balance balance balance balance
+Elemental Analysis ICP
+Ash (mass %) 0.77 086 0.74 0.77 0.77086 0.74 0.77067
+ppm 2 ial ma 71 rR 1 a 1 2
+Ca (mass %) 013 021 0.08 0.13 0.21 0.08 0.08
+Meg (mass %) 00s 0 0.08 0.0 0 0.08 0.06
+(mass %) Ol O41 OM Out oll ot ol
+P (mass %) 0.08 0.08 0.08 0.08 0.08 0.08 0.08
+S (mass %) O18 O18 0.18 0.18 O18 O18 018
+Performance Testing
+CEC-L-109-14 test % — 89.0 50.3 169.5 BB B4L 36.2 12K 788
+Change in Kv10
+MIM Test: Friction 0.104 0.093 0.089 0.107
+Cocficien, 135° C.,
+MINGR: Traction 0.092 0.096 0.097 0.088,
+Coeflicient at 100° C.
+HERR: Wear Sear 197 172.5 182.5 286 160.5 270
+Diameter am.
+HERR: 013 04
+
+Coefficient at 140° C.
+
+Seal ind te sume amount of IM PIDSA-PAM, pheno anna IDSA, a
+PAO busestock, LOFI, and Star H-SD block e
+
+[0961] Viscosity control typically becomes worse with
+increasing treat rates of magnesium salicylate detergent. In
+‘Table 18, with Component 2, increasing the Mg Salicylate
+amount results in an 81% increase in viscosity at the end of
+L109 test. Unexpectedly, oils containing Component 1,
+Batch 5 significantly attenuated the detrimental impact of
+the magnesium salicylate detergents on end of test viscosity
+compared to oils containing Component 2. This beneficially
+allows Mg Salicylate treat rates to be increased in oils for
+which treat rates are normally constrained by L109 perfor-
+mance.
+
+[0962] Due to the improved 1.109 viscosity control per-
+formance when using Component 1 Bx 5 vs Component 2,
+increased treat rates of magnesium detergent can be used
+when formulating with Component | Bx 5. To calculate the
+Mg (ppm) content in a comparative Component 2 blend to
+give equivalent L109 viscosity control to the inventive
+Component 1 Bx 5 blend the following equation is used
+Y=0.2388X-18.469 where Y equals L109 viscosity increase
+of the inventive Component | BxS blend and X is equal to
+Mg ppm from the magnesium detergent in comparative
+Component 2 blend.
+
+[0963] To calculate the amount of Mg (ppm) from mag-
+nesium detergent that can be used to give equivalent L109
+viscosity control with the Component 1 Bx 5 formulation
+(Oil £2) versus comparative oil (C-B2), the below equation
+is used, Y=0.2388X-18.469, where Y equals L109 viscosity
+increase of the formulations containing Component 1 Bx5
+and X is equal to Mg ppm. For Oil E2, we solve for X in
+equation Y=0.2388X-18.469, where Y 127.4, ie. X=(124.
+7418.469)/0.2388=600 ppm Mg.
+
+foamant, Group I diluent oil, 20 mass %
+
+[0964] As we can formulate with high magnesium to
+achieve equivalent predicted 109 performance we can also
+predict less low speed pre-ignition events as well. Compari-
+son Oil G2 was formulated with Component 2 and 0.8 mass
+% magnesium detergent, which is calculated to give equiva-
+lent L109 viscosity increase performance to Oil E2.
+
+5] The performance of the two oils were compared in
+iction (MTM) and wear (HFRR) tests. Oil E2 had lower
+friction and wear than Comparative Oil G2. As well improv-
+ing fuel economy and engine wear, higher magnesium treat
+rates can help to combat low-speed pre-ignition in gasoline
+engines.
+
+[0966] _ It is impressive to note that the positive impact of
+the inventive compositions here can be demonstrated across
+a wide variety of compositions. FIG. 4 illustrates the posi-
+tive impact across many compositions of interest to the
+lubricant industry obtained herein.
+
+10967] All documents described herein are incorporated
+by reference herein, including any priority documents and/or
+testing procedures, to the extent they are not inconsistent
+with this text. As is apparent from the foregoing general
+description and the specific embodiments, while forms of
+the invention have been illustrated and described, various
+modifications can be made without departing from the spirit
+and scope of the invention. Accordingly, it is not intended
+that the invention be limited thereby. The term “comprising”
+is considered synonymous with the term “including.” Like-
+wise, whenever a composition, an element, or a group of
+elements is preceded with the transitional phrase “compris-
+ing”, it is understood that we also contemplate the same
+composition or group of elements with transitional phrases
+

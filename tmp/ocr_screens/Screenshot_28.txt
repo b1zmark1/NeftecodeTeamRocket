@@ -1,0 +1,67 @@
+5,000,000, - 140, ULSD
+41, ULSD
+©1341, ULSD
+> 4,000,000 = 143-2, ULSD
+g © 144-1, ULSD
+2 3.000.000 + 144-2, ULSD
+5 ==> 145, ULSD
+© 2,000,000 140, B20
+s —+— 141, B20
+= —*K— 142, B20,
+1,000,000 SN ne
+—B— 144, B20
+0 —— 145, B20,
+os 0 1s 2 303840 [Fresh 014820
+
+Fuel Dilution (% wt)
+Figure 22. Wear volume vs. fuel dilution.
+
+0.18
+
++-@-+ 140, ULSD
+
++ 141, ULSD
+143-1, ULSD
+
+143-2, ULSD
++ 144-1, ULSD.
+144-2, ULSD
+145, ULSD
+—o— 140, B20
+—+— 141, B20
+ee 142, B20
+—A— 143, B20
+—a— 144, B20
+
+0 3,000 6,000
+
+9,000
+Oil Age (miles)
+
+12,000 145, B20
+
+Figure 23. Friction coefficient vs. mileage.
+
+other was taken late in the interval. Raman peak assignments
+have been documented in early work by Uy et al25. The
+spectrum from the 350 mile aged sample shows iron
+
+(341 and 375 cm7}), Fe3O4 (672 cm™!), and amorphous
+carbon (1365 and 1597 cm”). The spectrum from the 8,033
+mile aged sample shows Fe304, amorphous carbon, and
+carbonate (1084 cm7!).
+
+‘UV Raman spectra of films derived from the same two oil
+samples described above, plus the sample from the end of the
+oil interval, are compared in Figure 26. The spectrum from
+the 350 mile aged sample shows mixed phosphates (1007 cm
+1) and amorphous carbon (1607 cm™!). The so-called mixed
+
+phosphate peak may be due to any combination of
+pyrophosphate, orthophosphate, and sulfate. The peak at 1119
+em! is unknown, but is likely due to various lubricant
+derived components such as a combination of carbonates,
+phosphates, and sulfates. The peak at 1566 cm”! is due to 07
+from air. The spectra from the 8,033 and 11,871 mile oil aged
+samples both show mixed phosphates, carbonate (~1084 cm
+1), and amorphous carbon (~1406 and 1606 cm™!).

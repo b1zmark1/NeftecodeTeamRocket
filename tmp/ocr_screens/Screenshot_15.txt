@@ -1,0 +1,107 @@
+acid methyl esters (FAMEs) produced from the
+transesterification reaction of triglycerides containing long
+chain fatty acids and alcohol (usually methanol). The
+composition of the FAMEs varies with the feedstock, and
+affects the properties of biodiesel such as pour point and
+oxidation stability4. Common biodiesel feedstocks in the US
+include vegetable oils, such as soy and com oil, and animal
+fats. A biodiesel blend, designated as BXX, is a blend of XX
+% biodiesel with petrodiesel. Ford warranty policy currently
+accepts biodiesel blends of B5 or less for use in any of its
+diesel engines. Biodiesel blends up to B20 are approved for
+the new 6.7L V-8 turbocharged diesel engine. Other original
+equipment manufacturers are cautiously recommending
+various biodiesel blends.
+
+‘Numerous countries worldwide are taking actions to promote
+the use of biodiesel. The new Renewable Fuel Standard of the
+US. Energy Independence and Security Act of 2007
+mandates the use of altemative, renewable fuels such as
+biodiesel. This legislation will greatly increase the use of
+biodiesel in the marketplace. It requires a volume of 500
+million gallons of biomass-based diesel (which includes
+biodiesel) into the nation’s fuel supply in 2009, growing to 1
+billion gallons by 20126. In comparison, the U.S. consumes
+about 45 billion gallons of diesel fuel for transportation per
+year. More biodiesel in the marketplace leads to a greater
+potential risk of engine lubrication issues.
+
+The growing interest for biodiesel has been driven by a desire
+for energy in e (domestically produced), the
+increasing cost of petroleum-derived fuels, and an interest in
+reducing greenhouse gas emissions®. Biodiesel can affect
+engine lubrication (through fuel dilution), as well as
+combustion characteristics and emissions. Many risks
+associated with excessive biodiesel dilution have been
+identified, yet its actual impact has not been well quantified,
+
+Limited information has been published on the impact of
+biodiesel on the durability of modem engines in cases with
+high fuel dilution. Laboratory oil aging studies have reported
+the effect of biodiesel dilution on engine oil: 10. 11 12
+Work at Ford Research® has shown that fuel dilution resulted
+in increased oil degradation, and biodiesel has a greater effect
+on degradation than ULSD dilution. Bench tests with the
+laboratory-aged oil with simulated fuel dilution showed wear
+increases as oil age increases, but wear was not any worse
+with biodiesel than with ULSD. Work by Watson et al 12
+indicated that fuel dilution would be greater with biodiesel
+than ULSD, and biodiesel dilution increased oil degradation
+and copper corrosion. A bench test used to qualify oil as API
+CI-4, High Temperature Corrosion Bench Test (HTCBT),
+conducted with B20 showed increased levels of lead
+corrosion! A laboratory study by Fang et al12 using
+
+mixtures of base oil, zinc dithiodialkyl phosphate (ZDDP),
+and fuel showed an increase in wear as the concentration of
+aged biodiesel increased. The authors suggested partially
+degraded biodiesel interacts with ZDDP, an anti-wear
+additive, to hinder wear protection. Wear did not increase as
+the amount of fresh biodiesel increased, indicating no
+problematic interaction between ZDDP with fresh biodiesel.
+
+Engine tests with significant levels of fuel dilution have been
+run to study the impact of biodiesel dilution on engine
+lubrication. 13. 14. 15, 16 The general conclusions have
+‘been consistent, in that biodiesel dilution causes increased
+fuel dilution!3, increased oil degradation!4.
+lead corrosion. 14. 15. and increased engine deposits. 14.
+
+greater than BS. Despite these findings, excessive engine
+wear has not been observed with biodiesel! 14 16
+Additionally, Devlin et al16 observed that soot particles in
+the oil from B20 and ULSD were of similar size and
+hardness. The latest ACEA European specifications for heavy
+duty engine oils require OM646LA1Z and OMS01LA18
+engine tests to be run with B5 to ensure that the oil is able to
+adequately protect the engine in the presence of biodiesel.
+
+Fleet evaluations have been run with B20, but the level of
+fuel dilution in these studies was either minimal or
+
+sported!2 20. 21. 22 proc! and Bamnitt22 reported lower
+concentrations of soot in the engine oil with vehicles fueled
+with B20, probably due to reduced particulate matter
+emissions with B201,
+
+In this study, several engine oil samples were collected from
+a fleet of prototype medium-duty trucks running on either
+ULSD or biodiesel to the effect of biodiesel on
+engine lubrication. The study consisted of three parts: 1) oil
+analysis, 2) laboratory friction and wear testing with the
+vehicle-aged oil samples, and 3) chemical analysis of the
+wear-protective tribofilms that formed on ferrous substrates
+during laboratory friction and wear testing.
+
+EXPERIMENTAL
+‘VEHICLE AGING
+
+Diesel engine oil samples were collected between 2-3 times
+per week from a fleet throughout a given oil change interval.
+The fleet consisted of six prototype medium-duty trucks
+equipped with V-8 diesel engines. The vehicles were
+equipped with an experimental urea selective catalytic
+reduction (SCR) aftertreatment system, and used a post-
+injection strategy for active DPF regeneration. The
+experimental aftertreatment configuration did not include any
+means of passive regeneration of the DPF, such as a

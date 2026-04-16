@@ -1,0 +1,27 @@
+{
+  "input_train_path": "compact_v3\\train_flat_features_v3_compact.csv",
+  "n_splits": 5,
+  "random_state": 42,
+  "max_iter": 500,
+  "best_config": {
+    "config_id": "mlp_4",
+    "hidden_layers": [
+      128,
+      128
+    ],
+    "alpha": 0.001,
+    "learning_rate_init": 0.0005
+  },
+  "raw_feature_count": 30,
+  "final_feature_count": 30,
+  "min_non_na_ratio": 0.1,
+  "variance_threshold": 1e-12,
+  "max_features": 120,
+  "uses_groupkfold": true,
+  "feature_columns_file": "compact_v3\\mlp_flat_compact_output\\mlp_flat_compact_feature_columns.json",
+  "dropped_columns_file": "compact_v3\\mlp_flat_compact_output\\mlp_flat_compact_dropped_columns.json",
+  "outputs": {
+    "cv_fold_metrics": "compact_v3\\mlp_flat_compact_output\\mlp_flat_compact_cv_fold_metrics.csv",
+    "cv_summary": "compact_v3\\mlp_flat_compact_output\\mlp_flat_compact_cv_summary.csv"
+  }
+}

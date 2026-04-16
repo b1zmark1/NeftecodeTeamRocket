@@ -1,0 +1,71 @@
+Based on the screening tests, the oxidation of one
+engine oil (Oil A) with and without SME biodiesel at 20
+wt%
+
+method Cd 8b-90 [47]. Statistical analyses were carried out
+using IBM" SPSS" Statistics for Windows, version 23.0 (IBM
+4739,
+
+(300 mL) were exposed to oxidizing conditions Sau to
+the above Rancimat conditions, but
+
+rp.). TI
+clr intended for analysis of ued motor ols [49 at Polaris
+Laboratories (Ind IN).
+
+ASTM 2274, consisting of glass tubes (oo cm length,
+4.2 cm inner diameter), each fitted with a centrally posi-
+tioned glass air supply tube and glass condenser cap, as
+described previously [8, 32, 44, 45, 46]. The tubes were
+
+Results and Discussion
+
+heated at
+grade air flowing at 100 #5 mL/min. The condenser cap
+was water cooled to 20°C.
+
+.N was determined using American Oil Chemists’
+Society (AOCS) method Cd 34-63 [47]. The ester value was
+quantified by measuring the saponification value (AOCS
+method Cd 3-25) [48] and subtracting the TAN as described
+previously [8, 46]. Measuring the saponification value involves
+adding alcoholic KOH (25 mL, 0.5 mol/L) to a 1.0 g sample,
+reflxing for 1 hr, and titrating with 0.5 mol/L HCl. Kinematic
+
+density at 40°C
+
+Oxidation Stability by RSSOT
+and Rancimat
+
+‘The oxidative stability of the various oil-biodiesel mixtures
+(eight oils, each with SME biodiesel at 0, 5, 10, and 20 wt%)
+was first measured by RSSOT with pure oxygen at 160°C
+at 700 kPa (Figure 1). This method yields characteristic
+induction times for a 10% pressure drop resulting from
+
+Parr SVM 3000 Stabinger Viscometer [8.46] FTIR spectra
+were collected using a Thermo Scientific Nicolet iS 10
+spectrometer equipped with a Smart ARK accessory using
+attenuated total reflectance at a resolution of 4 cm“ from 650
+to 4,000 cm" [8, 46]. Peroxides were measured using AOCS
+
+oxygen into the sample [39, 40, 41, 42]. As
+shown in Figure 1, the oils without biodiesel exhibited the
+greatest variation in oxidation stability. The four fully
+formulated oils (A, B,C, and D) and the partially formulated
+oils (Apacuat aNd Baraat) Showed much greater stability
+(much longer induction periods) than the two base oils
+
+[GEXEEII 25507 oxidation stability (induction period at 160°C) for oils with varying SME biodiesel content. Error bars show
+
+PetroOxy Induction Period (hr)
+
+of6 Motor Company. All Rants Reserved
+
+0 5
+
+10 15 20
+
+Biodiesel in Oil (wt.-%) :
+
+{©2019 SAE Internationa Ford Motor Compan. Al RightsReserved.

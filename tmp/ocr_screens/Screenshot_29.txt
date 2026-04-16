@@ -1,0 +1,46 @@
+100 ++-@-+ 140, ULSD
+80
+= 00 J
+=
+5 +--+ M5, ULSD
+= 4 —o— 140, B20
+—+— 141, B20
+0 142, B20
+0 —A— 143, B20
+a 144, B20
+° —— 145, B20
+0 3,000 6.000 9,000 12,000
+Oil Age (miles)
+
+Figure 24, Electrical contact resistance vs. mileage.
+
+Table 1. HERR results of oils used to generate surface films for Raman analysis.
+HERR Results
+
+Vehicle # | Oil age (miles) | Fuel | Fuel (%) FECR fim (%) | Coef. of friction [ Wear volume (um*)
+350 6 7 159 2
+144 8,033 ULSD [19 4 .156 15,827
+11,871 23 3 171 906,349
+1.618 15 2 146 12,857
+140 6.177 B20 [28 165 3,048,165
+11,728 37 3 163 4,630,654
+S
+$3
+
+b) 8,033 miles
+
+1084
+
+Relative Raman Intensity
+Relative Raman Intensity
+
+a) 350 mile}
+a) 350 miles
+T i T
+500 1000 1500 2000 1000 1500 2000
+Raman shift, cm-1 Raman shift, em-1
+Figure 25. Visible Raman spectra of films formed from Figure 26. UV Raman spectra of films formed from
+HERR tests from oil with ULSD dilution with a) 350 HERR tests from oil with ULSD dilution with a) 350
+miles and b) 8,033 miles. Oil samples were obtained from miles, b) 8,033 miles, and c) 11,871 miles. Oil samples
+
+Vehicle #144. were obtained from Vehicle #144.

@@ -1,0 +1,148 @@
+Introduction
+
+but
+
+at 160°C
+
+arin idded cata
+
+growth for several decades. Biodiesel is typically
+
+produced by the transesterification of primarily
+vegetable oils (e.., soybean oil, rapeseed oil) with methanol.
+using a catalyst (e.g., HCI or NaOCH,) to generate fatty acid
+
+B iodiesel is a renewable diesel fuel that has seen steady
+
+to petroleum diesel fuel including higher cetane number and
+
+lubricity and lower tendency to form particulate emissions. A
+
+primary disadvantage compared to petroleum diesel is the
+oxidize at
+
+FAME mixt
+
+‘Mheduration of ol sing observed inchclesis diet
+related
+
+have generally Tncrncod over te for most original equip.
+ment OEMS), bi 3,000
+
+miles to 10,000 miles. At 10,000 miles, this corresponds to
+500 hr (21 days) at an average speed of 20 mi/hr (32 km/hr,
+eg, EPA UDDS cycle), 200 hr fs 3 day) at an average speed
+of 50 mi/hr (80 km/hr, EPA H US06 cycles), or
+133 hr (5.5 days) at 75 mi/hr tar km/h). In accelerated ol
+aging tests, Uy et al. used 48 hr at 160°C (with added iron and
+oxidizing blowby gas) and noted that 44 hr in this rg is
+
+linoleic or linolenic methyl esters) leading to peroxide
+
+«
+formation. Hydroperoxides and alkyl peroxides degrade
+esters,
+
+leading to the formation of carboxylic acids, alcohols,
+aldehydes, and polmers of varying sizes [1, 2, 3,4
+sel
+
+mixed with a
+gents, dispersants,antivear additive, rust and corrosion
+
+intended
+gasoline engines [11]. ASTM D7320 Sequence IIT test uses
+100 hr (4.2 days) at 150°C [34], while the CEC L-109 test uses
+216 hr (9 days) at 150°C [35]. In the present study, oxidation
+stability screening studies at 160°C were 48 hr in duration,
+while the extended experiments were 7 days.
+
+Antioxidant packages incorporated into engine oils
+should help to delay or prevent the oxidation of biodiesel in
+
+i
+
+tors ‘ah
+some amount of fuel (diesel and bodies) wil find its way
+into the engine oil [10, 11, 12, 13, 14, 15, 16, 17,18, 19, 20, 21
+Fuel injected into the cylinder can impinge on the oil film
+on the cylinder wall or piston head. During the expansion
+stroke, the piston rings tend to scrape oil from the cylinder
+walls, returning oil and any entrained fuel to the oil sump.
+‘The resulting accumulation of fuel in oil (“fuel dilution” of
+oil) can be especially pronounced during cold starts and
+stop-and-go operation [12]. This fuel dilution mechanism is
+amplified by late fuel injection strategies used to regenerate
+NO, or particle filter traps, in which the fuel is not burned
+in the cylinder, but is burned i di
+
+in engine oil containing antioxidant packages. Uy et al.
+studied the oxidation of an engine oil (SAE 15W-40 CJ-4)
+diluted with di Fons of diesel fuel contai
+
+10, 20, or 30 vol% soybean biodiesel (SME). Oxidation condi-
+tions included the addition of 60 ppm ferric octanoate and
+aeration with 300 ppm NO, at 160°C. After 48 hr, total acid
+number (TAN) had increased with increasing biodiesel
+content, while TBN decreased more rapidly and completely
+(to non-detect levels) for samples containing biodiesel [10}.
+Fourier-Transform Infrared Spectroscopy (F FTIR, carbonyl
+
+under thi ditions. Kovac etal. Imeasured the oxid
+
+tion catalyst to provide heat for regenerating ths traps
+[4,10, 11, 13, 18, 22, 23, 24, 25, 26, 27, 28]. With
+
+stability of E 15W-40, SAE 10W-40) with
+
+operation, diescl fuel tends to evaporate from the aaa
+removed via the crankcase breather or blowby tube [22].
+However, due to its lower vapor pressure, biodiesel tends to
+accumulate in engine oil toa much greater extent than petro-
+Jeum diesel [16, 17, 23, 29].
+
+Biodiesel thathas acurmulatedin engine lie subject to
+
+a biodiesel (type not pete added at 0, 5,10, and 20 vol%
+50°C hr). TAN
+
+of biodiesel in theoll Biodiesel oxidation was confirmed by
+
+-d the oxida-
+tion iy von rapeseed biodi« a inal tase ars at 170°C for 80
+hr with aeration. Biodiesel oxidation was observed by FTIR
+(hydroxyl stretching frequency) and by formation of high
+molecular weight compounds by size exclusion chromatog-
+
+and long exposure times. Engine oil temperature during
+warmed-up operation typically isin the range of 90°C-140°C
+[13, 24, 30, 31, 32] higher
+
+(up to 360°C) also occurs [13]. Standard US lubricant tests use
+150°C oil temperature in a gasoline engine (ASTM D7320,
+‘Sequence III) [33, 34]. Standard EU lubricant tests, including
+method CEC L-109 specifically for biodiesel in oil, a
+
+150°C [35]. Temperatures higher than those typically found
+
+for
+For example, Uy et al. used accelerated test conditions of
+160°C with the addition of ferric octanoate and 300 ppm NO,,
+{10, 11], and Kpan et al. studied oligomer formation in aged
+rapeseed biodiesel in oil at 170°C [10, 11, 36]. In the present
+
+raphy, while TA 10.7 mg KOH/g [36]. Fujimoto
+et al. studied the oxidation of a an engine oil (SAE SW-30)
+containing 15 vol% B30 (15 vol% SME in diesel fuel) in a 3.0-L_
+turbocharged diesel engine for 120 hr. FAME-derived
+polymers were formed, estimated to be 4-5 wt% after 40-75
+hr of engine operation. Several carboxylic acid oxidation
+PB
+
+nonanoic acid [25]. inal a ‘sy thet modeled exidation
+of FAMEs in oil was conducted using technical grade methyl
+linoleate (50 vol%) in dodecane at 140°C with aeration for 6
+hr, with a radical initiator (2-ethylhexyl nitrate) to accelerate
+the oxidation. Oxidation was assessed by 'H NMR for double
+
+{©2019 SAE Internationa Ford Motor Compan. Al RightsReserved.

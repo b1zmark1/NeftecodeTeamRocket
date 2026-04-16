@@ -1,0 +1,73 @@
+10 ULSD dilution
+
+B20 dilution
+
+0 3,000
+
+Figure 15. Kinematic viscosity at 100°C vs. mileage.
+
+Kin. Viscosity at 100 °C (
+
+0 10
+
+6,000
+Oil Age
+
+x B20 dilution
+
+20
+
+9,000 12,000
+
+(miles)
+
+8 ULSD dilution
+
+30
+
+Fuel Dilution (% wt)
+
+Figure 16. Kinematic viscosity at 100°C vs. fuel dilution.
+
+Wear metals
+
+Tron concentrations of the oil samples were determined to
+provide an estimate of engine wear. A higher iron
+concentration indicates more engine wear. The presence of
+iron is also undesirable because it can act as a catalyst to
+accelerate the rate of oil oxidation. Generally, the
+concentration of iron in an oil sample increases as the wear of
+engine components increases. However, in the case of this
+fleet where large amounts of fuel continuously dilute the oil,
+‘the concentration of iron could give a false indication of a
+low amount of engine wear. Since the relative mass of iron is
+of primary interest, wear metal (iron and lead) concentrations
+were normalized to a level of zero percent fuel dilution using
+the ASTM D3524 fuel dilution data.
+
+i difference in
+
+was seen between B20 and ULSD dilution Figure 17).
+despite the fact that the samples with biodiesel dilution
+reached a lower viscosity. The normalized iron concentration
+
+was less than 100 ppm for all oil samples, which is
+considered to be an acceptable level of wear. Thus, even at
+extremely high levels of fuel dilution, the oil provided
+adequate wear protection based on this indicator. As
+expected, the normalized iron concentration increased with
+mileage. The rate at which iron concentration increased is
+constant or slightly increasing with mileage, suggesting that
+the oil's wear protection capability deteriorates with age.
+About 5 ppm iron was detected in oil samples that were
+collected immediately after an oil change. In fresh oil, 1 ppm
+iron is commonly detected, suggesting that ~4 ppm was
+carried over from previous oil drains, analogous to the
+findings of the fuel dilution analysis.
+
+‘Normalized lead concentrations reached substantially higher
+levels with biodiesel dilution Figure_18). In contrast to
+biodiesel, all oil samples with ULSD dilution had a
+normalized lead concentration of less than 5 ppm. The
+primary source of lead in the engine comes from the main
+bearings. Higher lead concentrations seen with biodiesel

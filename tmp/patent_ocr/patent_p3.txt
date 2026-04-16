@@ -1,0 +1,32 @@
+Patent Application Publication
+
+Fig. 3
+
+L109 % Viscosity Increase
+
+May 1, 2025 Sheet 2 of 3
+
+US 2025/0136889 Al
+
+190.00
+170.00
+150.00
+130.00
+110.00
+90.00
+70.00
+50.00
+30.00
+
+400
+
+y =0.2411x- 2).203 rod
+—_—t
+a)
+y = C.1273x +26.40
+450 500 550 600 650 700 750
+
+Magnesium/ ppm
+
+800
+

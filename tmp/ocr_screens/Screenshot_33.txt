@@ -1,0 +1,140 @@
+‘onal Ford Motor Coon
+
+Ballet al, / SAE Int. J. Fuets Lubr. / Volume 12, Issue 3, 2019
+
+225
+
+bonds, bis-allyli dehy ides. 'The most
+signet factors leading to increased oxidation of methyl
+linoleate were temperature and airflow rate; while other
+factors, including the presence of iron filings, and a cerium-
+based prooxidant, had a significant impact only after initial
+oridation reactions had occured 3,
+
+objective of the present study is to further charac-
+terize the oxidation of SME Biodiesel fuel in several deel
+
+i 5) wit!
+
+aeration. Experiments included four fully formulated oils
+meeting different industry specificatio meeting the
+Association des Constructeurs Européens d’Automobiles
+(ACEA) specification C2 and two meeting the American
+Petroleum Institute (API) specification CJ-4. In addition, four
+
+cach with different base oil mixtures and
+similar but not identical additive packages. In addition,
+partially formulated versions of oils A and B were tested: two
+lacked antioxidants and ZDDP (Apariai 2nd Byer) and two
+were the corresponding base oils without any additives
+(Ajase and Bray). The SME biodiesel was obtained without
+added antioxidants from Gage Products (Ferndale, MI) with
+characteristics provided in Ball etal. [8].
+
+gets ware conicted ang two oxidation
+stability test methods. used to evaluate the stability
+of the eght oils containing biodiesel a 0,5, 10, and 20 wide
+First, oxidation stability was measured using a modified
+version of the RSSOT (ASTM D7545) with a PetroOxy instru-
+ment (Anton Paar H) [3940.4 42}, atest normally used to
+
+thetwo
+
+Ace ACD oils): two were the fully formulated oils, but without
+
+Site without addi tudy of the oxid:
+
+For that appli-
+cation, the test is conducted at 140°C and pressurized to
+700 kPa with pure oxygen. For this study of biodiesel in engine
+
+various biodiesel engine off mixtures used induction
+periods based on acid formation (Rancimat) and oxygen
+uptake (modified Rss nt bz, 38, 39, 40, 41]. In addition, one
+
+il, a 160°C was used, while the pressure was
+maintained at 700 kPa. In either case, the stability metric is
+thet Aime induction period”, TP) to reach a 10% drop in
+
+jessure, Because some samples required considerable time
+lester than 4 hr) to reach this pressure drop, the data were
+
+tion, TAN, STBN, ester content, visculty deity an oxida
+tion by FT]
+
+Methods
+
+‘The oils used in this study include both light-duty and heavy-
+duty engine oils that meet specifications for modcl-year 2010
+diesel engines (Table I. i
+
+P*
+for diff
+
+forasmall, but measurable, background
+pressure loss rate measured immediately after cach
+sample measurement.
+
+nd, a modified version of the Rancimat (Metrohm
+AG) oxidation stability test (EN 14112) was used [38]. The
+
+is commonly used
+
+tion period) before rapid oxidation begins ina biodiesel (or
+biodiesel-diese! blend) sample heated to 110°C at atmo-
+spheric pressure. Purified air is bubbled through the heated
+sample and then through a water trap to collect volatile
+organic acids generated from oxidation of the sample. ‘The
+
+in different geographical regions. Oils A and B are two
+examples of fully formulated engine oils meeting EU light-
+duty vehicle specifications with different base oil mixtures
+and similar additive packages, albeit at different concentra-
+tions. Oils C and D are two examples of fully formulated oils
+designed to North American heavy-duty diesel engine
+
+TABLE 1 Engine oils.
+
+of acids in the water bath is continuously
+measured with a conductivity sensor. In the present study
+using engine oils, a temperature of 160°C was used due to
+the high stability of the engine oils. ‘The Rancimat IP was
+determined as the time corresponding to the maximum in
+the second derivative of a least-squares sigmoidal curve fit
+to the conductivity data [43].
+
+‘omID Industry specification SAE viscosity rating _ Other information
+A 01
+
+‘ACEA C2 W-30
+
+ly
+
+meeting EU
+
+ly
+il A without antioxidants and ZDDP-
+il B without antioxidants and ZDDP
+il A base oil: mixture of API groups Ill (hydrocracked) and IV
+
+(polyalphaolefin synthetic)
+
+il B base oil: API group Ill
+
+8 AEA C2 ow-20
+Ron "Va va
+Banat na Wa
+Ase "Va va
+"Va na
+APICI-4 10W-30
+ARICA 5W-40
+
+ly NA
+Uses mixture of API groups Il (>90% saturated) and Ill base oils
+
+n/a = not applicable.
+
+£2019 SAE Internationa: Ford Motor Company. Al RightsReserved
+
+ly
+Uses mixture of API groups lll and IV base oils,
