@@ -12,8 +12,9 @@ from typing import Any
 import numpy as np
 import pandas as pd
 import torch
+from sklearn.feature_selection import mutual_info_regression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import KFold, StratifiedKFold, train_test_split
 from torch import nn
 from torch.utils.data import DataLoader, Dataset
 
@@ -24,12 +25,42 @@ TARGET_COLS = [
     "Oxidation EOT | DIN 51453 Daimler Oxidation Test (DOT), A/cm",
 ]
 COMPONENT_NAME_COL = "Компонент"
+TARGET_TRAINING_CONFIGS: dict[int, dict[str, Any]] = {
+    0: {
+        "top_k": 10,
+        "learning_rate": 5e-4,
+        "weight_decay": 5e-4,
+        "dropout": 0.25,
+        "model_dim": 64,
+        "pair_hidden_dim": 128,
+        "num_interaction_blocks": 2,
+        "scheduler_factor": 0.5,
+        "scheduler_patience": 8,
+        "min_learning_rate": 1e-5,
+        "grad_clip_norm": 1.0,
+    },
+    1: {
+        "top_k": 15,
+        "learning_rate": 8e-4,
+        "weight_decay": 1e-4,
+        "dropout": 0.15,
+        "model_dim": 64,
+        "pair_hidden_dim": 128,
+        "num_interaction_blocks": 2,
+        "scheduler_factor": 0.5,
+        "scheduler_patience": 8,
+        "min_learning_rate": 1e-5,
+        "grad_clip_norm": 1.0,
+    },
+}
 
 
 def set_seed(seed: int) -> None:
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
 
 
 def read_csv_strict(path: Path) -> pd.DataFrame:
@@ -84,6 +115,43 @@ def parse_numeric_like(value: Any) -> float:
     return float(cleaned)
 
 
+def fit_target_transform(values: np.ndarray, target_index: int, mode: str) -> dict[str, Any]:
+    clean_values = np.asarray(values, dtype=np.float32)
+    if mode == "none":
+        return {"type": "identity", "shift": 0.0}
+    if mode == "auto" and target_index == 0:
+        min_value = float(np.nanmin(clean_values))
+        shift = max(0.0, 1.0 - min_value)
+        return {"type": "log1p_shift", "shift": shift}
+    return {"type": "identity", "shift": 0.0}
+
+
+def apply_target_transform(values: np.ndarray, transform_spec: dict[str, Any]) -> np.ndarray:
+    values_array = np.asarray(values, dtype=np.float32)
+    transform_type = transform_spec["type"]
+
+    if transform_type == "identity":
+        return values_array
+    if transform_type == "log1p_shift":
+        shifted = np.maximum(values_array + float(transform_spec["shift"]), 0.0)
+        return np.log1p(shifted).astype(np.float32)
+
+    raise ValueError(f"Неизвестный тип target transform: {transform_type}")
+
+
+def inverse_target_transform(values: np.ndarray, transform_spec: dict[str, Any]) -> np.ndarray:
+    values_array = np.asarray(values, dtype=np.float32)
+    transform_type = transform_spec["type"]
+
+    if transform_type == "identity":
+        return values_array
+    if transform_type == "log1p_shift":
+        restored = np.expm1(values_array) - float(transform_spec["shift"])
+        return restored.astype(np.float32)
+
+    raise ValueError(f"Неизвестный тип target transform: {transform_type}")
+
+
 def detect_component_feature_columns(
     component_train_df: pd.DataFrame,
     scenario_train_df: pd.DataFrame,
@@ -128,6 +196,7 @@ def detect_component_feature_columns(
 def build_feature_spec(
     component_train_df: pd.DataFrame,
     scenario_train_df: pd.DataFrame,
+    target_transform_mode: str = "none",
 ) -> dict[str, Any]:
     validate_required_columns(component_train_df, [ID_COL, COMPONENT_NAME_COL], "component_train")
     validate_required_columns(scenario_train_df, [ID_COL, *TARGET_COLS], "scenario_train")
@@ -179,8 +248,21 @@ def build_feature_spec(
     global_std = np.where(np.isnan(global_std) | (global_std < 1e-8), 1.0, global_std)
 
     target_matrix = scenario_train_df[TARGET_COLS].to_numpy(dtype=np.float32)
-    target_mean = np.mean(target_matrix, axis=0)
-    target_std = np.std(target_matrix, axis=0)
+    target_transform_specs: list[dict[str, Any]] = []
+    transformed_target_columns: list[np.ndarray] = []
+    for target_index in range(len(TARGET_COLS)):
+        transform_spec = fit_target_transform(
+            target_matrix[:, target_index],
+            target_index,
+            mode=target_transform_mode,
+        )
+        target_transform_specs.append(transform_spec)
+        transformed_column = apply_target_transform(target_matrix[:, target_index], transform_spec)
+        transformed_target_columns.append(transformed_column.reshape(-1, 1))
+
+    transformed_target_matrix = np.concatenate(transformed_target_columns, axis=1)
+    target_mean = np.mean(transformed_target_matrix, axis=0)
+    target_std = np.std(transformed_target_matrix, axis=0)
     target_std = np.where(target_std < 1e-8, 1.0, target_std)
 
     category_vocabularies: dict[str, dict[str, int]] = {}
@@ -202,10 +284,82 @@ def build_feature_spec(
         "component_numeric_std": component_numeric_std.astype(np.float32),
         "global_mean": global_mean.astype(np.float32),
         "global_std": global_std.astype(np.float32),
+        "target_transform_specs": target_transform_specs,
         "target_mean": target_mean.astype(np.float32),
         "target_std": target_std.astype(np.float32),
     }
 
+def select_features_per_target(
+    component_df: pd.DataFrame,
+    scenario_df: pd.DataFrame,
+    feature_spec: dict[str, Any],
+    target_index: int,
+    top_k: int = 5,
+) -> dict[str, Any]:
+    """
+    Отбираем наиболее важные признаки под конкретный таргет
+    """
+    # агрегируем компонентные признаки (mean pooling)
+    grouped = component_df.groupby(ID_COL)
+
+    X_list = []
+    ids = []
+    for scenario_id, group in grouped:
+        numeric = encode_component_numeric(group, feature_spec)
+        pooled = np.mean(numeric, axis=0)
+        X_list.append(pooled)
+        ids.append(scenario_id)
+
+    X = np.array(X_list)
+
+    y_df = scenario_df.set_index(ID_COL).loc[ids]
+    y = y_df[TARGET_COLS[target_index]].to_numpy(dtype=np.float32)
+    y = apply_target_transform(y, feature_spec["target_transform_specs"][target_index])
+
+    # mutual information
+    mi = mutual_info_regression(X, y, random_state=0)
+    top_idx = np.argsort(mi)[-top_k:]
+
+    selected_columns = [
+        feature_spec["component_numeric_columns"][i]
+        if i < len(feature_spec["component_numeric_columns"])
+        else feature_spec["component_auto_numeric_columns"][i - len(feature_spec["component_numeric_columns"])]
+        for i in top_idx
+    ]
+
+    # создаем копию feature_spec
+    new_spec = copy.deepcopy(feature_spec)
+
+    new_spec["component_numeric_columns"] = [
+        col for col in feature_spec["component_numeric_columns"] if col in selected_columns
+    ]
+    new_spec["component_auto_numeric_columns"] = [
+        col for col in feature_spec["component_auto_numeric_columns"] if col in selected_columns
+    ]
+    # пересчитываем mean/std под новые фичи
+    filtered_df = component_df.copy()
+
+    numeric_arrays = []
+    for col in new_spec["component_numeric_columns"]:
+        values = pd.to_numeric(filtered_df[col], errors="coerce").to_numpy(dtype=np.float32)
+        numeric_arrays.append(values.reshape(-1, 1))
+
+    for col in new_spec["component_auto_numeric_columns"]:
+        values = filtered_df[col].map(parse_numeric_like).to_numpy(dtype=np.float32)
+        numeric_arrays.append(values.reshape(-1, 1))
+
+    numeric_matrix = np.concatenate(numeric_arrays, axis=1).astype(np.float32)
+
+    mean = np.nanmean(numeric_matrix, axis=0)
+    std = np.nanstd(numeric_matrix, axis=0)
+
+    mean = np.where(np.isnan(mean), 0.0, mean)
+    std = np.where((np.isnan(std)) | (std < 1e-8), 1.0, std)
+
+    new_spec["component_numeric_mean"] = mean.astype(np.float32)
+    new_spec["component_numeric_std"] = std.astype(np.float32)
+
+    return new_spec
 
 def encode_component_numeric(component_df: pd.DataFrame, feature_spec: dict[str, Any]) -> np.ndarray:
     numeric_arrays: list[np.ndarray] = []
@@ -257,8 +411,10 @@ class ScenarioSetDataset(Dataset):
         component_df: pd.DataFrame,
         scenario_df: pd.DataFrame,
         feature_spec: dict[str, Any],
+        target_index: int,
         is_train: bool,
     ) -> None:
+        self.target_index = target_index
         component_groups = {
             scenario_id: group.reset_index(drop=True)
             for scenario_id, group in component_df.groupby(ID_COL, sort=False)
@@ -285,8 +441,15 @@ class ScenarioSetDataset(Dataset):
             }
 
             if is_train:
-                targets = scenario_row[TARGET_COLS].to_numpy(dtype=np.float32)
-                targets = (targets - feature_spec["target_mean"]) / feature_spec["target_std"]
+                targets = np.array([scenario_row[TARGET_COLS[self.target_index]]], dtype=np.float32)
+                targets = apply_target_transform(
+                    targets,
+                    feature_spec["target_transform_specs"][self.target_index],
+                )
+                target_mean = feature_spec["target_mean"][self.target_index]
+                target_std = feature_spec["target_std"][self.target_index]
+
+                targets = (targets - target_mean) / target_std
                 sample["targets"] = targets.astype(np.float32)
 
             self.samples.append(sample)
@@ -316,7 +479,7 @@ def make_collate_fn(feature_spec: dict[str, Any], is_train: bool):
         }
 
         if is_train:
-            targets = torch.zeros((batch_size, len(TARGET_COLS)), dtype=torch.float32)
+            targets = torch.zeros((batch_size, 1), dtype=torch.float32)
 
         scenario_ids: list[str] = []
 
@@ -466,7 +629,7 @@ class InteractionSetRegressor(nn.Module):
             nn.Linear(128, 64),
             nn.ReLU(),
             nn.Dropout(dropout),
-            nn.Linear(64, len(TARGET_COLS)),
+            nn.Linear(64, 1),
         )
 
     def forward(
@@ -500,34 +663,36 @@ class InteractionSetRegressor(nn.Module):
         return self.head(final_features)
 
 
-def inverse_scale_targets(values: np.ndarray, feature_spec: dict[str, Any]) -> np.ndarray:
-    return values * feature_spec["target_std"].reshape(1, -1) + feature_spec["target_mean"].reshape(1, -1)
+def inverse_scale_target(values: np.ndarray, feature_spec: dict, target_index: int):
+    mean = feature_spec["target_mean"][target_index]
+    std = feature_spec["target_std"][target_index]
+    transformed_values = values * std + mean
+    return inverse_target_transform(
+        transformed_values,
+        feature_spec["target_transform_specs"][target_index],
+    )
 
 
 def calculate_metrics(y_true: np.ndarray, y_pred: np.ndarray) -> dict[str, Any]:
-    metrics: dict[str, Any] = {"per_target": {}}
-    rmse_values: list[float] = []
-    mae_values: list[float] = []
-    r2_values: list[float] = []
+    y_true = y_true.squeeze(-1)
+    y_pred = y_pred.squeeze(-1)
 
-    for index, target_name in enumerate(TARGET_COLS):
-        rmse_value = float(np.sqrt(mean_squared_error(y_true[:, index], y_pred[:, index])))
-        mae_value = float(mean_absolute_error(y_true[:, index], y_pred[:, index]))
-        r2_value = float(r2_score(y_true[:, index], y_pred[:, index]))
+    finite_mask = np.isfinite(y_true) & np.isfinite(y_pred)
+    if not finite_mask.any():
+        raise ValueError("Не удалось посчитать метрики: все значения y_true/y_pred невалидны.")
 
-        metrics["per_target"][target_name] = {
-            "rmse": rmse_value,
-            "mae": mae_value,
-            "r2": r2_value,
-        }
-        rmse_values.append(rmse_value)
-        mae_values.append(mae_value)
-        r2_values.append(r2_value)
+    y_true = y_true[finite_mask]
+    y_pred = y_pred[finite_mask]
 
-    metrics["mean_rmse"] = float(np.mean(rmse_values))
-    metrics["mean_mae"] = float(np.mean(mae_values))
-    metrics["mean_r2"] = float(np.mean(r2_values))
-    return metrics
+    rmse = float(np.sqrt(mean_squared_error(y_true, y_pred)))
+    mae = float(mean_absolute_error(y_true, y_pred))
+    r2 = float(r2_score(y_true, y_pred)) if y_true.shape[0] >= 2 else float("nan")
+
+    return {
+        "rmse": rmse,
+        "mae": mae,
+        "r2": r2,
+    }
 
 
 def evaluate_model(
@@ -535,6 +700,7 @@ def evaluate_model(
     dataloader: DataLoader,
     device: torch.device,
     feature_spec: dict[str, Any],
+    target_index: int
 ) -> tuple[dict[str, Any], pd.DataFrame]:
     model.eval()
 
@@ -557,16 +723,16 @@ def evaluate_model(
     scaled_targets = np.concatenate(target_batches, axis=0)
     scaled_predictions = np.concatenate(prediction_batches, axis=0)
 
-    targets = inverse_scale_targets(scaled_targets, feature_spec)
-    predictions = inverse_scale_targets(scaled_predictions, feature_spec)
+    targets = inverse_scale_target(scaled_targets, feature_spec, target_index=target_index)
+    predictions = inverse_scale_target(scaled_predictions, feature_spec, target_index=target_index)
 
     metrics = calculate_metrics(targets, predictions)
 
     output_df = pd.DataFrame({ID_COL: scenario_ids})
-    for index, target_name in enumerate(TARGET_COLS):
-        output_df[target_name] = targets[:, index]
-        output_df[f"pred::{target_name}"] = predictions[:, index]
+    target_name = TARGET_COLS[target_index]
 
+    output_df[target_name] = targets.squeeze(-1)
+    output_df[f"{target_name}_pred"] = predictions.squeeze(-1)
     return metrics, output_df
 
 
@@ -575,6 +741,7 @@ def predict_for_test(
     dataloader: DataLoader,
     device: torch.device,
     feature_spec: dict[str, Any],
+    target_index:int
 ) -> pd.DataFrame:
     model.eval()
 
@@ -593,11 +760,12 @@ def predict_for_test(
             scenario_ids.extend(batch["scenario_id"])
 
     scaled_predictions = np.concatenate(prediction_batches, axis=0)
-    predictions = inverse_scale_targets(scaled_predictions, feature_spec)
+    predictions = inverse_scale_target(scaled_predictions, feature_spec, target_index)
 
     output_df = pd.DataFrame({ID_COL: scenario_ids})
-    for index, target_name in enumerate(TARGET_COLS):
-        output_df[target_name] = predictions[:, index]
+    target_name = TARGET_COLS[target_index]
+
+    output_df[target_name] = predictions.squeeze(-1)
 
     return output_df
 
@@ -607,124 +775,233 @@ def save_json(data: dict[str, Any], path: Path) -> None:
         json.dump(data, file, ensure_ascii=False, indent=2)
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Обучение set-модели с явным interaction block для Daimler DOT.")
-    parser.add_argument("--component-train", required=True, type=Path)
-    parser.add_argument("--component-test", required=True, type=Path)
-    parser.add_argument("--scenario-train", required=True, type=Path)
-    parser.add_argument("--scenario-test", required=True, type=Path)
-    parser.add_argument("--out-dir", required=True, type=Path)
-    parser.add_argument("--epochs", default=300, type=int)
-    parser.add_argument("--batch-size", default=16, type=int)
-    parser.add_argument("--learning-rate", default=1e-3, type=float)
-    parser.add_argument("--weight-decay", default=1e-4, type=float)
-    parser.add_argument("--patience", default=40, type=int)
-    parser.add_argument("--val-size", default=0.2, type=float)
-    parser.add_argument("--seed", default=42, type=int)
-    args = parser.parse_args()
+def serialize_feature_spec(feature_spec: dict[str, Any]) -> dict[str, Any]:
+    serialized: dict[str, Any] = {}
+    for key, value in feature_spec.items():
+        if isinstance(value, np.ndarray):
+            serialized[key] = value.tolist()
+        else:
+            serialized[key] = value
+    return serialized
 
-    if not 0.0 < args.val_size < 1.0:
-        raise ValueError("--val-size должен быть в диапазоне (0, 1).")
 
-    set_seed(args.seed)
+def get_target_training_config(args: argparse.Namespace, target_index: int) -> dict[str, Any]:
+    defaults = {
+        "top_k": 15,
+        "learning_rate": args.learning_rate,
+        "weight_decay": args.weight_decay,
+        "dropout": 0.15,
+        "model_dim": 64,
+        "pair_hidden_dim": 128,
+        "num_interaction_blocks": 2,
+        "scheduler_factor": 0.5,
+        "scheduler_patience": 8,
+        "min_learning_rate": 1e-5,
+        "grad_clip_norm": 1.0,
+    }
+    defaults.update(TARGET_TRAINING_CONFIGS.get(target_index, {}))
+    return defaults
 
-    out_dir = args.out_dir
-    out_dir.mkdir(parents=True, exist_ok=True)
 
-    component_train_df = read_csv_strict(args.component_train)
-    component_test_df = read_csv_strict(args.component_test)
-    scenario_train_df = read_csv_strict(args.scenario_train)
-    scenario_test_df = read_csv_strict(args.scenario_test)
+def summarize_fold_metrics(fold_metrics: list[dict[str, Any]]) -> dict[str, Any]:
+    summary: dict[str, Any] = {}
+    for metric_name in ("rmse", "mae", "r2"):
+        values = [float(metrics[metric_name]) for metrics in fold_metrics if np.isfinite(metrics[metric_name])]
+        summary[f"mean_{metric_name}"] = float(np.mean(values)) if values else float("nan")
+        summary[f"std_{metric_name}"] = float(np.std(values)) if values else float("nan")
+    return summary
 
-    validate_required_columns(component_train_df, [ID_COL, COMPONENT_NAME_COL], "component_train")
-    validate_required_columns(component_test_df, [ID_COL, COMPONENT_NAME_COL], "component_test")
-    validate_required_columns(scenario_train_df, [ID_COL, *TARGET_COLS], "scenario_train")
-    validate_required_columns(scenario_test_df, [ID_COL], "scenario_test")
 
-    train_ids, valid_ids = train_test_split(
-        scenario_train_df[ID_COL].tolist(),
-        test_size=args.val_size,
-        random_state=args.seed,
+def make_regression_stratification_labels(
+    target_values: np.ndarray,
+    min_count_per_bin: int,
+    max_bins: int = 10,
+) -> np.ndarray | None:
+    values = np.asarray(target_values, dtype=np.float32)
+    unique_count = int(pd.Series(values).nunique(dropna=True))
+    upper_bins = min(max_bins, unique_count)
+
+    for num_bins in range(upper_bins, 1, -1):
+        labels = pd.qcut(
+            pd.Series(values).rank(method="first"),
+            q=num_bins,
+            labels=False,
+            duplicates="drop",
+        )
+        counts = pd.Series(labels).value_counts()
+        if counts.shape[0] >= 2 and int(counts.min()) >= min_count_per_bin:
+            return labels.to_numpy(dtype=np.int64)
+
+    return None
+
+
+def build_train_valid_splits(
+    scenario_train_df: pd.DataFrame,
+    target_index: int,
+    num_folds: int,
+    val_size: float,
+    seed: int,
+    use_regression_stratify: bool,
+) -> list[tuple[list[str], list[str]]]:
+    scenario_ids = scenario_train_df[ID_COL].tolist()
+    target_values = scenario_train_df[TARGET_COLS[target_index]].to_numpy(dtype=np.float32)
+
+    if num_folds <= 1:
+        stratify_labels = (
+            make_regression_stratification_labels(target_values, min_count_per_bin=2)
+            if use_regression_stratify
+            else None
+        )
+        train_ids, valid_ids = train_test_split(
+            scenario_ids,
+            test_size=val_size,
+            random_state=seed,
+            stratify=stratify_labels,
+        )
+        return [(train_ids, valid_ids)]
+
+    if num_folds > len(scenario_ids):
+        raise ValueError("--num-folds не может быть больше числа train-сценариев.")
+
+    stratify_labels = (
+        make_regression_stratification_labels(target_values, min_count_per_bin=num_folds)
+        if use_regression_stratify
+        else None
     )
+    if stratify_labels is None:
+        kfold = KFold(n_splits=num_folds, shuffle=True, random_state=seed)
+        splits: list[tuple[list[str], list[str]]] = []
+        scenario_ids_array = np.asarray(scenario_ids)
+        for train_idx, valid_idx in kfold.split(scenario_ids_array):
+            splits.append((
+                scenario_ids_array[train_idx].tolist(),
+                scenario_ids_array[valid_idx].tolist(),
+            ))
+        return splits
 
-    scenario_train_split_df = scenario_train_df[
-        scenario_train_df[ID_COL].isin(train_ids)
-    ].copy().reset_index(drop=True)
-    scenario_valid_split_df = scenario_train_df[
-        scenario_train_df[ID_COL].isin(valid_ids)
-    ].copy().reset_index(drop=True)
+    kfold = StratifiedKFold(n_splits=num_folds, shuffle=True, random_state=seed)
+    splits: list[tuple[list[str], list[str]]] = []
+    scenario_ids_array = np.asarray(scenario_ids)
+    for train_idx, valid_idx in kfold.split(scenario_ids_array, stratify_labels):
+        splits.append((
+            scenario_ids_array[train_idx].tolist(),
+            scenario_ids_array[valid_idx].tolist(),
+        ))
+    return splits
 
-    component_train_split_df = component_train_df[
-        component_train_df[ID_COL].isin(train_ids)
-    ].copy().reset_index(drop=True)
-    component_valid_split_df = component_train_df[
-        component_train_df[ID_COL].isin(valid_ids)
-    ].copy().reset_index(drop=True)
 
-    feature_spec = build_feature_spec(
-        component_train_df=component_train_split_df,
-        scenario_train_df=scenario_train_split_df,
+def order_by_reference_ids(df: pd.DataFrame, reference_ids: list[str], value_columns: list[str]) -> pd.DataFrame:
+    ordered = pd.DataFrame({ID_COL: reference_ids})
+    return ordered.merge(df[[ID_COL, *value_columns]], on=ID_COL, how="left")
+
+
+def average_test_predictions(fold_test_predictions: list[pd.DataFrame], target_name: str) -> pd.DataFrame:
+    combined = pd.concat(fold_test_predictions, ignore_index=True)
+    return combined.groupby(ID_COL, as_index=False)[target_name].mean()
+
+
+def train_single_fold(
+    *,
+    component_train_df: pd.DataFrame,
+    component_valid_df: pd.DataFrame,
+    component_test_df: pd.DataFrame,
+    scenario_train_df: pd.DataFrame,
+    scenario_valid_df: pd.DataFrame,
+    scenario_test_df: pd.DataFrame,
+    args: argparse.Namespace,
+    target_index: int,
+    fold_index: int,
+    device: torch.device,
+) -> dict[str, Any]:
+    fold_seed = args.seed + target_index * 100 + fold_index
+    set_seed(fold_seed)
+
+    base_feature_spec = build_feature_spec(
+        component_train_df=component_train_df,
+        scenario_train_df=scenario_train_df,
+        target_transform_mode=args.target_transform_mode,
+    )
+    target_config = get_target_training_config(args, target_index)
+    target_feature_spec = select_features_per_target(
+        component_train_df,
+        scenario_train_df,
+        base_feature_spec,
+        target_index,
+        top_k=target_config["top_k"],
     )
 
     train_dataset = ScenarioSetDataset(
-        component_df=component_train_split_df,
-        scenario_df=scenario_train_split_df,
-        feature_spec=feature_spec,
+        component_df=component_train_df,
+        scenario_df=scenario_train_df,
+        feature_spec=target_feature_spec,
         is_train=True,
+        target_index=target_index,
     )
     valid_dataset = ScenarioSetDataset(
-        component_df=component_valid_split_df,
-        scenario_df=scenario_valid_split_df,
-        feature_spec=feature_spec,
+        component_df=component_valid_df,
+        scenario_df=scenario_valid_df,
+        feature_spec=target_feature_spec,
         is_train=True,
+        target_index=target_index,
     )
     test_dataset = ScenarioSetDataset(
         component_df=component_test_df,
         scenario_df=scenario_test_df,
-        feature_spec=feature_spec,
+        feature_spec=target_feature_spec,
         is_train=False,
+        target_index=target_index,
     )
+
+    generator = torch.Generator()
+    generator.manual_seed(fold_seed)
 
     train_loader = DataLoader(
         train_dataset,
         batch_size=args.batch_size,
         shuffle=True,
-        collate_fn=make_collate_fn(feature_spec, is_train=True),
+        collate_fn=make_collate_fn(target_feature_spec, True),
+        generator=generator,
     )
     valid_loader = DataLoader(
         valid_dataset,
         batch_size=args.batch_size,
         shuffle=False,
-        collate_fn=make_collate_fn(feature_spec, is_train=True),
+        collate_fn=make_collate_fn(target_feature_spec, True),
     )
     test_loader = DataLoader(
         test_dataset,
         batch_size=args.batch_size,
         shuffle=False,
-        collate_fn=make_collate_fn(feature_spec, is_train=False),
+        collate_fn=make_collate_fn(target_feature_spec, False),
     )
 
     categorical_cardinalities = {
         column: len(vocabulary)
-        for column, vocabulary in feature_spec["category_vocabularies"].items()
+        for column, vocabulary in target_feature_spec["category_vocabularies"].items()
+    }
+    model_init_kwargs = {
+        "component_numeric_dim": len(target_feature_spec["component_numeric_mean"]),
+        "global_dim": len(target_feature_spec["global_columns"]),
+        "categorical_cardinalities": categorical_cardinalities,
+        "model_dim": target_config["model_dim"],
+        "pair_hidden_dim": target_config["pair_hidden_dim"],
+        "dropout": target_config["dropout"],
+        "num_interaction_blocks": target_config["num_interaction_blocks"],
     }
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-    model = InteractionSetRegressor(
-        component_numeric_dim=len(feature_spec["component_numeric_mean"]),
-        global_dim=len(feature_spec["global_columns"]),
-        categorical_cardinalities=categorical_cardinalities,
-        model_dim=64,
-        pair_hidden_dim=128,
-        dropout=0.15,
-        num_interaction_blocks=2,
-    ).to(device)
+    model = InteractionSetRegressor(**model_init_kwargs).to(device)
 
     optimizer = torch.optim.AdamW(
         model.parameters(),
-        lr=args.learning_rate,
-        weight_decay=args.weight_decay,
+        lr=target_config["learning_rate"],
+        weight_decay=target_config["weight_decay"],
+    )
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer,
+        mode="min",
+        factor=target_config["scheduler_factor"],
+        patience=target_config["scheduler_patience"],
+        min_lr=target_config["min_learning_rate"],
     )
     loss_fn = nn.SmoothL1Loss(beta=1.0)
 
@@ -741,7 +1018,7 @@ def main() -> None:
         sample_count = 0
 
         for batch in train_loader:
-            optimizer.zero_grad()
+            optimizer.zero_grad(set_to_none=True)
 
             predictions = model(
                 component_numeric=batch["component_numeric"].to(device),
@@ -756,6 +1033,7 @@ def main() -> None:
                 raise RuntimeError("Loss стал NaN/Inf. Проверьте входные данные и масштабирование.")
 
             loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=target_config["grad_clip_norm"])
             optimizer.step()
 
             batch_size = targets.shape[0]
@@ -763,27 +1041,38 @@ def main() -> None:
             sample_count += batch_size
 
         train_loss = running_loss / max(sample_count, 1)
-        valid_metrics, _ = evaluate_model(model, valid_loader, device, feature_spec)
+        valid_metrics, _ = evaluate_model(
+            model,
+            valid_loader,
+            device,
+            target_feature_spec,
+            target_index=target_index,
+        )
+        scheduler.step(valid_metrics["rmse"])
+        current_lr = float(optimizer.param_groups[0]["lr"])
 
         history.append(
             {
                 "epoch": epoch,
                 "train_loss": train_loss,
-                "valid_mean_rmse": valid_metrics["mean_rmse"],
-                "valid_mean_mae": valid_metrics["mean_mae"],
-                "valid_mean_r2": valid_metrics["mean_r2"],
+                "valid_rmse": valid_metrics["rmse"],
+                "valid_mae": valid_metrics["mae"],
+                "valid_r2": valid_metrics["r2"],
+                "learning_rate": current_lr,
             }
         )
 
         print(
+            f"fold={fold_index} "
             f"epoch={epoch} "
             f"train_loss={train_loss:.6f} "
-            f"valid_mean_rmse={valid_metrics['mean_rmse']:.6f} "
-            f"valid_mean_r2={valid_metrics['mean_r2']:.6f}"
+            f"valid_rmse={valid_metrics['rmse']:.6f} "
+            f"valid_r2={valid_metrics['r2']:.6f} "
+            f"lr={current_lr:.6g}"
         )
 
-        if valid_metrics["mean_rmse"] < best_score:
-            best_score = valid_metrics["mean_rmse"]
+        if valid_metrics["rmse"] < best_score:
+            best_score = valid_metrics["rmse"]
             best_metrics = valid_metrics
             best_state = copy.deepcopy(model.state_dict())
             best_epoch = epoch
@@ -795,56 +1084,235 @@ def main() -> None:
             break
 
     if best_state is None or best_metrics is None:
-        raise RuntimeError("Не удалось сохранить лучшую модель.")
+        raise RuntimeError("Не удалось сохранить лучшую модель для fold.")
 
     model.load_state_dict(best_state)
 
-    final_valid_metrics, valid_predictions_df = evaluate_model(model, valid_loader, device, feature_spec)
-    test_predictions_df = predict_for_test(model, test_loader, device, feature_spec)
+    final_valid_metrics, valid_df = evaluate_model(
+        model,
+        valid_loader,
+        device,
+        target_feature_spec,
+        target_index=target_index,
+    )
+    test_df = predict_for_test(
+        model,
+        test_loader,
+        device,
+        target_feature_spec,
+        target_index=target_index,
+    )
 
-    metrics_output = {
+    return {
+        "fold_index": fold_index,
+        "training_config": target_config,
+        "feature_spec": serialize_feature_spec(target_feature_spec),
+        "model_init_kwargs": model_init_kwargs,
         "best_epoch": best_epoch,
         "best_validation_metrics": best_metrics,
         "final_validation_metrics": final_valid_metrics,
         "selected_component_numeric_columns": (
-            feature_spec["component_numeric_columns"] + feature_spec["component_auto_numeric_columns"]
+            target_feature_spec["component_numeric_columns"]
+            + target_feature_spec["component_auto_numeric_columns"]
         ),
-        "selected_component_categorical_columns": feature_spec["component_categorical_columns"],
-        "global_columns": feature_spec["global_columns"],
+        "selected_component_categorical_columns": target_feature_spec["component_categorical_columns"],
+        "global_columns": target_feature_spec["global_columns"],
         "history": history,
+        "valid_df": valid_df,
+        "test_df": test_df,
+        "model_state_dict": best_state,
     }
 
-    valid_predictions_df.to_csv(out_dir / "validation_predictions_interaction_model.csv", index=False)
-    test_predictions_df.to_csv(out_dir / "test_predictions_interaction_model.csv", index=False)
-    save_json(metrics_output, out_dir / "validation_metrics_interaction_model.json")
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Обучение set-модели с явным interaction block для Daimler DOT.")
+    parser.add_argument("--component-train", required=True, type=Path)
+    parser.add_argument("--component-test", required=True, type=Path)
+    parser.add_argument("--scenario-train", required=True, type=Path)
+    parser.add_argument("--scenario-test", required=True, type=Path)
+    parser.add_argument("--out-dir", required=True, type=Path)
+    parser.add_argument("--epochs", default=300, type=int)
+    parser.add_argument("--batch-size", default=16, type=int)
+    parser.add_argument("--learning-rate", default=1e-3, type=float)
+    parser.add_argument("--weight-decay", default=1e-4, type=float)
+    parser.add_argument("--patience", default=40, type=int)
+    parser.add_argument("--val-size", default=0.2, type=float)
+    parser.add_argument("--num-folds", default=3, type=int)
+    parser.add_argument("--target-transform-mode", choices=["none", "auto"], default="none")
+    parser.add_argument("--regression-stratify", action="store_true")
+    parser.add_argument("--seed", default=42, type=int)
+    args = parser.parse_args()
+
+    if not 0.0 < args.val_size < 1.0:
+        raise ValueError("--val-size должен быть в диапазоне (0, 1).")
+    if args.num_folds < 1:
+        raise ValueError("--num-folds должен быть >= 1.")
+
+    set_seed(args.seed)
+
+    out_dir = args.out_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    component_train_df = read_csv_strict(args.component_train)
+    component_test_df = read_csv_strict(args.component_test)
+    scenario_train_df = read_csv_strict(args.scenario_train)
+    scenario_test_df = read_csv_strict(args.scenario_test)
+
+    validate_required_columns(component_train_df, [ID_COL, COMPONENT_NAME_COL], "component_train")
+    validate_required_columns(component_test_df, [ID_COL, COMPONENT_NAME_COL], "component_test")
+    validate_required_columns(scenario_train_df, [ID_COL, *TARGET_COLS], "scenario_train")
+    validate_required_columns(scenario_test_df, [ID_COL], "scenario_test")
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    all_test_predictions: list[pd.DataFrame] = []
+    all_valid_predictions: list[pd.DataFrame] = []
+    all_metrics: dict[str, Any] = {}
+    trained_target_artifacts: dict[str, Any] = {}
+
+    for target_index, target_name in enumerate(TARGET_COLS):
+        print(f"\n===== TRAINING FOR TARGET: {target_name} =====")
+        train_valid_splits = build_train_valid_splits(
+            scenario_train_df=scenario_train_df,
+            target_index=target_index,
+            num_folds=args.num_folds,
+            val_size=args.val_size,
+            seed=args.seed,
+            use_regression_stratify=args.regression_stratify,
+        )
+
+        fold_results: list[dict[str, Any]] = []
+        fold_valid_predictions: list[pd.DataFrame] = []
+        fold_test_predictions: list[pd.DataFrame] = []
+
+        for fold_index, (train_ids, valid_ids) in enumerate(train_valid_splits, start=1):
+            print(f"\n--- fold {fold_index}/{len(train_valid_splits)} ---")
+
+            scenario_train_split_df = scenario_train_df[
+                scenario_train_df[ID_COL].isin(train_ids)
+            ].copy().reset_index(drop=True)
+            scenario_valid_split_df = scenario_train_df[
+                scenario_train_df[ID_COL].isin(valid_ids)
+            ].copy().reset_index(drop=True)
+
+            component_train_split_df = component_train_df[
+                component_train_df[ID_COL].isin(train_ids)
+            ].copy().reset_index(drop=True)
+            component_valid_split_df = component_train_df[
+                component_train_df[ID_COL].isin(valid_ids)
+            ].copy().reset_index(drop=True)
+
+            fold_result = train_single_fold(
+                component_train_df=component_train_split_df,
+                component_valid_df=component_valid_split_df,
+                component_test_df=component_test_df,
+                scenario_train_df=scenario_train_split_df,
+                scenario_valid_df=scenario_valid_split_df,
+                scenario_test_df=scenario_test_df,
+                args=args,
+                target_index=target_index,
+                fold_index=fold_index,
+                device=device,
+            )
+            fold_results.append(fold_result)
+            fold_valid_predictions.append(fold_result["valid_df"])
+            fold_test_predictions.append(fold_result["test_df"])
+
+        oof_valid_df = pd.concat(fold_valid_predictions, ignore_index=True)
+        oof_valid_df = order_by_reference_ids(
+            oof_valid_df,
+            scenario_train_df[ID_COL].tolist(),
+            [target_name, f"{target_name}_pred"],
+        )
+
+        test_df = average_test_predictions(fold_test_predictions, target_name)
+        test_df = order_by_reference_ids(test_df, scenario_test_df[ID_COL].tolist(), [target_name])
+
+        oof_metrics = calculate_metrics(
+            oof_valid_df[[target_name]].to_numpy(dtype=np.float32),
+            oof_valid_df[[f"{target_name}_pred"]].to_numpy(dtype=np.float32),
+        )
+        fold_metric_summary = summarize_fold_metrics(
+            [fold_result["final_validation_metrics"] for fold_result in fold_results]
+        )
+        best_fold_result = min(
+            fold_results,
+            key=lambda result: result["best_validation_metrics"]["rmse"],
+        )
+
+        all_metrics[target_name] = {
+            "num_folds": len(train_valid_splits),
+            "training_config": fold_results[0]["training_config"],
+            "oof_validation_metrics": oof_metrics,
+            "fold_metric_summary": fold_metric_summary,
+            "best_fold": {
+                "fold_index": best_fold_result["fold_index"],
+                "best_epoch": best_fold_result["best_epoch"],
+                "best_validation_metrics": best_fold_result["best_validation_metrics"],
+            },
+            "folds": [
+                {
+                    "fold_index": fold_result["fold_index"],
+                    "best_epoch": fold_result["best_epoch"],
+                    "best_validation_metrics": fold_result["best_validation_metrics"],
+                    "final_validation_metrics": fold_result["final_validation_metrics"],
+                    "selected_component_numeric_columns": fold_result["selected_component_numeric_columns"],
+                    "selected_component_categorical_columns": fold_result["selected_component_categorical_columns"],
+                    "global_columns": fold_result["global_columns"],
+                    "history": fold_result["history"],
+                }
+                for fold_result in fold_results
+            ],
+        }
+
+        all_valid_predictions.append(oof_valid_df[[ID_COL, target_name, f"{target_name}_pred"]])
+        all_test_predictions.append(test_df[[ID_COL, target_name]])
+
+        trained_target_artifacts[target_name] = {
+            "target_index": target_index,
+            "num_folds": len(train_valid_splits),
+            "training_config": fold_results[0]["training_config"],
+            "oof_validation_metrics": oof_metrics,
+            "folds": [
+                {
+                    "fold_index": fold_result["fold_index"],
+                    "best_epoch": fold_result["best_epoch"],
+                    "best_validation_metrics": fold_result["best_validation_metrics"],
+                    "model_init_kwargs": fold_result["model_init_kwargs"],
+                    "feature_spec": fold_result["feature_spec"],
+                    "model_state_dict": fold_result["model_state_dict"],
+                }
+                for fold_result in fold_results
+            ],
+        }
+
+    #    merge predictions
+    valid_final = all_valid_predictions[0]
+    for df in all_valid_predictions[1:]:
+        valid_final = valid_final.merge(df, on=ID_COL)
+
+    test_final = all_test_predictions[0]
+    for df in all_test_predictions[1:]:
+        test_final = test_final.merge(df, on=ID_COL)
+
+    valid_final.to_csv(out_dir / "validation_predictions_interaction_model.csv", index=False)
+    test_final.to_csv(out_dir / "test_predictions_interaction_model.csv", index=False)
+
+    save_json(all_metrics, out_dir / "validation_metrics_interaction_model.json")
 
     torch.save(
         {
-            "model_state_dict": model.state_dict(),
-            "feature_spec": {
-                "component_numeric_columns": feature_spec["component_numeric_columns"],
-                "component_auto_numeric_columns": feature_spec["component_auto_numeric_columns"],
-                "component_categorical_columns": feature_spec["component_categorical_columns"],
-                "global_columns": feature_spec["global_columns"],
-                "category_vocabularies": feature_spec["category_vocabularies"],
-                "component_numeric_mean": feature_spec["component_numeric_mean"].tolist(),
-                "component_numeric_std": feature_spec["component_numeric_std"].tolist(),
-                "global_mean": feature_spec["global_mean"].tolist(),
-                "global_std": feature_spec["global_std"].tolist(),
-                "target_mean": feature_spec["target_mean"].tolist(),
-                "target_std": feature_spec["target_std"].tolist(),
-            },
+            "target_columns": TARGET_COLS,
+            "targets": trained_target_artifacts,
         },
-        out_dir / "interaction_model.pt",
+        out_dir / "interaction_models.pt",
     )
 
     print("Обучение завершено.")
-    print(f"Лучшая эпоха: {best_epoch}")
-    print(json.dumps(best_metrics, ensure_ascii=False, indent=2))
+    print(json.dumps(all_metrics, ensure_ascii=False, indent=2))
     print(f"Validation predictions: {(out_dir / 'validation_predictions_interaction_model.csv').resolve()}")
     print(f"Test predictions: {(out_dir / 'test_predictions_interaction_model.csv').resolve()}")
     print(f"Metrics: {(out_dir / 'validation_metrics_interaction_model.json').resolve()}")
-    print(f"Model: {(out_dir / 'interaction_model.pt').resolve()}")
+    print(f"Models: {(out_dir / 'interaction_models.pt').resolve()}")
 
 
 if __name__ == "__main__":
