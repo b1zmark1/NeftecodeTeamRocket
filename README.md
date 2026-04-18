@@ -1,81 +1,82 @@
-# Neftecode Final Submission
+# НЕФТЕКОД 2026 — Team ROCKET
 
-Репозиторий приведен к финальному baseline `O2`.
+![ROCKET](docks/logo.png)
 
-## Что осталось в репозитории
+Финальный репозиторий хакатонного решения команды **ROCKET** для baseline-модели `O2`.
+
+## Состав репозитория
 
 - [inference.ipynb](/e:/Projects/Neftecode/inference.ipynb)  
-  Самодостаточный ноутбук с полным pipeline:
-  - raw CSV -> transform,
-  - добавление `O2`-признаков,
-  - обучение иерархической модели,
-  - сохранение `prediction.csv`.
+  Самодостаточный ноутбук. Он читает только исходные CSV из папки [data](/e:/Projects/Neftecode/data), сам строит признаки, обучает historical `hierarchical model` и записывает итоговый [prediction.csv](/e:/Projects/Neftecode/prediction.csv).
+
+- [data](/e:/Projects/Neftecode/data)  
+  Единственный источник входных данных для решения:
+  - [daimler_component_properties.csv](/e:/Projects/Neftecode/data/daimler_component_properties.csv)
+  - [daimler_mixtures_train.csv](/e:/Projects/Neftecode/data/daimler_mixtures_train.csv)
+  - [daimler_mixtures_test.csv](/e:/Projects/Neftecode/data/daimler_mixtures_test.csv)
 
 - [prediction.csv](/e:/Projects/Neftecode/prediction.csv)  
-  Итоговый baseline prediction.
+  Текущий baseline submission.
 
-- [daimler_component_properties.csv](/e:/Projects/Neftecode/daimler_component_properties.csv)
-- [daimler_mixtures_train.csv](/e:/Projects/Neftecode/daimler_mixtures_train.csv)
-- [daimler_mixtures_test.csv](/e:/Projects/Neftecode/daimler_mixtures_test.csv)  
-  Единственные входные данные для решения.
-
-- [patent_extraction](/e:/Projects/Neftecode/patent_extraction)  
-  Оставлена полностью для дальнейшей работы.
+- [docks](/e:/Projects/Neftecode/docks)  
+  Служебные материалы для сдачи. Сейчас здесь лежит логотип команды:
+  - [logo.png](/e:/Projects/Neftecode/docks/logo.png)
 
 - [Dockerfile](/e:/Projects/Neftecode/Dockerfile)
 - [requirements-docker.txt](/e:/Projects/Neftecode/requirements-docker.txt)
 - [.dockerignore](/e:/Projects/Neftecode/.dockerignore)
 
-## Что удалено
+Локальная папка [patent_extraction](/e:/Projects/Neftecode/patent_extraction) сохранена для дальнейшей работы, но не входит в финальный пакет для `main`.
 
-Убраны старые и неиспользуемые для финальной сдачи каталоги:
+## Что делает `inference.ipynb`
 
-- `Nikita`
-- `final_o2_inputs`
-- `hierarchical_model`
-- `hierarchical_out`
-- `interaction_out`
-- `mlp`
-- `mlp_out`
-- `model_with_structure`
-- `plsreg`
+Ноутбук не вызывает внешние `.py`-скрипты. В нем зашито все решение целиком:
 
-Также убран локальный runtime и исследовательский мусор:
-
-- `_notebook_runtime_o2`
-- `tmp_us2025_ocr`
-- старые локальные PDF/TXT и прочие временные каталоги
-
-## Как устроено решение
-
-`inference.ipynb` не вызывает внешние `.py`-скрипты. Внутри ноутбука зашиты:
-
-- логика трансформации raw-данных в component/scenario tables;
-- логика построения `O2`-блока:
+- чтение исходных CSV из `data/`;
+- трансформация raw-данных в component/scenario-level представление;
+- построение baseline `O2`-признаков:
   - `o2_salicylate_tbn_x_amine_ao`
   - `o2_salicylate_tbn_x_phenol_ao`
   - `o2_salicylate_tbn_x_amine_x_phenol`
   - `o2_ca_salicylate_present`
   - `o2_mg_detergent_present`
-- логика обучения `hierarchical model`;
-- сохранение финального `prediction.csv`.
+- обучение `hierarchical model`;
+- сохранение итогового `prediction.csv`.
 
-Во время исполнения ноутбук создает временную папку `_notebook_runtime_o2` с промежуточными CSV и model artifacts. Это runtime-артефакт, его не нужно коммитить.
+Во время исполнения создается временная папка `_notebook_runtime_o2`. Это runtime-артефакт, его не нужно коммитить.
 
-## Запуск без Docker
+## Структура запуска
 
-Нужны зависимости Python:
+Ожидаемая структура проекта:
+
+```text
+Neftecode/
+├── data/
+│   ├── daimler_component_properties.csv
+│   ├── daimler_mixtures_train.csv
+│   └── daimler_mixtures_test.csv
+├── docks/
+│   └── logo.png
+├── inference.ipynb
+├── prediction.csv
+├── Dockerfile
+└── requirements-docker.txt
+```
+
+## Запуск локально
+
+Нужны пакеты:
 
 - `numpy`
 - `pandas`
 - `scikit-learn`
 - `torch`
 
-Запуск можно сделать через Jupyter или простым исполнением кода ячеек ноутбука.
+Дальше достаточно открыть [inference.ipynb](/e:/Projects/Neftecode/inference.ipynb) и выполнить все ячейки сверху вниз.
 
-После завершения в корне будет создан или перезаписан:
+Результат:
 
-- [prediction.csv](/e:/Projects/Neftecode/prediction.csv)
+- в корне проекта будет создан или обновлен [prediction.csv](/e:/Projects/Neftecode/prediction.csv)
 
 ## Запуск через Docker
 
@@ -85,35 +86,32 @@
 docker build -t neftecode-o2 .
 ```
 
-Запуск:
-
-```bash
-docker run --rm -v %cd%:/app neftecode-o2
-```
-
-Для PowerShell:
+Запуск в PowerShell:
 
 ```powershell
-docker build -t neftecode-o2 .
 docker run --rm -v ${PWD}:/app neftecode-o2
+```
+
+Запуск в `cmd`:
+
+```cmd
+docker run --rm -v %cd%:/app neftecode-o2
 ```
 
 Контейнер:
 
-- устанавливает зависимости из [requirements-docker.txt](/e:/Projects/Neftecode/requirements-docker.txt);
+- ставит зависимости из [requirements-docker.txt](/e:/Projects/Neftecode/requirements-docker.txt);
 - исполняет все code-cells из [inference.ipynb](/e:/Projects/Neftecode/inference.ipynb);
-- пишет `prediction.csv` в корень проекта.
+- записывает `prediction.csv` в корень проекта.
 
-## Что важно для сдачи
+## Что отправлять
 
-Для финальной сдачи достаточно следующего набора:
+Для финальной сдачи нужны:
 
 - `inference.ipynb`
 - `prediction.csv`
-- `daimler_component_properties.csv`
-- `daimler_mixtures_train.csv`
-- `daimler_mixtures_test.csv`
+- папка `data/`
 - `Dockerfile`
 - `requirements-docker.txt`
 
-`patent_extraction` не участвует в baseline `O2`, но сохранена в репозитории отдельно по рабочей необходимости.
+`patent_extraction` в baseline `O2` не участвует и в `main` не требуется.
