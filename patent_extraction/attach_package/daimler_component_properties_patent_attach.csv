@@ -1,0 +1,19 @@
+Компонент,Наименование партии,Наименование показателя,Единица измерения_по_партиям,Значение показателя
+Антиоксидант_patent_dpa_component1,Batch 3,Тип АО,–,Дифениламин
+Антиоксидант_patent_dpa_component1,Batch 3,"Активный Азот / Кислород, % масс. (N или O)",% масс,3.40
+Антиоксидант_patent_dpa_component1,Batch 3,Mono-C9-alkyl substituted diphenylamine share,% масс,0.30
+Антиоксидант_patent_dpa_component1,Batch 3,Di-C9-alkyl substituted diphenylamine share,% масс,95.6
+Антиоксидант_patent_dpa_component1,Batch 3,Tri-C9-alkyl substituted diphenylamine share,% масс,4.10
+Антиоксидант_patent_dpa_component2,not disclosed,Тип АО,–,Дифениламин
+Антиоксидант_patent_dpa_component2,not disclosed,"Активный Азот / Кислород, % масс. (N или O)",% масс,3.75
+Антиоксидант_patent_dpa_component2,not disclosed,Mono-C9-alkyl substituted diphenylamine share,% масс,29
+Антиоксидант_patent_dpa_component2,not disclosed,Di-C9-alkyl substituted diphenylamine share,% масс,68
+Антиоксидант_patent_dpa_component2,not disclosed,Tri-C9-alkyl substituted diphenylamine share,% масс,3
+Детергент_patent_ca_sulfonate_1,table10_common,Категория,–,Сульфонат кальция
+Детергент_patent_mg_sulfonate_1,table10_common,Категория,–,Сульфонат магния
+Базовое_масло_patent_group_iii_1,table10_common,Группа по API,–,3
+Дисперсант_patent_dvm_1,table10_common,Категория,–,Dispersant viscosity modifier
+Дисперсант_patent_borated_pibsa_pam_1,table10_common,Категория,–,Borated PIBSA-PAM dispersant
+Дисперсант_patent_pibsa_pam_1,table10_common,Тип сукцинимида,–,PIBSA-PAM
+Противоизносная_присадка_patent_zddp_1,table10_common,Категория,–,ZDDP
+Прочее_patent_common_additives_1,table10_common,Категория,–,Unspecified common additives and diluents
