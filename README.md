@@ -7,7 +7,16 @@
 ## Состав репозитория
 
 - [inference.ipynb](/e:/Projects/Neftecode/inference.ipynb)  
-  Самодостаточный ноутбук. Он читает только исходные CSV из папки [data](/e:/Projects/Neftecode/data), сам строит признаки, обучает historical `hierarchical model` и записывает итоговый [prediction.csv](/e:/Projects/Neftecode/prediction.csv).
+  Самодостаточный ноутбук. Он читает только исходные CSV из папки [data](/e:/Projects/Neftecode/data), сам строит признаки, содержит код обучения `hierarchical model` и код получения предсказаний.
+
+- [train.py](/e:/Projects/Neftecode/train.py)  
+  Код обучения модели. Скрипт строит component/scenario-level таблицы из `data/`, добавляет `O2`-признаки и обучает historical `hierarchical model`.
+
+- [predict.py](/e:/Projects/Neftecode/predict.py)  
+  Код получения предсказаний. Скрипт строит те же признаки, загружает зафиксированный checkpoint модели и воспроизводимо формирует финальный [predictions.csv](/e:/Projects/Neftecode/predictions.csv).
+
+- [model/hierarchical_o2_baseline.pt](/e:/Projects/Neftecode/model/hierarchical_o2_baseline.pt)  
+  Зафиксированный checkpoint baseline-модели `O2`.
 
 - [data](/e:/Projects/Neftecode/data)  
   Единственный источник входных данных для решения:
@@ -16,7 +25,10 @@
   - [daimler_mixtures_test.csv](/e:/Projects/Neftecode/data/daimler_mixtures_test.csv)
 
 - [prediction.csv](/e:/Projects/Neftecode/prediction.csv)  
-  Текущий baseline submission.
+  Проверенный baseline artifact модели `O2`.
+
+- [predictions.csv](/e:/Projects/Neftecode/predictions.csv)  
+  Файл, который формируется контейнерным запуском для отправки на платформу.
 
 - [docks](/e:/Projects/Neftecode/docks)  
   Служебные материалы для сдачи. Сейчас здесь лежит логотип команды:
@@ -30,7 +42,7 @@
 
 ## Что делает `inference.ipynb`
 
-Ноутбук не вызывает внешние `.py`-скрипты. В нем зашито все решение целиком:
+Ноутбук содержит то же решение, что и отдельные `.py`-файлы:
 
 - чтение исходных CSV из `data/`;
 - трансформация raw-данных в component/scenario-level представление;
@@ -41,11 +53,12 @@
   - `o2_ca_salicylate_present`
   - `o2_mg_detergent_present`
 - обучение `hierarchical model`;
-- сохранение итогового `prediction.csv`.
+- получение предсказаний на тестовом наборе;
+- сохранение итогового `predictions.csv`.
 
 Во время исполнения создается временная папка `_notebook_runtime_o2`. Это runtime-артефакт, его не нужно коммитить.
 
-Важно: нейросетевое обучение PyTorch может давать небольшие отличия между Windows и Linux/Docker даже при фиксированном seed. Поэтому ноутбук сохраняет свежий model-output в `_notebook_runtime_o2/train_out/test_predictions_hierarchical_model.csv`, но не затирает уже приложенный проверенный baseline [prediction.csv](/e:/Projects/Neftecode/prediction.csv), если файл присутствует и имеет корректный формат submission.
+Важно: нейросетевое обучение PyTorch может давать небольшие отличия между Windows и Linux/Docker даже при фиксированном seed. Поэтому для воспроизводимой контейнерной сдачи используется не retrain, а checkpoint [model/hierarchical_o2_baseline.pt](/e:/Projects/Neftecode/model/hierarchical_o2_baseline.pt). Код обучения сохранен отдельно в [train.py](/e:/Projects/Neftecode/train.py).
 
 ## Структура запуска
 
@@ -60,7 +73,13 @@ Neftecode/
 ├── docks/
 │   └── logo.png
 ├── inference.ipynb
+├── train.py
+├── predict.py
+├── src/
+├── model/
+│   └── hierarchical_o2_baseline.pt
 ├── prediction.csv
+├── predictions.csv
 ├── Dockerfile
 └── requirements-docker.txt
 ```
@@ -74,11 +93,30 @@ Neftecode/
 - `scikit-learn`
 - `torch`
 
-Дальше достаточно открыть [inference.ipynb](/e:/Projects/Neftecode/inference.ipynb) и выполнить все ячейки сверху вниз.
+В Docker используется CPU-only сборка PyTorch.
+
+Обучение модели:
+
+```powershell
+python train.py
+```
+
+Скрипт обучит модель с нуля и сохранит:
+
+- `model/hierarchical_o2_trained.pt`
+- `prediction_fresh_retrain.csv`
+
+Получение финальных предсказаний через зафиксированный checkpoint:
+
+```powershell
+python predict.py
+```
 
 Результат:
 
-- в корне проекта будет создан или обновлен [prediction.csv](/e:/Projects/Neftecode/prediction.csv)
+- в корне проекта будет создан или обновлен [predictions.csv](/e:/Projects/Neftecode/predictions.csv)
+
+Альтернативно можно открыть [inference.ipynb](/e:/Projects/Neftecode/inference.ipynb) и выполнить ячейки сверху вниз.
 
 ## Запуск через Docker
 
@@ -103,15 +141,31 @@ docker run --rm -v %cd%:/app neftecode-o2
 Контейнер:
 
 - ставит зависимости из [requirements-docker.txt](/e:/Projects/Neftecode/requirements-docker.txt);
-- исполняет все code-cells из [inference.ipynb](/e:/Projects/Neftecode/inference.ipynb);
-- записывает `prediction.csv` в корень проекта.
+- запускает [predict.py](/e:/Projects/Neftecode/predict.py);
+- воспроизводимо записывает `predictions.csv` в корень проекта.
+
+Проверка результата после запуска:
+
+```powershell
+Get-FileHash predictions.csv -Algorithm SHA256
+```
+
+Ожидаемый SHA256 для проверенного baseline:
+
+```text
+31D58179D347F3577F22806EE63350D6C1C5103D972C21C9EFED8AA59E02D82C
+```
 
 ## Что отправлять
 
 Для финальной сдачи нужны:
 
 - `inference.ipynb`
-- `prediction.csv`
+- `train.py`
+- `predict.py`
+- папка `src/`
+- папка `model/`
+- `predictions.csv`
 - папка `data/`
 - `Dockerfile`
 - `requirements-docker.txt`

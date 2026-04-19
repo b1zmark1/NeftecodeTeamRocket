@@ -2,3 +2,7 @@ _notebook_runtime_o2/
 tmp_us2025_ocr/
 patent_extraction/
 patent_extraction.7z
+__pycache__/
+*.pyc
+prediction_fresh_retrain.csv
+model/hierarchical_o2_trained.pt

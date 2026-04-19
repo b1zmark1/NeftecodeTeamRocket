@@ -12,7 +12,8 @@ ENV NUMEXPR_NUM_THREADS=1
 
 COPY requirements-docker.txt /app/requirements-docker.txt
 RUN pip install --no-cache-dir -r /app/requirements-docker.txt
+RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch==2.9.1+cpu
 
 COPY . /app
 
-CMD ["python", "-c", "import json; from pathlib import Path; nb=json.loads(Path('inference.ipynb').read_text(encoding='utf-8')); ns={'__name__':'__main__'}; [exec(compile(''.join(cell.get('source', [])), f'inference_cell_{i}', 'exec'), ns) for i, cell in enumerate(nb['cells']) if cell.get('cell_type') == 'code']"]
+CMD ["python", "predict.py"]
