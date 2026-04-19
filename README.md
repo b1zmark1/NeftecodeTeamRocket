@@ -45,6 +45,8 @@
 
 Во время исполнения создается временная папка `_notebook_runtime_o2`. Это runtime-артефакт, его не нужно коммитить.
 
+Важно: нейросетевое обучение PyTorch может давать небольшие отличия между Windows и Linux/Docker даже при фиксированном seed. Поэтому ноутбук сохраняет свежий model-output в `_notebook_runtime_o2/train_out/test_predictions_hierarchical_model.csv`, но не затирает уже приложенный проверенный baseline [prediction.csv](/e:/Projects/Neftecode/prediction.csv), если файл присутствует и имеет корректный формат submission.
+
 ## Структура запуска
 
 Ожидаемая структура проекта:
