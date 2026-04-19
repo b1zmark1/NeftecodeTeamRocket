@@ -2,60 +2,71 @@
 
 ![ROCKET](docks/logo.png)
 
-Финальный репозиторий хакатонного решения команды **ROCKET** для baseline-модели `O2`.
+Финальный репозиторий хакатонного решения команды **ROCKET**.
 
 ## Состав репозитория
 
-- [inference.ipynb](/e:/Projects/Neftecode/inference.ipynb)  
-  Самодостаточный ноутбук. Он читает только исходные CSV из папки [data](/e:/Projects/Neftecode/data), сам строит признаки, содержит код обучения `hierarchical model` и код получения предсказаний.
+- inference.ipynb
+  Самодостаточный predict-only ноутбук. Он читает только исходные CSV из папки [data](/e:/Projects/Neftecode/data), сам строит признаки и через зафиксированный checkpoint воспроизводимо формирует финальный `predictions.csv`.
 
-- [train.py](/e:/Projects/Neftecode/train.py)  
-  Код обучения модели. Скрипт строит component/scenario-level таблицы из `data/`, добавляет `O2`-признаки и обучает historical `hierarchical model`.
+- train.py
+  Код обучения модели. Скрипт строит component/scenario-level таблицы из `data/` и обучает historical `hierarchical model`.
 
-- [predict.py](/e:/Projects/Neftecode/predict.py)  
-  Код получения предсказаний. Скрипт строит те же признаки, загружает зафиксированный checkpoint модели и воспроизводимо формирует финальный [predictions.csv](/e:/Projects/Neftecode/predictions.csv).
+- predict.py
+  Код получения предсказаний. Скрипт строит те же признаки, загружает зафиксированный checkpoint модели и воспроизводимо формирует финальный [predictions.csv].
 
-- [model/hierarchical_o2_baseline.pt](/e:/Projects/Neftecode/model/hierarchical_o2_baseline.pt)  
-  Зафиксированный checkpoint baseline-модели `O2`.
+- model/hierarchical_o2_baseline.pt
+  Зафиксированный checkpoint baseline-модели.
 
-- [data](/e:/Projects/Neftecode/data)  
-  Единственный источник входных данных для решения:
+- data 
+  Источник входных данных для решения:
 
-  - [daimler_component_properties.csv](/e:/Projects/Neftecode/data/daimler_component_properties.csv)
-  - [daimler_mixtures_train.csv](/e:/Projects/Neftecode/data/daimler_mixtures_train.csv)
-  - [daimler_mixtures_test.csv](/e:/Projects/Neftecode/data/daimler_mixtures_test.csv)
-- [predictions.csv](/e:/Projects/Neftecode/predictions.csv)  
+  - daimler_component_properties.csv
+  - daimler_mixtures_train.csv
+  - daimler_mixtures_test.csv
+- predictions.csv
   Файл, который формируется контейнерным запуском для отправки на платформу.
 
-- [docks](/e:/Projects/Neftecode/docks)  
-  Служебные материалы для сдачи. Сейчас здесь лежит логотип команды:
+- docks
+  Служебные материалы для сдачи:
 
-  - [logo.png](/e:/Projects/Neftecode/docks/logo.png)
-- [Dockerfile](/e:/Projects/Neftecode/Dockerfile)
-- [requirements-docker.txt](/e:/Projects/Neftecode/requirements-docker.txt)
-- [.dockerignore](/e:/Projects/Neftecode/.dockerignore)
+  - logo.png
+- Dockerfile
+- requirements-docker.txt
+- .dockerignore
+- patent_data
+  Папка с патентными данными и отдельным локальным pipeline для экспериментов с расширенным train:
 
-Локальная папка [patent_extraction](/e:/Projects/Neftecode/patent_extraction) сохранена для дальнейшей работы, но не входит в финальный пакет для `main`.
+  - daimler_mixtures_train_patent_attach.csv
+  - daimler_component_properties_patent_attach.csv
+  - train.py
+  - predict.py
+  - inference.ipynb
+  - README.md
+
+  Что это за папка:
+  - отдельные скрипты для локального обучения и предсказания на объединённых `data + patent_data`.
+
+  Важно: baseline-скрипты в корне проекта эти файлы автоматически не читают.
+- tools/merge_patent_attach_into_data.py
+  Вспомогательный скрипт для локального объединения патент-пакета с исходными CSV в отдельную папку `data_with_patents/`.
+
+Папка `patent_data` не участвует в baseline напрямую. Она нужна как:
+- отдельное приложение к финальному решению;
+- локальный экспериментальный контур для retrain с патентными данными.
 
 ## Что делает `inference.ipynb`
 
-Ноутбук содержит то же решение, что и отдельные `.py`-файлы:
+Корневой ноутбук работает в predict-only режиме:
 
-- чтение исходных CSV из `data/`;
-- трансформация raw-данных в component/scenario-level представление;
-- построение baseline `O2`-признаков:
-  - `o2_salicylate_tbn_x_amine_ao`
-  - `o2_salicylate_tbn_x_phenol_ao`
-  - `o2_salicylate_tbn_x_amine_x_phenol`
-  - `o2_ca_salicylate_present`
-  - `o2_mg_detergent_present`
-- обучение `hierarchical model`;
-- получение предсказаний на тестовом наборе;
-- сохранение итогового `predictions.csv`.
+- читает исходные CSV из `data/`;
+- сам строит те же признаки, что и `predict.py`;
+- загружает checkpoint model/hierarchical_o2_baseline.pt;
+- сохраняет итоговый `predictions.csv`.
 
-Во время исполнения создается временная папка `_notebook_runtime_o2`. Это runtime-артефакт, его не нужно коммитить.
+Во время исполнения создается временная папка `_notebook_runtime_o2`. Это runtime-артефакт.
 
-Важно: нейросетевое обучение PyTorch может давать небольшие отличия между Windows и Linux/Docker даже при фиксированном seed. Поэтому для воспроизводимой контейнерной сдачи используется не retrain, а checkpoint [model/hierarchical_o2_baseline.pt](/e:/Projects/Neftecode/model/hierarchical_o2_baseline.pt). Код обучения сохранен отдельно в [train.py](/e:/Projects/Neftecode/train.py).
+Код обучения baseline сохранен отдельно в train.py.
 
 ## Структура запуска
 
@@ -70,6 +81,13 @@ Neftecode/
 ├── docks/
 │   └── logo.png
 ├── inference.ipynb
+├── patent_data/
+│   ├── daimler_component_properties_patent_attach.csv
+│   ├── daimler_mixtures_train_patent_attach.csv
+│   ├── inference.ipynb
+│   ├── predict.py
+│   ├── train.py
+│   └── README.md
 ├── train.py
 ├── predict.py
 ├── src/
@@ -110,11 +128,19 @@ python predict.py
 
 Результат:
 
-- в корне проекта будет создан или обновлен [predictions.csv](/e:/Projects/Neftecode/predictions.csv)
+- в корне проекта будет создан или обновлен predictions.csv
 
-Альтернативно можно открыть [inference.ipynb](/e:/Projects/Neftecode/inference.ipynb) и выполнить ячейки сверху вниз.
+Альтернативно можно открыть inference.ipynb и выполнить ячейки сверху вниз.
+
+Для патентного контура есть отдельный самостоятельный predict-only ноутбук:
+
+```powershell
+jupyter notebook patent_data/inference.ipynb
+```
 
 ## Запуск через Docker
+
+## Важно: у команды не получилось собрать docker без VPN, не подключается к pypi 
 
 Сборка образа:
 
@@ -136,34 +162,6 @@ docker run --rm -v %cd%:/app neftecode-o2
 
 Контейнер:
 
-- ставит зависимости из [requirements-docker.txt](/e:/Projects/Neftecode/requirements-docker.txt);
-- запускает [predict.py](/e:/Projects/Neftecode/predict.py);
+- ставит зависимости из requirements-docker.txt;
+- запускает predict.py;
 - воспроизводимо записывает `predictions.csv` в корень проекта.
-
-Проверка результата после запуска:
-
-```powershell
-Get-FileHash predictions.csv -Algorithm SHA256
-```
-
-Ожидаемый SHA256 для проверенного baseline:
-
-```text
-31D58179D347F3577F22806EE63350D6C1C5103D972C21C9EFED8AA59E02D82C
-```
-
-## Что отправлять
-
-Для финальной сдачи нужны:
-
-- `inference.ipynb`
-- `train.py`
-- `predict.py`
-- папка `src/`
-- папка `model/`
-- `predictions.csv`
-- папка `data/`
-- `Dockerfile`
-- `requirements-docker.txt`
-
-`patent_extraction` в baseline `O2` не участвует и в `main` не требуется.

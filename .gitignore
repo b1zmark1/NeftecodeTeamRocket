@@ -6,3 +6,9 @@ __pycache__/
 *.pyc
 prediction_fresh_retrain.csv
 model/trained_model.pt
+data_with_patents/
+patent_data/_runtime/
+patent_data/data_with_patents/
+patent_data/model/
+patent_data/prediction_fresh_retrain_with_patents.csv
+patent_data/predictions_with_patents.csv
