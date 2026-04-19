@@ -5,4 +5,4 @@ patent_extraction.7z
 __pycache__/
 *.pyc
 prediction_fresh_retrain.csv
-model/hierarchical_o2_trained.pt
+model/trained_model.pt

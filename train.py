@@ -60,9 +60,9 @@ def main() -> None:
     trained_checkpoint_path = OUT_DIR / "hierarchical_model.pt"
     if not trained_checkpoint_path.exists():
         raise FileNotFoundError(trained_checkpoint_path)
-    shutil.copyfile(trained_checkpoint_path, MODEL_DIR / "hierarchical_o2_trained.pt")
+    shutil.copyfile(trained_checkpoint_path, MODEL_DIR / "trained_model.pt")
     shutil.copyfile(fresh_prediction_path, ROOT / "prediction_fresh_retrain.csv")
-    print(f"Trained checkpoint saved to: {(MODEL_DIR / 'hierarchical_o2_trained.pt').resolve()}")
+    print(f"Trained checkpoint saved to: {(MODEL_DIR / 'trained_model.pt').resolve()}")
     print(f"Fresh retrain prediction saved to: {(ROOT / 'prediction_fresh_retrain.csv').resolve()}")
 
 

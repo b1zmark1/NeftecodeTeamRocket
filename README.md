@@ -20,20 +20,17 @@
 
 - [data](/e:/Projects/Neftecode/data)  
   Единственный источник входных данных для решения:
+
   - [daimler_component_properties.csv](/e:/Projects/Neftecode/data/daimler_component_properties.csv)
   - [daimler_mixtures_train.csv](/e:/Projects/Neftecode/data/daimler_mixtures_train.csv)
   - [daimler_mixtures_test.csv](/e:/Projects/Neftecode/data/daimler_mixtures_test.csv)
-
-- [prediction.csv](/e:/Projects/Neftecode/prediction.csv)  
-  Проверенный baseline artifact модели `O2`.
-
 - [predictions.csv](/e:/Projects/Neftecode/predictions.csv)  
   Файл, который формируется контейнерным запуском для отправки на платформу.
 
 - [docks](/e:/Projects/Neftecode/docks)  
   Служебные материалы для сдачи. Сейчас здесь лежит логотип команды:
-  - [logo.png](/e:/Projects/Neftecode/docks/logo.png)
 
+  - [logo.png](/e:/Projects/Neftecode/docks/logo.png)
 - [Dockerfile](/e:/Projects/Neftecode/Dockerfile)
 - [requirements-docker.txt](/e:/Projects/Neftecode/requirements-docker.txt)
 - [.dockerignore](/e:/Projects/Neftecode/.dockerignore)
@@ -78,7 +75,6 @@ Neftecode/
 ├── src/
 ├── model/
 │   └── hierarchical_o2_baseline.pt
-├── prediction.csv
 ├── predictions.csv
 ├── Dockerfile
 └── requirements-docker.txt
@@ -103,7 +99,7 @@ python train.py
 
 Скрипт обучит модель с нуля и сохранит:
 
-- `model/hierarchical_o2_trained.pt`
+- `model/trained_model.pt`
 - `prediction_fresh_retrain.csv`
 
 Получение финальных предсказаний через зафиксированный checkpoint:
