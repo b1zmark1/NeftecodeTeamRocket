@@ -33,6 +33,9 @@
   - logo.png
 - Dockerfile
 - requirements-docker.txt
+- requirements-dev.txt
+- scripts/local_ci.ps1
+- tests/
 - .dockerignore
 - patent_data
   Папка с патентными данными и отдельным локальным pipeline для экспериментов с расширенным train:
@@ -119,6 +122,27 @@ python train.py
 
 - `model/trained_model.pt`
 - `prediction_fresh_retrain.csv`
+
+Параметры эксперимента можно менять через CLI:
+
+```powershell
+python train.py --epochs 50 --batch-size 8 --seed 42
+```
+
+Логирование эксперимента в MLflow:
+
+```powershell
+python train.py --epochs 20 --enable-mlflow --mlflow-tracking-uri sqlite:///mlflow.db
+```
+
+Локальная CI-проверка:
+
+```powershell
+pip install -r requirements-dev.txt
+powershell -ExecutionPolicy Bypass -File scripts/local_ci.ps1
+```
+
+CI-скрипт запускает unit-тесты, `python predict.py` и smoke-test обучения на 1 эпоху.
 
 Получение финальных предсказаний через зафиксированный checkpoint:
 

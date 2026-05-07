@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import torch
 import numpy as np
 import pandas as pd
-import torch
 from torch.utils.data import DataLoader
 
 from src.train_hierarchical_model import (

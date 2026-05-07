@@ -3,9 +3,9 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+import torch
 import numpy as np
 import pandas as pd
-import torch
 from torch.utils.data import DataLoader
 
 

@@ -4,15 +4,16 @@ import argparse
 import copy
 import json
 import math
+import os
 import random
 import re
 from pathlib import Path
 from typing import Any
 
-import numpy as np
-import pandas as pd
 import torch
 import torch.nn.functional as F
+import numpy as np
+import pandas as pd
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 from torch import nn
@@ -654,6 +655,70 @@ def save_json(data: dict[str, Any], path: Path) -> None:
         json.dump(data, file, ensure_ascii=False, indent=2)
 
 
+def sanitize_mlflow_key(value: str) -> str:
+    sanitized = re.sub(r"[^A-Za-z0-9_.\-/ ]+", "_", value)
+    sanitized = re.sub(r"\s+", " ", sanitized).strip(" _")
+    return sanitized or "metric"
+
+
+def flatten_metrics(prefix: str, metrics: dict[str, Any]) -> dict[str, float]:
+    flattened: dict[str, float] = {}
+    for key, value in metrics.items():
+        metric_key = sanitize_mlflow_key(f"{prefix}_{key}")
+        if isinstance(value, dict):
+            flattened.update(flatten_metrics(metric_key, value))
+        elif isinstance(value, (int, float, np.floating)) and np.isfinite(float(value)):
+            flattened[metric_key] = float(value)
+    return flattened
+
+
+def log_mlflow_run(args: argparse.Namespace, metrics_output: dict[str, Any], out_dir: Path) -> None:
+    try:
+        import mlflow
+    except ImportError as exc:
+        raise RuntimeError(
+            "MLflow logging requested, but mlflow is not installed. "
+            "Install dev dependencies from requirements-dev.txt."
+        ) from exc
+
+    tracking_uri = args.mlflow_tracking_uri or os.environ.get("MLFLOW_TRACKING_URI")
+    if tracking_uri:
+        mlflow.set_tracking_uri(tracking_uri)
+    mlflow.set_experiment(args.mlflow_experiment)
+
+    with mlflow.start_run(run_name=args.mlflow_run_name):
+        mlflow.log_params(
+            {
+                "epochs": args.epochs,
+                "batch_size": args.batch_size,
+                "learning_rate": args.learning_rate,
+                "weight_decay": args.weight_decay,
+                "patience": args.patience,
+                "val_size": args.val_size,
+                "seed": args.seed,
+                "model_dim": 64,
+                "dropout": 0.15,
+                "family_count": metrics_output["family_count"],
+                "component_numeric_columns_count": len(metrics_output["selected_component_numeric_columns"]),
+                "component_categorical_columns_count": len(metrics_output["selected_component_categorical_columns"]),
+                "global_columns_count": len(metrics_output["global_columns"]),
+            }
+        )
+        mlflow.log_metrics(flatten_metrics("best", metrics_output["best_validation_metrics"]))
+        mlflow.log_metrics(flatten_metrics("final", metrics_output["final_validation_metrics"]))
+        mlflow.log_metric("best_epoch", metrics_output["best_epoch"])
+
+        for artifact_name in (
+            "validation_metrics_hierarchical_model.json",
+            "validation_predictions_hierarchical_model.csv",
+            "test_predictions_hierarchical_model.csv",
+            "hierarchical_model.pt",
+        ):
+            artifact_path = out_dir / artifact_name
+            if artifact_path.exists():
+                mlflow.log_artifact(str(artifact_path))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Иерархическая модель для transformed Daimler DOT данных.")
     parser.add_argument("--component-train", required=True, type=Path)
@@ -668,6 +733,10 @@ def main() -> None:
     parser.add_argument("--patience", default=30, type=int)
     parser.add_argument("--val-size", default=0.2, type=float)
     parser.add_argument("--seed", default=42, type=int)
+    parser.add_argument("--enable-mlflow", action="store_true")
+    parser.add_argument("--mlflow-tracking-uri", default=None)
+    parser.add_argument("--mlflow-experiment", default="neftecode-daimler-dot")
+    parser.add_argument("--mlflow-run-name", default=None)
     args = parser.parse_args()
 
     if not 0.0 < args.val_size < 1.0:
@@ -886,6 +955,9 @@ def main() -> None:
         },
         out_dir / "hierarchical_model.pt",
     )
+
+    if args.enable_mlflow:
+        log_mlflow_run(args=args, metrics_output=metrics_output, out_dir=out_dir)
 
     print("Обучение завершено.")
     print(f"Лучшая эпоха: {best_epoch}")
