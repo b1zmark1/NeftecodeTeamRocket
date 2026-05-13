@@ -15,3 +15,4 @@ patent_data/predictions_with_patents.csv
 mlruns/
 mlartifacts/
 mlflow.db
+streamlit_runs/

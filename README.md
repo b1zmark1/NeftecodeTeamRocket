@@ -15,6 +15,9 @@
 - predict.py
   Код получения предсказаний. Скрипт строит те же признаки, загружает зафиксированный checkpoint модели и воспроизводимо формирует финальный [predictions.csv].
 
+- streamlit_app.py
+  Простой продуктовый интерфейс для загрузки CSV, обучения модели с нуля и дообучения из checkpoint.
+
 - model/hierarchical_o2_baseline.pt
   Зафиксированный checkpoint baseline-модели.
 
@@ -128,6 +131,26 @@ python train.py
 ```powershell
 python train.py --epochs 50 --batch-size 8 --seed 42
 ```
+
+Дообучение из существующего checkpoint:
+
+```powershell
+python train.py --epochs 30 --init-checkpoint model/hierarchical_o2_baseline.pt
+```
+
+Запуск Streamlit-интерфейса:
+
+```powershell
+pip install -r requirements-dev.txt
+streamlit run streamlit_app.py
+```
+
+В интерфейсе можно:
+
+- использовать CSV из папки `data/` или загрузить свои `train`, `test` и `component_properties`;
+- обучить модель с нуля;
+- дообучить модель из baseline checkpoint или загруженного `.pt`;
+- скачать checkpoint, validation predictions и test predictions после запуска.
 
 Логирование эксперимента в MLflow:
 

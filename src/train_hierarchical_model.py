@@ -719,6 +719,32 @@ def log_mlflow_run(args: argparse.Namespace, metrics_output: dict[str, Any], out
                 mlflow.log_artifact(str(artifact_path))
 
 
+def load_compatible_checkpoint_weights(model: nn.Module, checkpoint_path: Path) -> dict[str, Any]:
+    if not checkpoint_path.exists():
+        raise FileNotFoundError(checkpoint_path)
+
+    checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=False)
+    checkpoint_state = checkpoint.get("model_state_dict", checkpoint)
+    current_state = model.state_dict()
+
+    compatible_state = {
+        key: value
+        for key, value in checkpoint_state.items()
+        if key in current_state and tuple(value.shape) == tuple(current_state[key].shape)
+    }
+    skipped_keys = sorted(set(checkpoint_state) - set(compatible_state))
+
+    current_state.update(compatible_state)
+    model.load_state_dict(current_state)
+
+    return {
+        "checkpoint_path": str(checkpoint_path.resolve()),
+        "loaded_tensors": len(compatible_state),
+        "skipped_tensors": len(skipped_keys),
+        "skipped_tensor_names": skipped_keys,
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Иерархическая модель для transformed Daimler DOT данных.")
     parser.add_argument("--component-train", required=True, type=Path)
@@ -737,6 +763,12 @@ def main() -> None:
     parser.add_argument("--mlflow-tracking-uri", default=None)
     parser.add_argument("--mlflow-experiment", default="neftecode-daimler-dot")
     parser.add_argument("--mlflow-run-name", default=None)
+    parser.add_argument(
+        "--init-checkpoint",
+        default=None,
+        type=Path,
+        help="Optional checkpoint for warm-start retraining. Only tensors with matching shapes are loaded.",
+    )
     args = parser.parse_args()
 
     if not 0.0 < args.val_size < 1.0:
@@ -836,6 +868,15 @@ def main() -> None:
         dropout=0.15,
     ).to(device)
 
+    warm_start_info: dict[str, Any] | None = None
+    if args.init_checkpoint is not None:
+        warm_start_info = load_compatible_checkpoint_weights(model, args.init_checkpoint)
+        print(
+            "Warm-start checkpoint loaded: "
+            f"{warm_start_info['loaded_tensors']} tensors, "
+            f"{warm_start_info['skipped_tensors']} skipped."
+        )
+
     optimizer = torch.optim.AdamW(
         model.parameters(),
         lr=args.learning_rate,
@@ -929,6 +970,7 @@ def main() -> None:
         "global_columns": feature_spec["global_columns"],
         "family_count": len(feature_spec["family_vocabulary"]),
         "history": history,
+        "warm_start": warm_start_info,
     }
 
     valid_predictions_df.to_csv(out_dir / "validation_predictions_hierarchical_model.csv", index=False)

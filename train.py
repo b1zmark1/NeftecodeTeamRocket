@@ -80,6 +80,8 @@ def train_model(args: argparse.Namespace) -> Path:
             sys.argv.extend(["--mlflow-tracking-uri", args.mlflow_tracking_uri])
         if args.mlflow_run_name:
             sys.argv.extend(["--mlflow-run-name", args.mlflow_run_name])
+    if args.init_checkpoint:
+        sys.argv.extend(["--init-checkpoint", str(args.init_checkpoint)])
     try:
         train_hierarchical_main()
     finally:
@@ -108,6 +110,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--mlflow-tracking-uri", default=None)
     parser.add_argument("--mlflow-experiment", default="neftecode-daimler-dot")
     parser.add_argument("--mlflow-run-name", default=None)
+    parser.add_argument(
+        "--init-checkpoint",
+        default=None,
+        type=Path,
+        help="Checkpoint for warm-start retraining. Matching tensors are reused.",
+    )
     return parser.parse_args()
 
 
